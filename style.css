@@ -1,0 +1,128 @@
+/* Patrick Daly Stylesheet */
+
+/* TEXT */
+@font-face { 
+	font-family: Logo; src: url('fonts/logo.ttf'); 
+} 
+@font-face { 
+	font-family: Body; src: url('fonts/body.ttf'); 
+} 
+
+/* GENERAL */
+body {
+	background-color: #FFEFD5;
+	font-family: 'Body', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+p {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}
+
+/* HEADER */
+header {
+	background-color: #CC6600;
+	overflow: hidden;
+}
+#header-content  {
+	max-width: 1000px;
+	width: 80%;
+	margin: 0 auto;
+}
+header h1 {
+	font-family: 'Logo', sans-serif;
+	color: #FFEFD5;
+	float: left;
+	display: inline;
+}
+header h2 {
+	float: right;
+	display: inline;
+}
+
+/* MAIN BODY */
+#main-body {
+	clear: both;
+	padding: 60px 0;
+	margin: 0 auto;
+	width: 35%;
+	max-width: 1000px;
+}
+#bio-image {
+	float: left;
+	margin-right: 15px;
+	padding-top: 8px;
+}
+#main-body p {
+	line-height: 1.7em;
+	margin-top: 0;
+}
+
+/* SITE NAV */
+#site-nav {
+	clear: both;
+	padding-bottom: 100px;
+	overflow: hidden;
+	max-width: 1000px;
+	width: 80%;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+}
+.column-two {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.button {
+	margin: 0 auto;
+	cursor: pointer;
+}
+#linkedin-logo {
+	max-width: 33%;
+}
+#github-logo {
+	max-width: 33%;
+}
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+nav li a {
+	text-decoration: none;
+	padding-top: 5px;
+	display: inline-block;
+	color: #000;
+	font-size: 120%;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 750px) {
+	header h1, 
+	header h2 {
+		display: block;
+		float: left;
+	}
+	header h1 {
+		line-height: 1.5em;
+	}
+	#main-body {
+		width: 80%;
+	}
+	#bio-image,
+	.button {
+		display: none;
+	}
+	#site-nav nav {
+		display: block;
+	}
+	.column-three {
+		width: 100%;
+		text-align: left;
+	}
+
+}
+img {
+	width: 300px;
+}
