@@ -1,0 +1,15 @@
+::selection{
+  background: $selection-colour__background;
+  color: $selection-colour__color;
+  text-shadow:none;
+}
+::-moz-selection{
+  background: $selection-colour__background;
+  color: $selection-colour__color;
+  text-shadow:none;
+}
+::-webkit-selection{
+  background: $selection-colour__background;
+  color: $selection-colour__color;
+  text-shadow:none;
+}

@@ -1,0 +1,10 @@
+//------------------------------------*\
+//  $UNDERLINE
+//------------------------------------*/
+
+// Better text underlines using background gradients
+
+@mixin underline($color: $colour-primary, $weight: 1px, $offset: 0px) {
+  background-image: linear-gradient(bottom, transparent, transparent $offset, $color $offset, $color ($offset + $weight),
+                    transparent ($offset + $weight));
+}
