@@ -1,2 +1,1 @@
-# srijancse.github.io
-My Personal page
+Srijan's Personal Webpage
