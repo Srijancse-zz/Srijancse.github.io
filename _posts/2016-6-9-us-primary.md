@@ -1,60 +1,10 @@
 ---
 layout: post
-title:  "Democratic presidential primaries can be predicted by counting High School Graduates "
-date:   2016-6-8 23:25:00
+title:  "Failing GSoC! A hell of an experience."
+date:   2016-8-30 03:30:00
 categories: election
 ---
 
-|State                      |High School Graduates         |Winner|
-|---------------------------|-----------------------------------|------|
-|Wyoming|91.8%|![img]({{ site.url }}/images/sanders.png)|
-|Minnesota|91.5%|![img]({{ site.url }}/images/sanders.png)|
-|Alaska|91.4%|![img]({{ site.url }}/images/sanders.png)|
-|New Hampshire|91.3%|![img]({{ site.url }}/images/sanders.png)|
-|Vermont|91.0%|![img]({{ site.url }}/images/sanders.png)|
-|Montana|90.8%|![img]({{ site.url }}/images/sanders.png)|
-|Iowa|91.4%|![img]({{ site.url }}/images/clinton.png)|
-|Hawaii|90.4%|![img]({{ site.url }}/images/sanders.png)|
-|Utah|90.4%|![img]({{ site.url }}/images/sanders.png)|
-|Maine|90.2%|![img]({{ site.url }}/images/sanders.png)|
-|North Dakota|90.1%|![img]({{ site.url }}/images/sanders.png)|
-|South Dakota|89.9%|![img]({{ site.url }}/images/clinton.png)|
-|Nebraska|89.8%|![img]({{ site.url }}/images/sanders.png)|
-|Wisconsin|89.8%|![img]({{ site.url }}/images/sanders.png)|
-|Kansas|89.7%|![img]({{ site.url }}/images/sanders.png)|
-|Washington|89.7%|![img]({{ site.url }}/images/clinton.png)|
-|Colorado|89.3%|![img]({{ site.url }}/images/sanders.png)|
-|Oregon|89.1%|![img]({{ site.url }}/images/sanders.png)|
-|Massachusetts|89.0%|![img]({{ site.url }}/images/clinton.png)|
-|Connecticut|88.6%|![img]({{ site.url }}/images/clinton.png)|
-|Idaho|88.4%|![img]({{ site.url }}/images/sanders.png)|
-|Maryland|88.2%|![img]({{ site.url }}/images/clinton.png)|
-|Michigan|87.9%|![img]({{ site.url }}/images/sanders.png)|
-|Pennsylvania|87.9%|![img]({{ site.url }}/images/clinton.png)|
-|Ohio|87.6%|![img]({{ site.url }}/images/clinton.png)|
-|Delaware|87.4%|![img]({{ site.url }}/images/clinton.png)|
-|New Jersey|87.4%|![img]({{ site.url }}/images/clinton.png)|
-|Missouri|86.8%|![img]({{ site.url }}/images/clinton.png)|
-|Indiana|86.6%|![img]({{ site.url }}/images/sanders.png)|
-|Virginia|86.6%|![img]({{ site.url }}/images/clinton.png)|
-|Illinois|86.4%|![img]({{ site.url }}/images/clinton.png)|
-|Oklahoma|85.6%|![img]({{ site.url }}/images/sanders.png)|
-|United States|85.3%|![img]({{ site.url }}/images/clinton.png)|	
-|Florida|85.3%|![img]({{ site.url }}/images/clinton.png)|
-|New York|84.7%|![img]({{ site.url }}/images/clinton.png)|
-|Rhode Island|84.7%|![img]({{ site.url }}/images/sanders.png)|
-|North Carolina|84.3%|![img]({{ site.url }}/images/clinton.png)|
-|Arizona|84.2%|![img]({{ site.url }}/images/clinton.png)|
-|Georgia|83.9%|![img]({{ site.url }}/images/clinton.png)|
-|Nevada|83.9%|![img]({{ site.url }}/images/clinton.png)|
-|South Carolina|83.6%|![img]({{ site.url }}/images/clinton.png)|
-|Tennessee|83.1%|![img]({{ site.url }}/images/clinton.png)|
-|New Mexico|82.8%|![img]({{ site.url }}/images/clinton.png)|
-|West Virginia|82.8%|![img]({{ site.url }}/images/sanders.png)|
-|Arkansas|82.4%|![img]({{ site.url }}/images/clinton.png)|
-|Louisiana|82.2%|![img]({{ site.url }}/images/clinton.png)|
-|Alabama|82.1%|![img]({{ site.url }}/images/clinton.png)|
-|Kentucky|81.7%|![img]({{ site.url }}/images/clinton.png)|
-|California|80.6%|![img]({{ site.url }}/images/clinton.png)|
-|Mississippi|80.4%|![img]({{ site.url }}/images/clinton.png)|
-|Texas|79.9%|![img]({{ site.url }}/images/clinton.png)|
+|So, yeah. I failed the final evaluations of Google Summer of Code. I didn't expect it, but I think I should have added more features to my project and worked harder. To be honest, this was one hell of a summer. Working on such a project, OfflineExtension for WikiEditor, with such an awesome community WikiToLearn and such cool mentors, Gianluca Rigoletti and Irene Cortinovis, is worth millions. I couldn't pass the final evaluations, but I gained so so much that I have no hard feelings. Of course, I felt bad, but at the end, the experience is all that matters. Thanks, Google and WikiToLearn for giving me such an amazing opportunity. I would work more on my project and try to get it in the production mode, as soon as possible. Also, I will reapply for Google Summer of Code next year too with the same organization, and will definitely pass :'). And, the bad part ends here. Good news is that I'm now a core developer of WikiToLearn, and I find this opportunity to be more worthy than being a GSoCer, so this.failure eventually equals to this.success (Sorry for this, I'm learning JAVA :P ). Thanks, Riccardo and Gianluca for giving me this oppurtunity. I’ll give my best, work harder, learn and will contribute to  as much as I can. :)
+
+Long Live WikiToLearn, Long Live KDE, Long Live Mediawiki and Long Live FOSSatAmrita! :)
