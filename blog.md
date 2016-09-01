@@ -1,6 +1,6 @@
 ---
 layout: defaultblog
-title: Blog Of HackerKid
+title: Blog Of Srijan Agarwal
 permalink: /blog/
 ---
 

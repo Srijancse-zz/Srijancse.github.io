@@ -9,7 +9,7 @@ Yesterday was a hell of a day. We re-created the infamous Facemash in less than 
 
 <img src = "/images/comparo.png">
 
- 
+
 
 We used the famous Elo algorithm for rating the pictures.  If you are not familiar with the Elo algoritham, then Google it.  I will try to explain the basic implementation of Elo algorithm for rating players. If you want to rate two players then the new rating of player A looks something like this.
 
