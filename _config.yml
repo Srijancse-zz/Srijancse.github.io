@@ -1,12 +1,12 @@
 # Site settings
-title: Hackerkid's Blog
-email: yo@vishnuks.com
+title: Srijan Agarwal's Blog
+email: srijan@wikitolearn.org
 description: > # this means to ignore newlines until "baseurl:"
-  This is the blog of Vishnu KS aka Hackerkid
+  This is the blog of Srijan Agarwal
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://hackerkid.github.io" # the base hostname & protocol for your site
-twitter_username: hackerkidx
-github_username:  hackerkid
+url: "http://srijancse.github.io" # the base hostname & protocol for your site
+twitter_username: srijancse
+github_username:  srijancse
 
 # Build settings
 markdown: kramdown
