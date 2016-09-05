@@ -1,3 +1,3 @@
 Srijan's Personal Webpage
 
-srijanagarwal.me
+www.srijanagarwal.me
