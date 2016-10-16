@@ -1,0 +1,28 @@
+<head>
+    <!-- HTTPS redirect for github pages -->
+    <script type="text/javascript">
+        var host = 'srijancse.github.io';
+        if ((host === window.location.host) && (window.location.protocol === 'http:')) {
+            window.location.protocol = 'https'; // without ':' for firefox compatibility
+        }
+    </script>
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Srijan Agarwal: web developer" property="og:title">
+    <meta content="Srijan Agarwal: web developer" property="twitter:title">
+    <meta content="website" property="og:type">
+    <meta content="{{site.title}}" property="og:site_name">
+    <meta property="fb:admins" content="1103227056" />
+    <!-- title and desc -->
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+</head>

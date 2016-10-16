@@ -1,0 +1,29 @@
+---
+layout: default
+title: Writing
+---
+
+<header>
+    <h1>
+        <a href="">Writing</a>
+        <a href="/"><div class="dot"></div></a>
+        <div class="right">
+            <a href="https://github.com/{{site.github_username}}">GitHub</a>
+        </div>
+    </h1>
+</header>
+<section class="posts">
+    <ul>
+    {% for post in site.posts %}
+        <li>
+            <div>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                {% comment %}
+                <!-- TODO: date or tag -->
+                <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
+                {% endcomment %}
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</section>

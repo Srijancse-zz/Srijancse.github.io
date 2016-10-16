@@ -1,0 +1,26 @@
+# http://blog.wercker.com/2013/05/31/simplify-you-jekyll-publishing-process-with-wercker.html
+# our build should run within a Ruby box
+box: phusion/passenger-ruby22
+
+build:
+  steps:
+    # Run a smart version of bundle install
+    # which improves build execution time of
+    # future builds
+    - bundle-install
+
+    # A custom script step
+    # that actually builds the jekyll site
+    - script:
+        name: generate site
+        code: bundle exec jekyll build --trace
+
+deploy:
+    steps:
+        - install-packages:
+            packages: git ssh-client
+        - leipert/git-push:
+            gh_oauth: $GIT_TOKEN
+            basedir: _site
+            branch: master
+            discard_history: true

@@ -1,0 +1,29 @@
+@keyframes zoom {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.dot {
+  font-size: 10px;
+  vertical-align: middle;
+  padding: 0 0.5rem;
+  display: inline-block;
+  transition: 0.25s $ease-in-sine;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    border-radius: 50%;
+    background: $color-dot;
+    animation-name: zoom;
+    animation-duration: 1.5s;
+    animation-timing-function: $ease-in-sine;
+  }
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
