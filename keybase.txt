@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/srijancse
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://srijanagarwal.me
+  * I am srijancse (https://keybase.io/srijancse) on keybase.
+  * I have a public key with fingerprint 3328 D72C A2EC 57CC 79FD  2702 2416 141C BCC1 397B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01017507e9526be4d57ac1d47e69766e28efd0e4536d793c816d2b09a0cb4c16bda30a",
+            "fingerprint": "3328d72ca2ec57cc79fd27022416141cbcc1397b",
+            "host": "keybase.io",
+            "key_id": "2416141cbcc1397b",
+            "kid": "01017507e9526be4d57ac1d47e69766e28efd0e4536d793c816d2b09a0cb4c16bda30a",
+            "uid": "9db212cd37a87b53ee9e2515236bbe19",
+            "username": "srijancse"
+        },
+        "service": {
+            "hostname": "srijanagarwal.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1476799812,
+    "expire_in": 157680000,
+    "prev": "72c36333c2012c091cddbc20d43a1f99381bd7e2bb2555ba2e9e1831465adc61",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIqAnicrVJZbE1BGL6lpSpUNSUt13JaqUjLmTnLnLmRFLVUKoSQIOWa7fYerXNu
+z71tVStuGsRSidhiD6GxPYiIJ8QSkpaWWF4siQchiAepVKgWcxoeJB7Ny+T/5/u+
++b5/5s6wgYGMlPGrkje+PMpqT7l/60htYPmg4tmNCnV5gxJqVKpE/yaquYgnwlU2
+V0KKClSADBUJbECTCp0biDDAdSRMjExTQEtEuCp0QzM5whqzgMkhVTFRGdUZMCkn
+mkqUIiViO5XCi3m2k5CymgYtjiAjUDADMYZwhEOkQqgDE+iAUcaAhhGVxKgb9xnS
+HCVxMdV2ZU8W4X57/8D/Z9+1/XKYUwgg4xoiFqKGJgQW0AAG1ExKBcA+MC48h6wT
+Eh337LXEYXGhbCxSZLvOZsKfrB/lLwipJF49qZ4qW0VKzHMTLnOr5Wk0kYiFfHKi
+Ieaj6wUN/9YJU9vhcpaSUCe8uO06SghIJEvYvjDQkYkwtgAsUsT6mO2JsO0jDGRa
+qlz+NaJOSsrha6amaQyqMpiKAeOcyoLrGgERjDULUI4EpBQahkHlQ2EBLA3opkE4
+M4HiJ6txXCVkSJuk0s9kVzokUevJ2LdvVqQGUjICg9IG+H8skDFkxJ+f17xh8M+G
+SU2F50+o83KU8gErDjfi522dTdM6O5u75pc8H34w+Xj3lWXdY8rU/N6JJ4Mt+YWp
+d7deqzjd8/rHrsKFsQXLj69893no8FcPthVERgZzM8GKTZeS5NPsjOia7NS+qy17
+JhzLfnapeFRBTd+B6qyKYhhpXh17M2d8Zkn+4um9Iy9k7Z+wfW72fOfp/p0r18w9
+NeVeV256+4zzlw+1RR5Gm6++WJR2MT3zFT7a1Z0SHjcrZ1/r9/vBmW1NNS/Vbeem
+d+S1XWhtCux90XI9LfkxaJU+Wf9285J28nVL+dlkac/GpXldkz+8KSntuL3jW3vU
+PZMWzCvvfZ8+uqxbdPS8XzKv91COlTn2FwZTOP4=
+=stsN
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/srijancse
+
+==================================================================
