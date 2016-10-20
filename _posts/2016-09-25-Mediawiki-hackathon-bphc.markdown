@@ -10,9 +10,9 @@ It was a great event indeed, and an amazing experience to speak about WikiToLear
 
 Few amazing things, I found out at BITS was :
 
-i)  0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy [Subham Soni](https://en.wikipedia.org/wiki/User:Soni) waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.
++  0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy [Subham Soni](https://en.wikipedia.org/wiki/User:Soni) waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.
 
-ii) Give students bad mess food, they would complain.
++ Give students bad mess food, they would complain.
 Give students good mess food, they would complain in a month.
 Baffled at crazy [Subham Soni](https://en.wikipedia.org/wiki/User:Soni) addressing their mess food as boring/bad etc.
 
