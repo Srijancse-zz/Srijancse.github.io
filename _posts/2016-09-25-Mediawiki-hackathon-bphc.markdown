@@ -9,6 +9,7 @@ I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at 
 It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on 'How to contribute to WikiToLearn' and the talk can be found [here](https://slides.com/srijancse/wikitolearn).
 
 Few amazing things, I found out at BITS was :
+
 1.  0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy [Subham Soni](https://en.wikipedia.org/wiki/User:Soni) waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.
 
 2. Give students bad mess food, they would complain
