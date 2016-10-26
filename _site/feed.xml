@@ -5,8 +5,8 @@
     <description>Web developer, 19. I code, eat and write.</description>
     <link>https://srijancse.github.io/</link>
     <atom:link href="https://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Oct 2016 09:12:18 +0530</pubDate>
-    <lastBuildDate>Thu, 20 Oct 2016 09:12:18 +0530</lastBuildDate>
+    <pubDate>Wed, 26 Oct 2016 20:33:35 +0530</pubDate>
+    <lastBuildDate>Wed, 26 Oct 2016 20:33:35 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -26,25 +26,41 @@
 
 &lt;p&gt;It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on ‘How to contribute to WikiToLearn’ and the talk can be found &lt;a href=&quot;https://slides.com/srijancse/wikitolearn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Few amazing things, I found out at BITS was :
-1.  0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.&lt;/p&gt;
+&lt;p&gt;Few amazing things, I found out at BITS was :&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Give students bad mess food, they would complain
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Give students bad mess food, they would complain.
 Give students good mess food, they would complain in a month.
-Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; addressing their mess food as boring/bad etc.&lt;/li&gt;
-&lt;/ol&gt;
+Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; addressing their mess food as boring/bad etc.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Since, this was my first visit to Hyderabad, I also got an opportunity to roam around the city, with my BPHC Friends, Utkarsh and Utsav. Some of the photos :&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Visit to Charminar&lt;/strong&gt;
- &lt;img src=&quot;/images/Charminar.jpg&quot; alt=&quot;Visit to Charminar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visit to Charminar&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+ &lt;div class=&quot;image-block&quot;&gt;
+     &lt;img src=&quot;/images/Charminar.jpg&quot; alt=&quot;profile image&quot; /&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;BITS Pilani Hyderabad Campus&lt;/strong&gt;
- &lt;img src=&quot;/images/bphc.jpg&quot; alt=&quot;BITS Pilani Hyderabad Campus&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BITS Pilani Hyderabad Campus&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+ &lt;div class=&quot;image-block&quot;&gt;
+     &lt;img src=&quot;/images/bphc.jpg&quot; alt=&quot;profile image&quot; /&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Giving talk&lt;/strong&gt;
-&lt;img src=&quot;/images/talk.jpg&quot; alt=&quot;Giving talk&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Giving talk&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/talk.jpg&quot; alt=&quot;profile image&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 13:13:39 +0530</pubDate>
         <link>https://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</link>
