@@ -88,6 +88,6 @@ The last talk of the day was by [Anwesha Das](anweshadas.in) on *A walk on licen
 
 The day ended with all the Indians and Ryan going to a Riverside Restaurant and having amazing food.
 
-**Day 1 : FUDCon APAC, Norton University, Phnom Penh**
+**Day 2 : FUDCon APAC, Norton University, Phnom Penh**
 
 Coming soon!
