@@ -151,4 +151,4 @@ We had a great party after the talks at Fudpub with Barcamp organizers. Free bee
 </div>
 </div>
 
-This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I'm going to cherish for long.
+This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I'm going to cherish for long.
