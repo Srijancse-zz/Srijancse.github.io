@@ -11,7 +11,6 @@ I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Pe
     <img src="/images/fudcon.png" alt="fudcon">
 </div>
 </div>
-<br>
 
 FUDCon (Fedora Users and Developers Conference) is an important event in the world of free software that is held in different parts of the world organized by Fedora Organization. The FUDCon comprised of sessions, talks, workshops and hackfest in which project participants worked on specific initiatives. FUDCon Phnom Penh was conducted at Norton University, Phnom Penh along Barcamp ASEAN. Around 50 speakers from around the world gave talks related to entrepreneurship and open source software. I was traveling with one my friends, Abhinand N, who also got selected to deliver a talk on Mediawiki. Looked like, we were the only two undergrads who were invited to deliver talks.
 
@@ -24,7 +23,6 @@ Phnom Penh looked more or less like an Indian city just with more **prettier** g
     <img src="/images/tuk-tuk.jpeg" alt="tuktuk">
 </div>
 </div>
-<br>
 
 As soon as we reached Hotel, it was almost Dinner time. Sirko Kemter was the local organizer and all the developers decided to go to a nearby BBQ place. Remember, Abhinand is a **pure** vegeterian and he came to eat BBQ (:P). Anyway, the food was great, since I had never tried Lobster and Prawn. Amazing experience, it was.
 
