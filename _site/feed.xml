@@ -5,8 +5,8 @@
     <description>Web Developer, 19. I code, eat and write.</description>
     <link>https://srijancse.github.io/</link>
     <atom:link href="https://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Nov 2016 16:58:53 +0530</pubDate>
-    <lastBuildDate>Wed, 16 Nov 2016 16:58:53 +0530</lastBuildDate>
+    <pubDate>Thu, 17 Nov 2016 18:47:51 +0530</pubDate>
+    <lastBuildDate>Thu, 17 Nov 2016 18:47:51 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -81,7 +81,7 @@
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/sumantro.jpg&quot; alt=&quot;paragn&quot; /&gt;
+    &lt;img src=&quot;/images/sumantro.jpg&quot; alt=&quot;sumantro&quot; /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -89,7 +89,7 @@
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/anwesha.jpg&quot; alt=&quot;paragn&quot; /&gt;
+    &lt;img src=&quot;/images/anwesha.jpg&quot; alt=&quot;anwesha&quot; /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -97,7 +97,65 @@
 
 &lt;p&gt;&lt;strong&gt;Day 2 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Coming soon!&lt;/p&gt;
+&lt;p&gt;Day 2 started with heavy rains at Cambodia. Thanks to Sirko for providing raincoats! It was another day of interesting talks and I had my talk at 3pm.&lt;/p&gt;
+
+&lt;p&gt;The first talk I went to was by &lt;a href=&quot;https://fedoraproject.org/wiki/User:Noriko&quot;&gt;Noriko Mizumoto&lt;/a&gt; on &lt;em&gt;How can you help us get Fedora to the world?&lt;/em&gt;. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/noriko.jpg&quot; alt=&quot;noriko&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Following was the talk on &lt;em&gt;Exploring Fedora Infrastructure&lt;/em&gt; by &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt;. Sayan Chowdhary is a Senior Software Engineer at Red Hat, Pune and has been a Python developer contributing to Fedora. Sayan talked about Fedora web projects and how can one contribute to them.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/sayan.jpg&quot; alt=&quot;sayan&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next was the talk by &lt;a href=&quot;http://kushaldas.in&quot;&gt;Kushal Das&lt;/a&gt; on &lt;em&gt;Testing Fedora Atomic in an automated way&lt;/em&gt;. I don’t need to introduce him (:P). He talked about testing fedora atomic project in an automated way by using Python and Go script made by him. It went over my head mostly, since I never contributed to Fedora. Anyway, it is always amazing to listen him speaking. The way he explains a scenario, is absolutely stunning.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/kushal.jpg&quot; alt=&quot;kushal&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After the better lunch, next talk I attended was on &lt;em&gt;Fedora QA&lt;/em&gt; by &lt;a href=&quot;&quot;&gt;Sumantro Mukherjee&lt;/a&gt;. Sumantro introduced us to Fedora Quality Assurance, the workflow and how to test a package. Great talk, indeed.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/sumantro2.jpg&quot; alt=&quot;sumantro&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, it was time for &lt;a href=&quot;http://wwww.srijanagarwal.me&quot;&gt;my&lt;/a&gt; talk on &lt;strong&gt;WikiToLearn&lt;/strong&gt; : &lt;em&gt;Bringing Academia to the Internet Era : A revolution in Knowledge Sharing&lt;/em&gt;. I introduced WikiToLearn to the attendees, how to contribute and gave them a hand-on session on “How to make a personalized book”. I briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. I spoke on who/how can contribute being a student, teacher, translator or hacker, how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, About the power of collaboration and its impact in academia with the help of WikiToLearn and also how students and professors are using it in their universities as a tool to make learning much more effective in a collaborative way. Slides for the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn-2&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/srijan.jpg&quot; alt=&quot;srijan&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The last talk was on &lt;em&gt;Contributing to Mediawiki&lt;/em&gt; by Abhinand N. Abhinand is a Google Summer of Code’16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submition. It was a great talk, too.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/abhinand.jpg&quot; alt=&quot;abhinand&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We had a great party after the talks at Fudpub with Barcamp organizers. Free beer, yaay (:D).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/party2.jpg&quot; alt=&quot;party&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I’m going to cherish for long.&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Nov 2016 13:13:39 +0530</pubDate>
         <link>https://srijancse.github.io/writing/FUDCon-PhnomPenh/</link>
@@ -108,7 +166,26 @@
     
       <item>
         <title>MediaWikiToLearn Hackathon, Amrita University Amritapuri Campus 2016</title>
-        <description>
+        <description>&lt;p&gt;FOSS@Amrita conducted Mediawiki Hackathon at Amrita University, Amritapuri Campus on 1st and 2nd October, 2016.
+MediaWikiToLearn Hackathon was organised to bring more new students into the field of Open Source Contribution, thereby giving them a chance to interact with developers online. Provide an opportunity to learn the workflow of bug fixing and patch submission in MediaWiki.&lt;/p&gt;
+
+&lt;p&gt;I spoke about &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; to the professors and students of Amrita University, Amritapuri Campus!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/talk2.jpg&quot; alt=&quot;talk&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;WikiToLearn Editathon was concluded with a good number of edits and personalized books made by 25 professors on subjects varying from Biotechnology, Business, Physics, and Mathematics.&lt;/p&gt;
+
+&lt;p&gt;The Pywikibot Mediawiki hacking session led by Abdeali Kothari was a great success as students could grasp the fundamentals well and catch up with their tasks. Though it was a bit hard for participants to get started with their first bug fix. By the end of second day of MediaWiki Hackathon, we could get more than 5 patches uploaded to Gerrit.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/organizers.jpg&quot; alt=&quot;organizers&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Sat, 01 Oct 2016 13:13:39 +0530</pubDate>
         <link>https://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</link>
