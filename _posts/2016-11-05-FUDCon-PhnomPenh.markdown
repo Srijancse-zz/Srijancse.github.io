@@ -135,7 +135,7 @@ Now, it was time for [my](http://wwww.srijanagarwal.me) talk on **WikiToLearn** 
 </div>
 </div>
 
-The last talk was on *Contributing to Mediawiki* by Abhinand N. Abhinand is a Google Summer of Code'16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submition. It was a great talk, too.
+The last talk was on *Contributing to Mediawiki* by Abhinand N. Abhinand is a Google Summer of Code'16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submission. It was a great talk, too.
 
 <div class="image-wrap">
 <div class="image-block">
