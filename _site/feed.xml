@@ -5,9 +5,29 @@
     <description>Web Developer, 19. I code, eat and write.</description>
     <link>https://srijancse.github.io/</link>
     <atom:link href="https://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Nov 2016 19:05:29 +0530</pubDate>
-    <lastBuildDate>Thu, 17 Nov 2016 19:05:29 +0530</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2016 21:37:23 +0530</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2016 21:37:23 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>What is happiness?</title>
+        <description>&lt;p&gt;I never thought about this before, to be honest. Material things do not necessarily bring you happiness. That is a fact of life. We all know that, then why do we get happy by them? &lt;em&gt;‘If material things bring just a temporary and short-term happiness, then what does that mean?’&lt;/em&gt; Does it mean that we have to buy material objects at a rate of perhaps one per day to sustain the temporary and short-term high of getting something new? The problem is, that begins to sound a lot like a drug habit. This train of thinking got me into some very deep areas. Things like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;What is happiness?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What does it mean to be happy?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What do I want to do in my life?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Does life have meaning?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Very deep, isn’t it?&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
+        <link>https://srijancse.github.io/writing/what-is-happiness/</link>
+        <guid isPermaLink="true">https://srijancse.github.io/writing/what-is-happiness/</guid>
+        
+        
+      </item>
     
       <item>
         <title>FUDCon APAC Phnom Penh Cambodia 2016</title>
@@ -139,7 +159,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The last talk was on &lt;em&gt;Contributing to Mediawiki&lt;/em&gt; by Abhinand N. Abhinand is a Google Summer of Code’16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submition. It was a great talk, too.&lt;/p&gt;
+&lt;p&gt;The last talk was on &lt;em&gt;Contributing to Mediawiki&lt;/em&gt; by Abhinand N. Abhinand is a Google Summer of Code’16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submission. It was a great talk, too.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -257,7 +277,7 @@ Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&
 
 &lt;p&gt;&lt;strong&gt;Learn to read the source code&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;There is no substitute for the ability to read through seemingly gigantic code bases. Let’s face it, most of the documentation of any code available is very bad at the best. It may be useful to the end user, but for any new developer, it’s just gibberish. You are on your own when you need to go through the source code of something which spans hundreds of thousands of lines with hundreds of files. Where do you start? Well, it depends. Lear how to use Bug/Issue Trackers Every organisation will have a bug tracker. If you don’t know what a Software bug is, now will be a good time to start. Bug trackers are like the Version Co1ntrol systems which we talked about earlier. In fact, most version control clients will have an implementation of the bug tracker themselves. Github has an “Issues” system, which is the same thing. A bug tracker, basically, lists all the “issues”(or bugs) currently identified with the software and their “status”(are they solved? Unsolved? Being worked upon). Bug trackers provide the non-developer end users with a way of pointing out a problem in the software. They might also be used to request a new feature, which is different from a bug.&lt;/p&gt;
+&lt;p&gt;There is no substitute for the ability to read through seemingly gigantic code bases. Let’s face it, most of the documentation of any code available is very bad at the best. It may be useful to the end user, but for any new developer, it’s just gibberish. You are on your own when you need to go through the source code of something which spans hundreds of thousands of lines with hundreds of files. Where do you start? Well, it depends. Lear how to use Bug/Issue Trackers Every organisation will have a bug tracker. If you don’t know what a Software bug is, now will be a good time to start. Bug trackers are like the Version Control systems which we talked about earlier. In fact, most version control clients will have an implementation of the bug tracker themselves. Github has an “Issues” system, which is the same thing. A bug tracker, basically, lists all the “issues”(or bugs) currently identified with the software and their “status”(are they solved? Unsolved? Being worked upon). Bug trackers provide the non-developer end users with a way of pointing out a problem in the software. They might also be used to request a new feature, which is different from a bug.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Submit Patches&lt;/strong&gt;&lt;/p&gt;
 
