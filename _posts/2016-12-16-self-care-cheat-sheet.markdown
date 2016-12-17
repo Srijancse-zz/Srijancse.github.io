@@ -9,7 +9,7 @@ The other day, this article on self care floated across my timeline. I took a lo
 
 **Are you hydrated?**  If not, have a glass of water.
 
-**Have you eaten in the past three hours? ** If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?
+**Have you eaten in the past three hours?** If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?
 
 **Have you showered in the past day?**  If not, take a shower right now.
 
