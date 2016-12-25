@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Boostrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/unslider.js"></script>
+	<!---->
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="css/unslider.css">
+
+
+	<title>Altroom</title>
+</head>
+<body>
+
+<!--  Hero Image  -->
+<style type="text/css">
+	.hero {
+ 	    display: table;
+    	width: 100%;
+    	height: auto;
+    	padding: 50vh 0;
+    	background: url("./Assets/Images/hero-full-image.png") no-repeat bottom center scroll;
+    	background-color: #000;
+    	-webkit-background-size: cover;
+    	-moz-background-size: cover;
+    	background-size: cover;
+    	-o-background-size: cover;
+}
+html,body {
+	margin: 0;
+	padding: 0;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	display: table;
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+
+</style>
+<script>
+(function() {
+
+function Slideshow( element ) {
+	this.el = document.querySelector( element );
+	this.init();
+}
+
+Slideshow.prototype = {
+	init: function() {
+		this.wrapper = this.el.querySelector( ".slider-wrapper" );
+		this.slides = this.el.querySelectorAll( ".slide" );
+		this.previous = this.el.querySelector( ".slider-previous" );
+		this.next = this.el.querySelector( ".slider-next" );
+		this.index = 0;
+		this.total = this.slides.length;
+		this.timer = null;
+
+		this.action();
+		this.stopStart();
+	},
+	_slideTo: function( slide ) {
+		var currentSlide = this.slides[slide];
+		currentSlide.style.opacity = 1;
+
+		for( var i = 0; i < this.slides.length; i++ ) {
+			var slide = this.slides[i];
+			if( slide !== currentSlide ) {
+				slide.style.opacity = 0;
+			}
+		}
+	},
+	action: function() {
+		var self = this;
+		self.timer = setInterval(function() {
+			self.index++;
+			if( self.index == self.slides.length ) {
+				self.index = 0;
+			}
+			self._slideTo( self.index );
+
+		}, 3000);
+	},
+	stopStart: function() {
+		var self = this;
+		self.el.addEventListener( "mouseover", function() {
+			clearInterval( self.timer );
+			self.timer = null;
+
+		}, false);
+		self.el.addEventListener( "mouseout", function() {
+			self.action();
+
+		}, false);
+	}
+
+
+};
+
+document.addEventListener( "DOMContentLoaded", function() {
+
+	var slider = new Slideshow( "#main-slider" );
+
+});
+
+
+})();
+
+</script>
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="./Assets/Images/hero-full-image.png" alt="First" class="slide" /><!-- slides -->
+		<img src="./Assets/Images/sunli.png" alt="Second" class="slide" />
+		<img src="./Assets/Images/garyv.png" alt="Third" class="slide" />
+	</div>
+</div>
+<!--  End Hero Image  -->
+
+<!--  Tiles Section  -->
+
+<style type="text/css">
+	figure{
+		margin: -9em 0em;
+		overflow: hidden;
+	}
+	@media screen and (min-width: 320px){
+		.cards.col-xs-12{
+			padding: 1rem;
+			height: 22rem;
+			overflow: hidden;
+		}
+		.gradientImg{
+			margin-top: -9em;
+			padding: 0em;
+			margin-left: 10em;
+		}
+		.playBtn{
+			    margin-top: -16em;
+			    padding: 9em;
+			    margin-left: 0em;
+		}
+	}
+	@media screen and (min-width: 1224px){
+		.cards.col-md-6{
+			padding: 1rem;
+			overflow: hidden;
+			height: 41rem;
+		}
+		.gradientImg{
+			margin-top: -27em;
+			padding: 8em;
+			margin-left: 10em;
+		}
+		.star{
+
+		}
+		.playBtn{
+			margin-top: -40em;
+			padding: 17em;
+			margin-left: -1em;
+		}
+	}
+</style>
+
+<div class="container" id="tiles">
+	<div class="row">
+		<div class="col-md-offset-4 col-xs-offset-1">
+			<label class="lead">LEARN FROM THE BEST OUT THERE</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+				<img class="star img-responsive" src="./Assets/Images/Aliciad.png"  />
+				<img class="gradientImg img-responsive" src="./Assets/Orange-Gradient.svg" />
+				<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+			<img class="star img-responsive" src="./Assets/Images/audiv.png">
+			<img class="gradientImg img-responsive" src="./Assets/Yellow-gradient.svg" />
+			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+			<img class="star img-responsive" src="./Assets/Images/brodhav.png">
+			<img class="gradientImg img-responsive" src="./Assets/Green-Gradient.svg" />
+			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+			<img class="star img-responsive" src="./Assets/Images/garyv.png">
+			<img class="gradientImg img-responsive" src="./Assets/Purple-Gradient.svg" />
+			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+			<img class="star img-responsive" src="./Assets/Images/ranvirs.png">
+			<img class="gradientImg img-responsive" src="./Assets/Pink-Gradient.svg" />
+			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+		<div class="cards col-md-6 col-xs-12">
+			<a href="#">
+			<img class="star img-responsive" src="./Assets/Images/sunli.png">
+			<img class="gradientImg img-responsive" src="./Assets/Blue-Gradient.svg" />
+			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+			</a>
+		</div>
+
+	</div>
+</div>
+
+<!--  End Tiles Section  -->
+
+<style type="text/css">
+	.tilter.tilter--5{
+		max-height: 30rem;
+		max-width: 37rem;
+	}
+	/* PreFooter */
+	.header {
+		padding: 8rem 15px 2rem 15px;
+		margin: 0px 7px;
+	}
+	.description {
+		margin-top: 2rem;
+		padding: 0px 15px;
+		font-size: 18px;
+	}
+	#image {
+		padding: 0;
+	}
+	.paint {
+		height: 100mm;
+		float: right;
+		position: relative;
+		z-index: -1;
+		top: 17mm;
+		left: 10mm
+	}
+	.mic {
+		height: 25mm;
+		float: right;
+		position: absolute;
+		right: 57mm;
+		top: 10mm;
+	}
+	.pencil {
+		height: 40mm;
+		float: right;
+		position: absolute;
+		right: 90mm;
+		top: 23mm;
+	}
+	.galaxy {
+		height: 20mm;
+		float: right;
+		position: absolute;
+		top: 77mm;
+		right: 95mm;
+	}
+	/* Footer */
+	.footer {
+		padding: 2rem;
+		background-color: #111;
+		color: #fff;
+		margin-top: 0px;
+	}
+	.footer-header {
+		font-size: 16px;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	.footer-list {
+		text-align: center;
+		word-spacing: 2rem;
+		margin-bottom: 10px;
+	}
+	.footer-links {
+		font-size: 14px;
+		text-decoration: none;
+		color: #fff;
+		-webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+	}
+	.footer-links:hover {
+		text-decoration: none;
+		color: #777;
+		transition:.5s ease;
+	}
+	.divider {
+		color: #777;
+	}
+	.copyright {
+		width: 115px;
+		margin: 25px auto;
+	}
+	#logo {
+		height: 30px;
+		display: inline;
+		position: relative;
+		bottom: 3px;
+	}
+	#year {
+		display: inline;
+		color: #fff;
+	}
+	.social {
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+		word-spacing: 2rem;
+		padding-top: 0px;
+	}
+	.social a {
+		text-decoration: none;
+		color: #fff;
+		-webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+	}
+	.fa-facebook:hover {
+		color: #3b59ac;
+		transition:.5s ease;
+	}
+	.fa-twitter:hover {
+		color: #00aced;
+		transition:.5s ease;
+	}
+	.fa-instagram:hover {
+		color: #fd1d1d;
+		transition:.5s ease;
+		background: -webkit-linear-gradient(#405dec, #fd1d1d, #ffdc80);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	}
+</style>
+
+
+<!-- PreFooter -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h1 class="header">A classroom for alternative learning</h1>
+			<p class="description">
+				Altroom is a platform for gamified and interactive lesson bites on
+				alternative learning, ranging from photography to increasing confidence
+			</p>
+		</div>
+
+		<div class="col-md-6 col-sm-12" id="image">
+			<img src="Assets/Paint-element.png" class="paint" />
+			<img src="Assets/Mic-element.png" class="mic" />
+			<img src="Assets/pencil-element.png" class="pencil" />
+			<img src="Assets/Galaxy-element.png" class="galaxy" />
+		</div>
+	</div>
+</div>
+<!-- End of PreFooter -->
+
+<!--  Footer  -->
+<footer>
+	<div class="container-fluid footer">
+		<div class="container">
+			<div class="row footer-section">
+				<h4 class="footer-header">COMPANY</h4>
+				<p class="footer-list">
+					<a href="#" class="footer-links">Jobs</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Blog</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Press</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Legal</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Pricing</a>
+				</p>
+			</div>
+			<div class="row footer-section">
+				<h4 class="footer-header">HELP</h4>
+				<p class="footer-list">
+					<a href="#" class="footer-links">Account</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Support</a> <span class="divider">|</span>
+					<a href="#" class="footer-links">Feedback</a>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="copyright">
+					<img src="./Assets/White Logo.svg" id="logo"/>
+					<p id="year">2017</p>
+				</div>
+			</div>
+			<div class="row">
+				<p class="social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</p>
+			</div>
+				<!--
+				<div class="col-md-1 col-sm-12 col-xs-12">
+					<h4 class="footer-header">SOCIAL</h4>
+					<ul>
+						<li><a href="#" class="footer-links">Twitter</a></li>
+						<li><a href="#" class="footer-links">Facebook</a></li>
+						<li><a href="#" class="footer-links">Instagram</a></li>
+					</ul>
+				</div>
+				-->
+		</div>
+	</div>
+</footer>
+<!--  End Footer  -->
+
+</body>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/anime.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
