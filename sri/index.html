@@ -16,6 +16,9 @@
 	<link rel="stylesheet" href="css/unslider.css">
 
 
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/tiles.css">
+
 	<title>Altroom</title>
 </head>
 <body>
@@ -146,99 +149,123 @@ document.addEventListener( "DOMContentLoaded", function() {
 
 <!--  Tiles Section  -->
 
-<style type="text/css">
-	figure{
-		margin: -9em 0em;
-		overflow: hidden;
-	}
-	@media screen and (min-width: 320px){
-		.cards.col-xs-12{
-			padding: 1rem;
-			height: 22rem;
-			overflow: hidden;
-		}
-		.gradientImg{
-			margin-top: -9em;
-			padding: 0em;
-			margin-left: 10em;
-		}
-		.playBtn{
-			    margin-top: -16em;
-			    padding: 9em;
-			    margin-left: 0em;
-		}
-	}
-	@media screen and (min-width: 1224px){
-		.cards.col-md-6{
-			padding: 1rem;
-			overflow: hidden;
-			height: 41rem;
-		}
-		.gradientImg{
-			margin-top: -27em;
-			padding: 8em;
-			margin-left: 10em;
-		}
-		.star{
-
-		}
-		.playBtn{
-			margin-top: -40em;
-			padding: 17em;
-			margin-left: -1em;
-		}
-	}
-</style>
-
 <div class="container" id="tiles">
 	<div class="row">
-		<div class="col-md-offset-4 col-xs-offset-1">
+		<div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-1">
 			<label class="lead">LEARN FROM THE BEST OUT THERE</label>
 		</div>
 	</div>
-	<div class="row">
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
+	<div class="star-row row">
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
+				<img class="star img-responsive" src="./Assets/Images/brodhav.png"  />
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Green-Gradient.svg" />
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Brodha V</h3>
+						<p>HELPS YOU LEARN RAPPING</p>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
+				<img class="star img-responsive" src="./Assets/Images/audiv.png"  />
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Yellow-gradient.svg" />
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Auditya Venkatesh</h3>
+						<p>HELPS YOU LEARN PHOTOGRAPHY</p>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
+				<img class="star img-responsive" src="./Assets/Images/ranvirs.png" 
+				style="margin-bottom: -1em;" />
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Pink-Gradient.svg"/>
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Ranveer Singh</h3>
+						<p>HELPS YOU LEARN ACTING</p>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
 				<img class="star img-responsive" src="./Assets/Images/Aliciad.png"  />
-				<img class="gradientImg img-responsive" src="./Assets/Orange-Gradient.svg" />
-				<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
-			<img class="star img-responsive" src="./Assets/Images/audiv.png">
-			<img class="gradientImg img-responsive" src="./Assets/Yellow-gradient.svg" />
-			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
-			<img class="star img-responsive" src="./Assets/Images/brodhav.png">
-			<img class="gradientImg img-responsive" src="./Assets/Green-Gradient.svg" />
-			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
-			<img class="star img-responsive" src="./Assets/Images/garyv.png">
-			<img class="gradientImg img-responsive" src="./Assets/Purple-Gradient.svg" />
-			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
-			<img class="star img-responsive" src="./Assets/Images/ranvirs.png">
-			<img class="gradientImg img-responsive" src="./Assets/Pink-Gradient.svg" />
-			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
-		<div class="cards col-md-6 col-xs-12">
-			<a href="#">
-			<img class="star img-responsive" src="./Assets/Images/sunli.png">
-			<img class="gradientImg img-responsive" src="./Assets/Blue-Gradient.svg" />
-			<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
-			</a>
-		</div>
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Orange-Gradient.svg" />
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Alicia Souza</h3>
+						<p>HELPS YOU DESIGN YOUR BRAND</p>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
+				<img class="star img-responsive" src="./Assets/Images/garyv.png"  />
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Purple-Gradient.svg" />
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Gary Vaynerchuck</h3>
+						<p>HELPS YOU BUILD YOUR BUSINESS</p>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="card col-md-6 col-xs-12">
+				<img class="star img-responsive" src="./Assets/Images/sunli.png"  />
+				<div class="row">
+					<div class="gradient col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 col-xs-offset-4 col-xs-8">
+						<img class="gradientImg img-responsive" src="./Assets/Blue-Gradient.svg" />
+					</div>
+					<div class="play col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-2 col-xs-offset-3 col-xs-3">
+						<img class="playBtn img-responsive" src="./Assets/Play Button.svg" />
+					</div>
+					<div class="star-text col-md-5 col-md-offset-7 col-sm-4 col-sm-offset-7 col-xs-7 col-xs-offset-5">
+						<h3>Sunil Chhetri</h3>
+						<p>HELPS YOU LEARN FOOTBALL</p>
+					</div>
+				</div>
+			</div>
+		</a>
+		
+		
 
 	</div>
 </div>
