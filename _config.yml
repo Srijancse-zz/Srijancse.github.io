@@ -2,6 +2,7 @@
 # Some meta tags in _includes/head.html and other file contents need manual edits
 title: Srijan Agarwal
 email: srijan@wikitolearn.org
+author: Srijan Agarwal
 description:  # this means to ignore newlines until "baseurl:"
   Web Developer, 19. I code, eat and write.
 baseurl: ""
@@ -25,3 +26,5 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
+gems:
+  - jekyll-seo-tag

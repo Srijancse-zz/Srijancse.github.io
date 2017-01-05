@@ -5,9 +5,76 @@
     <description>Web Developer, 19. I code, eat and write.</description>
     <link>https://srijancse.github.io/</link>
     <atom:link href="https://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Dec 2016 22:01:59 +0530</pubDate>
-    <lastBuildDate>Fri, 16 Dec 2016 22:01:59 +0530</lastBuildDate>
+    <pubDate>Thu, 05 Jan 2017 18:07:38 +0530</pubDate>
+    <lastBuildDate>Thu, 05 Jan 2017 18:07:38 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>My Experiences with NodeJS</title>
+        <description>&lt;p&gt;For the past few months, I have been working with Node.js aka The Node (:D).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Node : Easy to learn, Impossible to master&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to summarize in a line, I would say this (^). If you’ve some experience with JavaScript, then Node is very easy to learn. Google for a few tutorials, play around with &lt;em&gt;Express.js&lt;/em&gt;, and you’re good to go. But as soon as you start playing, you remember, what about database? And, then &lt;em&gt;NPM&lt;/em&gt; comes to the rescue. Few SQL packages could be found, but I always go with Mongo. Easy to work it and open sourced.&lt;/p&gt;
+
+&lt;p&gt;Packages that consist of trivial code no more than 10 lines of code are downloaded in the thousands every day from NPM. Seriously!? You need a dependency for array type checking? And these packages are used by some huge tools such as React.
+You’ll never master something that moves at break-neck speed, not to mention the potential of dependency instability.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Want to catch errors? Good luck, boss!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Me, Coming from other languages such as Python or PHP I’d expect throwing and catching errors, or even returning an error from a function would be a straightforward way of handling errors. It’s not the case with Node.&lt;/p&gt;
+
+&lt;p&gt;Instead, one gets to pass errors around in the callbacks (or promises) — that’s right! No throwing of exceptions. Not to mention if you forget to return your callback on an error, it continues to run and triggers another set of errors after you returned the initial one.&lt;/p&gt;
+
+&lt;p&gt;Even if you do manage to come up with a solid standard for your own errors, you can’t confirm (without reading the source) that the many of the NPM packages you have installed follow the same pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final thoughts on Node&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Jan 2017 20:30:39 +0530</pubDate>
+        <link>https://srijancse.github.io/writing/Experiences-With-Node/</link>
+        <guid isPermaLink="true">https://srijancse.github.io/writing/Experiences-With-Node/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>3586x2017 : New Year’s Resolution</title>
+        <description>&lt;p&gt;&lt;strong&gt;2016 — An amazing year&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The best thing happened to me was &lt;a href=&quot;http://foss.amrita.ac.in&quot;&gt;FOSS at Amrita&lt;/a&gt;, my seniors, and mentors. Working with amazing peeps at &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; has made this year even better. Met and connected with awesome people, traveled to a foreign land for the first time (thanks to WikiToLearn again), learned new skills and now working on an exciting product with &lt;a href=&quot;http://under25.club&quot;&gt;Under 25 club&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In addition, 2016 was a great year, but that doesn’t necessarily mean this debuting 2017 can’t be a better one!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2017 — Future as we know it&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;January 1st is here and it was a long way. After a couple of years watching Mark Zuckerberg setting his goals at the beginning of the year and then showing his accomplishments in December, I decided to start the year with the same idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First: Personal Life&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My life is good right now. I have a happy family, friends whom I trust and I am &lt;em&gt;happy&lt;/em&gt;. For this 2017, I want to gain some weight, so I’ll start by exercising and running daily. This goal is difficult for me, so I’ll try my best. It’s my first step to get in shape so I’ll keep that in mind and then find a new goal.&lt;/p&gt;
+
+&lt;p&gt;My main goal is to make at least &lt;em&gt;5&lt;/em&gt; trips this year.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second: Work Life&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Funny thing, since last year, I have focused my career on working and studying at the same time. This year, I want to continue contributing to WikiToLearn, work with startups and learn interesting and cool stuff like Machine Learning. If some cool app idea or something comes along the way, awesome, but I won’t be desperate about changing this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Third: Hardware Hacky-Stuff&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This will be my year for &lt;em&gt;artificial intelligence&lt;/em&gt;. I’ll take a course on AI and Machine Learning, so my main goal, much like Zuckerberg’s 2016 goal, is to build something cool using AI and Machine Learning. I want to build something that doesn’t exist yet (atleast planning to), so this summer will serve as exploration and then, in March, I’ll start coding. I hope to find something cool to do so I can show it in December.&lt;/p&gt;
+
+&lt;p&gt;That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!&lt;/p&gt;
+
+&lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Jan 2017 12:30:39 +0530</pubDate>
+        <link>https://srijancse.github.io/writing/new-year-2017/</link>
+        <guid isPermaLink="true">https://srijancse.github.io/writing/new-year-2017/</guid>
+        
+        
+      </item>
     
       <item>
         <title>What is happiness?</title>
@@ -37,7 +104,7 @@
 
 &lt;p&gt;&lt;strong&gt;Are you hydrated?&lt;/strong&gt;  If not, have a glass of water.&lt;/p&gt;
 
-&lt;p&gt;**Have you eaten in the past three hours? ** If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Have you eaten in the past three hours?&lt;/strong&gt; If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Have you showered in the past day?&lt;/strong&gt;  If not, take a shower right now.&lt;/p&gt;
 
