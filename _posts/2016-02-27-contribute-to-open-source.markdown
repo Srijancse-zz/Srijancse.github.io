@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Contributing to Open Source"
-date:   2016-02-27 01:43:39 -0600
+date:   2016-06-27 01:43:39 -0600
 ---
 
 Since everyone was asking me this question regularly, I thought of writing a blog post of it. So, these are the points, once should be focusing on to crack Google Summer of Code or similar SoC programs.
