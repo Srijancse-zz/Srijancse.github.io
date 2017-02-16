@@ -4,23 +4,38 @@ title:  "WikiToLearn India Conference 2017"
 date:   2017-01-20 9:00:39 -0600
 ---
 
-For the past few months, I have been working with Node.js aka The Node (:D).
+The annual WikiToLearn India Conference 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organise the event and in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.
 
-**Node : Easy to learn, Impossible to master**
+Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing #WTLIndiaConf happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.
 
-If you want to summarize in a line, I would say this (^). If you’ve some experience with JavaScript, then Node is very easy to learn. Google for a few tutorials, play around with *Express.js*, and you’re good to go. But as soon as you start playing, you remember, what about database? And, then *NPM* comes to the rescue. Few SQL packages could be found, but I always go with Mongo. Easy to work it and open sourced.
+I was traveling with two other fellow speakers and my university mates, Haritha Harikumar and Chaithanya Krishnan. This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -> Bangalore -> Jaipur (17th January) and Jaipur -> Bangalore -> University (22nd January).
 
-Packages that consist of trivial code no more than 10 lines of code are downloaded in the thousands every day from NPM. Seriously!? You need a dependency for array type checking? And these packages are used by some huge tools such as React.
-You’ll never master something that moves at break-neck speed, not to mention the potential of dependency instability.
+Day 0 :
+I was very excited for this conference, and we had a train to Bangalore on 16th evening and a flight from Bangalore to Jaipur on 17th night. Train was not much late (only 4 hours :/), but the good thing was that the flight was at late night. I had some commitments on the morning at bangalore and had to finish it off.
+The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reached Jaipur at 3.30 AM.
 
-**Want to catch errors? Good luck, boss!**
+Day 1:
+Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn't even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man'eater’’ a.k.a ‘Harish Navnit’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club (FOSS@Amrita), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home. 
+After conversing with him for like 10 minutes, I didn't even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see Riccardo Iaconelli (met him for the first time, finally :D) and Tony Thomas (meeting him for the nth time :P) coming.
 
-Me, Coming from other languages such as Python or PHP I’d expect throwing and catching errors, or even returning an error from a function would be a straightforward way of handling errors. It’s not the case with Node.
+The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks. The first talk of the first day of the event was by Sagar Agarwal on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
 
-Instead, one gets to pass errors around in the callbacks (or promises) — that’s right! No throwing of exceptions. Not to mention if you forget to return your callback on an error, it continues to run and triggers another set of errors after you returned the initial one.
+Next talk was by Jaminy Prabha on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.
 
-Even if you do manage to come up with a solid standard for your own errors, you can’t confirm (without reading the source) that the many of the NPM packages you have installed follow the same pattern.
+Lunch was pretty great. All the speakers gathered at a common place and had food. :D
 
-**Final thoughts on Node**
+The following talk was the Keynote by the founder, Riccardo Iaconelli himself. His talk started with an example of some guy who was bragging something how he invented something , and how he couldn’t license it properly to make it proprietary. He talked about the motive behind Richard Stallman’s idea of Open Source. He then briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. He spoke on how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, about the power of collaboration and its impact in academia with the help of WikiToLearn. Also, he launched a competition for the attendees for the best technical and editing contribution - applicants can nominate themselves and there will be a winner who will be invited to a WTL sprint / akademy.
 
-Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.
+Next talk was by Abhimanyu Shekhawat. Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.
+
+The following talk was by Jay gupta. Jay is a Computer Science Student at Amity University, fellow WikiToLearn Core Developer and a GSoC’16 student. He talked about his Google Summer of Code’16 project : WikiToLearn Desktop Client which is a cross platform browser. The main feature of the application is the offline mode. Users can use even use WikiToLearn in offline mode after this project is implemented. Nice talk it was.
+
+The last talk of the day was by Amit Kumar Jaiswal. He is an open hacktivist and a Mozilla Representative acting as a Mozilla Science Lab collaborator, developer at WorldBrain is a final year undergrad of Computer Science & Engineering from Kanpur University. He is a former internee at IIM Ahmadabad, CMIE and evangelizing Open Source and Mozilla. His talk was titled as “Diving into Docker: Developing a darn fast, repeatable workflow”. He introduced attendees to the basics of Docker,  how to use Docker throughout the development process and Illustrated them the web development process using Docker.
+
+The talks on day 1 were really great start for the conference. After a quick tea break, where we had a bit of fun with Riccardo teaching him some local slang and pulling off pranks with local people ensured that we made our way to the evening lab sessions. Attendees and Speakers were completely refreshed and were able to provide hands on guidance to students at the university. Abhimanyu showing his ‘stud’ness at the lab hours too ;P.
+
+
+An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian and Swedish songs at a bonfire followed by listening and ROFLing on ‘Ye Bik Gayi Hai Gormint’ brings the day to a perfect end.
+
+
+Day2:
