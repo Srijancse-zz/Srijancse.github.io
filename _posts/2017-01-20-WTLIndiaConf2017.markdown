@@ -8,7 +8,7 @@ The annual [**WikiToLearn India Conference**](https://india2017.wikitolearn.even
 
 <div class="image-wrap">
 <div class="image-block">
-    <img src="/images/wtlindiaconf.jpg" alt="fudcon">
+    <img src="/images/wtlindiaconf.jpg" alt="WTLIndiaConf">
 </div>
 </div>
 
@@ -40,6 +40,12 @@ Lunch was pretty great. All the speakers gathered at a common place and had food
 The following talk was the Keynote by the founder, **Riccardo Iaconelli** himself. His talk started with an example of some guy who was bragging something how he invented something , and how he couldn’t license it properly to make it proprietary. He talked about the motive behind Richard Stallman’s idea of Open Source. He then briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. He spoke on how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, about the power of collaboration and its impact in academia with the help of WikiToLearn. Also, he launched a competition for the attendees for the best technical and editing contribution - applicants can nominate themselves and there will be a winner who will be invited to a WTL sprint / Akademy.
 
 Next talk was by [**Abhimanyu Shekhawat**](https://keenlearner.wordpress.com/). Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.
+
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/abhimanyu.jpg" alt="abhimanyu">
+</div>
+</div>
 
 The following talk was by [**Jay Gupta**](cryptowriteup.wordpress.com). Jay is a Computer Science Student at Amity University, fellow WikiToLearn Core Developer and a GSoC’16 student. He talked about his Google Summer of Code’16 project : WikiToLearn Desktop Client which is a cross platform browser. The main feature of the application is the offline mode. Users can use even use WikiToLearn in offline mode after this project is implemented. Nice talk it was.
 
