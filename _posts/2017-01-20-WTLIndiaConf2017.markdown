@@ -88,6 +88,12 @@ This was followed by [**Davide Valsecchi**](https://twitter.com/davide_vals94), 
 
 Before heading out for lunch, we took the time out to pose for mandatory group photos.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/groupphoto.jpg" alt="Group Photo">
+</div>
+</div>
+
 After the lunch it was the time for Mozilla girls, [**Vnisha Srivastav**](https://reps.mozilla.org/u/Vnisha/) and [**Chaithanya Krishnan**](chaithanyah.wordpress.com) to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.
 
 
