@@ -61,6 +61,11 @@ The talks on day 1 were really great start for the conference. After a quick tea
 
 An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian and Swedish songs at a bonfire followed by listening and ROFLing on *‘Ye Bik Gayi Hai Gormint’* brings the day to a perfect end.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/bonfire.jpg" alt="bonfire">
+</div>
+</div>
 
 *Day2* :
 Second day of the event started with Tony Thomas’s talk. [*Tony Thomas*](https://tttwrites.wordpress.com) volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.
