@@ -6,6 +6,12 @@ date:   2017-01-20 9:00:39 -0600
 
 The annual [**WikiToLearn India Conference**](https://india2017.wikitolearn.events) 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/wtlindiaconf.jpg" alt="fudcon">
+</div>
+</div>
+
 Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing [**#WTLIndiaConf**](https://www.facebook.com/search/top/?q=%23WTLIndiaConf) happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.
 
 I was traveling with two other fellow speakers and my university mates, [**Haritha Harikumar**](harithaharikumar.wordpress.com) and [**Chaithanya Krishnan**](chaithanyah.wordpress.com). This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -> Bangalore -> Jaipur (17th January) and Jaipur -> Bangalore -> University (22nd January).
@@ -16,7 +22,14 @@ The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reac
 
 *Day 1*:
 Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn't even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man'eater’’ a.k.a ‘[**Harish Navnit**](harishnavnit.wordpress.com)’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club ([**FOSS@Amrita**](foss.amrita.ac.in)), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home.
+
 After conversing with him for like 10 minutes, I didn't even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see [**Riccardo Iaconelli**](https://www.linkedin.com/in/riccardoiaconelli) (met him for the first time, finally :D) and [**Tony Thomas**](http://www.thomastony.me/) (meeting him for the nth time :P) coming.
+
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/group.jpg" alt="We">
+</div>
+</div>
 
 The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks. The first talk of the first day of the event was by [**Sagar Agarwal**](http://sagaragarwal94.me) on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
 
