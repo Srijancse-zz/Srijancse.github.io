@@ -31,13 +31,15 @@ After conversing with him for like 10 minutes, I didn't even know when I slept a
 </div>
 </div>
 
-The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks. The first talk of the first day of the event was by [**Sagar Agarwal**](http://sagaragarwal94.me) on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
+The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks.
 
 <div class="image-wrap">
 <div class="image-block">
     <img src="/images/speakers.jpg" alt="speakers">
 </div>
 </div>
+
+The first talk of the first day of the event was by [**Sagar Agarwal**](http://sagaragarwal94.me) on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
 
 Next talk was by **Jaminy Prabha** on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.
 
