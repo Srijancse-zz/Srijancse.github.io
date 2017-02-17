@@ -63,7 +63,7 @@ An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian an
 
 <div class="image-wrap">
 <div class="image-block">
-    <img src="/images/bonfire.jpg" alt="bonfire">
+    <img src="/images/bonfire1.jpg" alt="bonfire">
 </div>
 </div>
 
