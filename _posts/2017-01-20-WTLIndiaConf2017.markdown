@@ -99,6 +99,12 @@ After the lunch it was the time for Mozilla girls, [**Vnisha Srivastav**](https:
 
 The following talk was by [**Arnav Dhamija**](www.arnavdhamija.com) on his Google Summer of Code’16 project with KDE. His project aimed to make the menial task of selecting files in a file manager as easy as possible. In any file manager copying and pasting has never been a pleasant experience, especially if the files are in a non-continuous order. Often, when selecting files using Ctrl+A or the selection tool, we find that we need to select only a subset of the required files we have selected. This leads to the unwieldy operation of removing files from our selection. Of course, the common workaround is to create a new folder and to put all the items in this folder prior to copying, but this is a very inefficient and very slow process if large files need to be copied. Moreover Ctrl+Click requires fine motor skills to not lose the entire selection of files. His talk was really great.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/arnav.jpg" alt="Arnav">
+</div>
+</div>
+
 Following was the talk by [**Haritha Harikumar**](harithaharikumar.wordpress.com). Haritha is an Open Source enthusiast and a Mediawiki contributor since 2015. She is an active member of FOSS@Amrita and a technical mentor at ThinkFOSS. She believes in the motto of Code, Share and Grow. She is an advisor for #include program organised by SHE++. Her talk was titled: "Engine behind Wiki Pages". She talked about different projects in Wikimedia Foundation, and MediaWiki in general. She introduced attendees to Mediawiki, and how to get started with technical contributions with Mediawiki.
 
 The last talk of the conference was by [**Amit Kumar Jaiswal**](medium.com/@AMIT_GKP) on *"Wikidata : A unidimensional Knowledge base by Wikimedia after Freebase migrated their data to Wikidata"*. He discussed about the Wikidata data model and user interface design, the current state of the project, and induced the discussions on the topic of collaboration for collecting structured data by a broad and open audience.
