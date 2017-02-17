@@ -51,8 +51,13 @@ The following talk was by [**Jay Gupta**](cryptowriteup.wordpress.com). Jay is a
 
 The last talk of the day was by [**Amit Kumar Jaiswal**](medium.com/@AMIT_GKP). He is an open hacktivist and a Mozilla Representative acting as a Mozilla Science Lab collaborator, developer at WorldBrain is a final year undergrad of Computer Science & Engineering from Kanpur University. He is a former internee at IIM Ahmadabad, CMIE and evangelizing Open Source and Mozilla. His talk was titled as “Diving into Docker: Developing a darn fast, repeatable workflow”. He introduced attendees to the basics of Docker,  how to use Docker throughout the development process and Illustrated them the web development process using Docker.
 
-The talks on day 1 were really great start for the conference. After a quick tea break, where we had a bit of fun with Riccardo teaching him some local slang and pulling off pranks with local people ensured that we made our way to the evening lab sessions. Attendees and Speakers were completely refreshed and were able to provide hands on guidance to students at the university. Abhimanyu showing his ‘stud’ness at the lab hours too ;P.
+The talks on day 1 were really great start for the conference. After a quick tea break, where we had a bit of fun with Riccardo teaching him some local slang and pulling off pranks with local people ensured that we made our way to the evening lab sessions. Attendees and Speakers were completely refreshed and were able to provide hands on guidance to students at the university. Abhimanyu showing his ‘stud’ness at the lab hours too (;P).
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/stud.jpg" alt="abhimanyu">
+</div>
+</div>
 
 An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian and Swedish songs at a bonfire followed by listening and ROFLing on *‘Ye Bik Gayi Hai Gormint’* brings the day to a perfect end.
 
