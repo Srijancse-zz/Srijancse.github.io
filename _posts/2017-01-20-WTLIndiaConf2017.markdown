@@ -33,6 +33,12 @@ After conversing with him for like 10 minutes, I didn't even know when I slept a
 
 The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks. The first talk of the first day of the event was by [**Sagar Agarwal**](http://sagaragarwal94.me) on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/speakers.jpg" alt="speakers">
+</div>
+</div>
+
 Next talk was by **Jaminy Prabha** on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.
 
 Lunch was pretty great. All the speakers gathered at a common place and had food. :D
@@ -69,6 +75,12 @@ An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian an
 
 *Day2* :
 Second day of the event started with Tony Thomas’s talk. [*Tony Thomas*](https://tttwrites.wordpress.com) volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.
+
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/tony.jpg" alt="tony">
+</div>
+</div>
 
 The next talk was by [**Harish Navnit**](harishnavnit.wordpress.com). Harish is a free software enthusiast and has been involved with promotional and technical activities with the KDE community for almost half a decade now. He has been a Season of KDE participant as well as being involved in two Google Summer of Code projects with KDE in the past couple of years. His talk was entitled as ‘Modern Day Makefile Generators’. He imparted a basic familiarity to how large projects handle their dependencies and how a buildsystem functions, in general. He talked in depth about Cmake and qmake, and how they are used in handling large projects. It was a great talk for the technical peeps out there which gave them a basic understanding of it.
 
