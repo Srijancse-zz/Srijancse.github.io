@@ -41,11 +41,23 @@ The WikiToLearn India Conference was a single track event, so no distribution of
 
 The first talk of the first day of the event was by [**Sagar Agarwal**](http://sagaragarwal94.me) on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.
 
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/atomsagar.jpeg" alt="Sagar Agarwal">
+</div>
+</div>
+
 Next talk was by **Jaminy Prabha** on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.
 
 Lunch was pretty great. All the speakers gathered at a common place and had food. :D
 
 The following talk was the Keynote by the founder, **Riccardo Iaconelli** himself. His talk started with an example of some guy who was bragging something how he invented something , and how he couldn’t license it properly to make it proprietary. He talked about the motive behind Richard Stallman’s idea of Open Source. He then briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. He spoke on how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, about the power of collaboration and its impact in academia with the help of WikiToLearn. Also, he launched a competition for the attendees for the best technical and editing contribution - applicants can nominate themselves and there will be a winner who will be invited to a WTL sprint / Akademy.
+
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/ruphy.jpeg" alt="Riccardo Iaconelli">
+</div>
+</div>
 
 Next talk was by [**Abhimanyu Shekhawat**](https://keenlearner.wordpress.com/). Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.
 
