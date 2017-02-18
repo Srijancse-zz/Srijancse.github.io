@@ -1,11 +1,11 @@
 ==================================================================
-https://keybase.io/srijancse
+http://keybase.io/srijancse
 --------------------------------------------------------------------
 
 I hereby claim:
 
   * I am an admin of http://srijanagarwal.me
-  * I am srijancse (https://keybase.io/srijancse) on keybase.
+  * I am srijancse (http://keybase.io/srijancse) on keybase.
   * I have a public key with fingerprint 3328 D72C A2EC 57CC 79FD  2702 2416 141C BCC1 397B
 
 To do so, I am signing this object:
@@ -44,7 +44,7 @@ which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
 Version: Keybase OpenPGP v2.0.58
-Comment: https://keybase.io/crypto
+Comment: http://keybase.io/crypto
 
 yMJ0AnicrVJtiFVFGL7X1hYvWavJgrC0NGvg1kXPzDkzc+ayRKX0Q/ErIqxtuczX
 uZ79OOd6zrl3XcyQftSmuZgl6GILcrMgVCpCxI92NU3D2LzJQl9/vLCSSJ9KQaY1
@@ -70,6 +70,6 @@ aHyYuX4zePOBzuyJ7T882DH98oqRruOX8qffffjrV5t2X7p47Hy9e/lovffY7SsD
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/srijancse
+View my publicly-auditable identity here: http://keybase.io/srijancse
 
 ==================================================================

@@ -42,4 +42,4 @@ The other day, this article on self care floated across my timeline. I took a lo
 You’ve made it this far, and you will make it through.  **You are stronger than you think.**
 
 
-The author was kind enough to create a printable Google Doc that’s well-organized and can be found [here](https://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view). They also released it under Creative Commons, which is awesome.
+The author was kind enough to create a printable Google Doc that’s well-organized and can be found [here](http://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view). They also released it under Creative Commons, which is awesome.

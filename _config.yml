@@ -6,13 +6,13 @@ author: Srijan Agarwal
 description:  # this means to ignore newlines until "baseurl:"
   Web Developer, 19. I code, eat and write.
 baseurl: ""
-url: "https://srijancse.github.io"
+url: "http://srijancse.github.io"
 twitter_username: srijancse
 github_username: srijancse
 linkedin_username: srijancse
 facebook_username: srijancse
 medium_username: srijancse
-google_analytics: UA-83244237-1 # get yours at https://analytics.google.com/analytics/web/
+google_analytics: UA-83244237-1 # get yours at http://analytics.google.com/analytics/web/
 
 html_lang: en
 permalink: /writing/:title/

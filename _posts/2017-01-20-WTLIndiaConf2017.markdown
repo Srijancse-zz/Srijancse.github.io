@@ -4,7 +4,7 @@ title:  "WikiToLearn India Conference 2017"
 date:   2017-01-20 9:00:39 -0600
 ---
 
-The annual [**WikiToLearn India Conference**](https://india2017.wikitolearn.events) 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.
+The annual [**WikiToLearn India Conference**](http://india2017.wikitolearn.events) 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -12,7 +12,7 @@ The annual [**WikiToLearn India Conference**](https://india2017.wikitolearn.even
 </div>
 </div>
 
-Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing [**#WTLIndiaConf**](https://www.facebook.com/search/top/?q=%23WTLIndiaConf) happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.
+Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing [**#WTLIndiaConf**](http://www.facebook.com/search/top/?q=%23WTLIndiaConf) happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.
 
 I was traveling with two other fellow speakers and my university mates, [**Haritha Harikumar**](harithaharikumar.wordpress.com) and [**Chaithanya Krishnan**](chaithanyah.wordpress.com). This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -> Bangalore -> Jaipur (17th January) and Jaipur -> Bangalore -> University (22nd January).
 
@@ -23,7 +23,7 @@ The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reac
 *Day 1*:
 Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn't even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man'eater’’ a.k.a ‘[**Harish Navnit**](harishnavnit.wordpress.com)’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club ([**FOSS@Amrita**](foss.amrita.ac.in)), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home.
 
-After conversing with him for like 10 minutes, I didn't even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see [**Riccardo Iaconelli**](https://www.linkedin.com/in/riccardoiaconelli) (met him for the first time, finally :D) and [**Tony Thomas**](http://www.thomastony.me/) (meeting him for the nth time :P) coming.
+After conversing with him for like 10 minutes, I didn't even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see [**Riccardo Iaconelli**](http://www.linkedin.com/in/riccardoiaconelli) (met him for the first time, finally :D) and [**Tony Thomas**](http://www.thomastony.me/) (meeting him for the nth time :P) coming.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -59,7 +59,7 @@ The following talk was the Keynote by the founder, **Riccardo Iaconelli** himsel
 </div>
 </div>
 
-Next talk was by [**Abhimanyu Shekhawat**](https://keenlearner.wordpress.com/). Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.
+Next talk was by [**Abhimanyu Shekhawat**](http://keenlearner.wordpress.com/). Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -88,7 +88,7 @@ An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian an
 </div>
 
 *Day2* :
-Second day of the event started with Tony Thomas’s talk. [*Tony Thomas*](https://tttwrites.wordpress.com) volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.
+Second day of the event started with Tony Thomas’s talk. [*Tony Thomas*](http://tttwrites.wordpress.com) volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -98,7 +98,7 @@ Second day of the event started with Tony Thomas’s talk. [*Tony Thomas*](https
 
 The next talk was by [**Harish Navnit**](harishnavnit.wordpress.com). Harish is a free software enthusiast and has been involved with promotional and technical activities with the KDE community for almost half a decade now. He has been a Season of KDE participant as well as being involved in two Google Summer of Code projects with KDE in the past couple of years. His talk was entitled as ‘Modern Day Makefile Generators’. He imparted a basic familiarity to how large projects handle their dependencies and how a buildsystem functions, in general. He talked in depth about Cmake and qmake, and how they are used in handling large projects. It was a great talk for the technical peeps out there which gave them a basic understanding of it.
 
-This was followed by [**Davide Valsecchi**](https://twitter.com/davide_vals94), Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. [TeXLa](https://github.com/wikitolearn/texla) is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.
+This was followed by [**Davide Valsecchi**](http://twitter.com/davide_vals94), Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. [TeXLa](http://github.com/wikitolearn/texla) is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.
 
 Before heading out for lunch, we took the time out to pose for mandatory group photos.
 
@@ -108,7 +108,7 @@ Before heading out for lunch, we took the time out to pose for mandatory group p
 </div>
 </div>
 
-After the lunch it was the time for Mozilla girls, [**Vnisha Srivastav**](https://reps.mozilla.org/u/Vnisha/) and [**Chaithanya Krishnan**](chaithanyah.wordpress.com) to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.
+After the lunch it was the time for Mozilla girls, [**Vnisha Srivastav**](http://reps.mozilla.org/u/Vnisha/) and [**Chaithanya Krishnan**](chaithanyah.wordpress.com) to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.
 
 <div class="image-wrap">
 <div class="image-block">
