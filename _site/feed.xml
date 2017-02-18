@@ -3,15 +3,15 @@
   <channel>
     <title>Srijan Agarwal</title>
     <description>Web Developer, 19. I code, eat and write.</description>
-    <link>https://srijancse.github.io/</link>
-    <atom:link href="https://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://srijancse.github.io/</link>
+    <atom:link href="http://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Sat, 18 Feb 2017 11:44:55 +0530</pubDate>
     <lastBuildDate>Sat, 18 Feb 2017 11:44:55 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>WikiToLearn India Conference 2017</title>
-        <description>&lt;p&gt;The annual &lt;a href=&quot;https://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
+        <description>&lt;p&gt;The annual &lt;a href=&quot;http://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -19,7 +19,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing &lt;a href=&quot;https://www.facebook.com/search/top/?q=%23WTLIndiaConf&quot;&gt;&lt;strong&gt;#WTLIndiaConf&lt;/strong&gt;&lt;/a&gt; happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.&lt;/p&gt;
+&lt;p&gt;Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing &lt;a href=&quot;http://www.facebook.com/search/top/?q=%23WTLIndiaConf&quot;&gt;&lt;strong&gt;#WTLIndiaConf&lt;/strong&gt;&lt;/a&gt; happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.&lt;/p&gt;
 
 &lt;p&gt;I was traveling with two other fellow speakers and my university mates, &lt;a href=&quot;harithaharikumar.wordpress.com&quot;&gt;&lt;strong&gt;Haritha Harikumar&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt;. This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -&amp;gt; Bangalore -&amp;gt; Jaipur (17th January) and Jaipur -&amp;gt; Bangalore -&amp;gt; University (22nd January).&lt;/p&gt;
 
@@ -30,7 +30,7 @@ The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reac
 &lt;p&gt;&lt;em&gt;Day 1&lt;/em&gt;:
 Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn’t even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man’eater’’ a.k.a ‘&lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club (&lt;a href=&quot;foss.amrita.ac.in&quot;&gt;&lt;strong&gt;FOSS@Amrita&lt;/strong&gt;&lt;/a&gt;), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home.&lt;/p&gt;
 
-&lt;p&gt;After conversing with him for like 10 minutes, I didn’t even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see &lt;a href=&quot;https://www.linkedin.com/in/riccardoiaconelli&quot;&gt;&lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt;&lt;/a&gt; (met him for the first time, finally :D) and &lt;a href=&quot;http://www.thomastony.me/&quot;&gt;&lt;strong&gt;Tony Thomas&lt;/strong&gt;&lt;/a&gt; (meeting him for the nth time :P) coming.&lt;/p&gt;
+&lt;p&gt;After conversing with him for like 10 minutes, I didn’t even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see &lt;a href=&quot;http://www.linkedin.com/in/riccardoiaconelli&quot;&gt;&lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt;&lt;/a&gt; (met him for the first time, finally :D) and &lt;a href=&quot;http://www.thomastony.me/&quot;&gt;&lt;strong&gt;Tony Thomas&lt;/strong&gt;&lt;/a&gt; (meeting him for the nth time :P) coming.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -66,7 +66,7 @@ Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waitin
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Next talk was by &lt;a href=&quot;https://keenlearner.wordpress.com/&quot;&gt;&lt;strong&gt;Abhimanyu Shekhawat&lt;/strong&gt;&lt;/a&gt;. Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.&lt;/p&gt;
+&lt;p&gt;Next talk was by &lt;a href=&quot;http://keenlearner.wordpress.com/&quot;&gt;&lt;strong&gt;Abhimanyu Shekhawat&lt;/strong&gt;&lt;/a&gt;. Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -95,7 +95,7 @@ Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waitin
 &lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;Day2&lt;/em&gt; :
-Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;https://tttwrites.wordpress.com&quot;&gt;&lt;em&gt;Tony Thomas&lt;/em&gt;&lt;/a&gt; volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.&lt;/p&gt;
+Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http://tttwrites.wordpress.com&quot;&gt;&lt;em&gt;Tony Thomas&lt;/em&gt;&lt;/a&gt; volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -105,7 +105,7 @@ Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http
 
 &lt;p&gt;The next talk was by &lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;. Harish is a free software enthusiast and has been involved with promotional and technical activities with the KDE community for almost half a decade now. He has been a Season of KDE participant as well as being involved in two Google Summer of Code projects with KDE in the past couple of years. His talk was entitled as ‘Modern Day Makefile Generators’. He imparted a basic familiarity to how large projects handle their dependencies and how a buildsystem functions, in general. He talked in depth about Cmake and qmake, and how they are used in handling large projects. It was a great talk for the technical peeps out there which gave them a basic understanding of it.&lt;/p&gt;
 
-&lt;p&gt;This was followed by &lt;a href=&quot;https://twitter.com/davide_vals94&quot;&gt;&lt;strong&gt;Davide Valsecchi&lt;/strong&gt;&lt;/a&gt;, Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. &lt;a href=&quot;https://github.com/wikitolearn/texla&quot;&gt;TeXLa&lt;/a&gt; is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.&lt;/p&gt;
+&lt;p&gt;This was followed by &lt;a href=&quot;http://twitter.com/davide_vals94&quot;&gt;&lt;strong&gt;Davide Valsecchi&lt;/strong&gt;&lt;/a&gt;, Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. &lt;a href=&quot;http://github.com/wikitolearn/texla&quot;&gt;TeXLa&lt;/a&gt; is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.&lt;/p&gt;
 
 &lt;p&gt;Before heading out for lunch, we took the time out to pose for mandatory group photos.&lt;/p&gt;
 
@@ -115,7 +115,7 @@ Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;After the lunch it was the time for Mozilla girls, &lt;a href=&quot;https://reps.mozilla.org/u/Vnisha/&quot;&gt;&lt;strong&gt;Vnisha Srivastav&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt; to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.&lt;/p&gt;
+&lt;p&gt;After the lunch it was the time for Mozilla girls, &lt;a href=&quot;http://reps.mozilla.org/u/Vnisha/&quot;&gt;&lt;strong&gt;Vnisha Srivastav&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt; to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -156,7 +156,7 @@ Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http
 
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: http://disqus.com/admin/universalcode/#configuration-variables*/
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&#39;s canonical URL variable
@@ -171,12 +171,12 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 })();
 &lt;/script&gt;
 
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
 </description>
         <pubDate>Fri, 20 Jan 2017 20:30:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/WTLIndiaConf2017/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/WTLIndiaConf2017/</guid>
+        <link>http://srijancse.github.io/writing/WTLIndiaConf2017/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/WTLIndiaConf2017/</guid>
         
         
       </item>
@@ -205,8 +205,8 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;p&gt;Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Jan 2017 20:30:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/Experiences-With-Node/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/Experiences-With-Node/</guid>
+        <link>http://srijancse.github.io/writing/Experiences-With-Node/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/Experiences-With-Node/</guid>
         
         
       </item>
@@ -242,8 +242,8 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 12:30:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/new-year-2017/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/new-year-2017/</guid>
+        <link>http://srijancse.github.io/writing/new-year-2017/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/new-year-2017/</guid>
         
         
       </item>
@@ -262,8 +262,8 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;p&gt;Very deep, isn’t it?&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/what-is-happiness/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/what-is-happiness/</guid>
+        <link>http://srijancse.github.io/writing/what-is-happiness/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/what-is-happiness/</guid>
         
         
       </item>
@@ -308,11 +308,11 @@ You’ll never master something that moves at break-neck speed, not to mention t
 
 &lt;p&gt;You’ve made it this far, and you will make it through.  &lt;strong&gt;You are stronger than you think.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The author was kind enough to create a printable Google Doc that’s well-organized and can be found &lt;a href=&quot;https://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view&quot;&gt;here&lt;/a&gt;. They also released it under Creative Commons, which is awesome.&lt;/p&gt;
+&lt;p&gt;The author was kind enough to create a printable Google Doc that’s well-organized and can be found &lt;a href=&quot;http://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view&quot;&gt;here&lt;/a&gt;. They also released it under Creative Commons, which is awesome.&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/self-care-cheat-sheet/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/self-care-cheat-sheet/</guid>
+        <link>http://srijancse.github.io/writing/self-care-cheat-sheet/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/self-care-cheat-sheet/</guid>
         
         
       </item>
@@ -341,11 +341,11 @@ You’ll never master something that moves at break-neck speed, not to mention t
 
 &lt;p&gt;As soon as we reached Hotel, it was almost Dinner time. Sirko Kemter was the local organizer and all the developers decided to go to a nearby BBQ place. Remember, Abhinand is a &lt;strong&gt;pure&lt;/strong&gt; vegeterian and he came to eat BBQ (:P). Anyway, the food was great, since I had never tried Lobster and Prawn. Amazing experience, it was.&lt;/p&gt;
 
-&lt;p&gt;At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. &lt;a href=&quot;https://kushaldas.in/&quot;&gt;Kushal Das&lt;/a&gt;, &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt; were among the famous open source developers from India. It was great meeting and interacting with them.&lt;/p&gt;
+&lt;p&gt;At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. &lt;a href=&quot;http://kushaldas.in/&quot;&gt;Kushal Das&lt;/a&gt;, &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt; were among the famous open source developers from India. It was great meeting and interacting with them.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Day 1 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by &lt;em&gt;Fedora State of the Union&lt;/em&gt; talk from &lt;a href=&quot;https://fedoraproject.org/wiki/User:Bex&quot;&gt;Brian Exelbierd&lt;/a&gt;, Fedora Community Action and Impact Coordinator.&lt;/p&gt;
+&lt;p&gt;FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by &lt;em&gt;Fedora State of the Union&lt;/em&gt; talk from &lt;a href=&quot;http://fedoraproject.org/wiki/User:Bex&quot;&gt;Brian Exelbierd&lt;/a&gt;, Fedora Community Action and Impact Coordinator.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -353,7 +353,7 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The first talk I went to was &lt;em&gt;Introduction to Rust Programming Language by&lt;/em&gt; &lt;a href=&quot;https://twitter.com/a2batic&quot;&gt;Kanika Murarka&lt;/a&gt;. Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.&lt;/p&gt;
+&lt;p&gt;The first talk I went to was &lt;em&gt;Introduction to Rust Programming Language by&lt;/em&gt; &lt;a href=&quot;http://twitter.com/a2batic&quot;&gt;Kanika Murarka&lt;/a&gt;. Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -361,7 +361,7 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt; and &lt;a href=&quot;https://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt; about my project and it was great! After the discussion, we followed for the next series of talks.&lt;/p&gt;
+&lt;p&gt;Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt; and &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt; about my project and it was great! After the discussion, we followed for the next series of talks.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -369,7 +369,7 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Next talk, I went onto was &lt;em&gt;How to globalize your software by&lt;/em&gt; &lt;a href=&quot;https://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt;. Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!&lt;/p&gt;
+&lt;p&gt;Next talk, I went onto was &lt;em&gt;How to globalize your software by&lt;/em&gt; &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt;. Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -377,7 +377,7 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The following talk was by &lt;a href=&quot;https://fedoraproject.org/wiki/User:Aeng&quot;&gt;Alex Eng&lt;/a&gt; on &lt;em&gt;Zanata, a translation platform&lt;/em&gt;. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.&lt;/p&gt;
+&lt;p&gt;The following talk was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Aeng&quot;&gt;Alex Eng&lt;/a&gt; on &lt;em&gt;Zanata, a translation platform&lt;/em&gt;. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -407,7 +407,7 @@ You’ll never master something that moves at break-neck speed, not to mention t
 
 &lt;p&gt;Day 2 started with heavy rains at Cambodia. Thanks to Sirko for providing raincoats! It was another day of interesting talks and I had my talk at 3pm.&lt;/p&gt;
 
-&lt;p&gt;The first talk I went to was by &lt;a href=&quot;https://fedoraproject.org/wiki/User:Noriko&quot;&gt;Noriko Mizumoto&lt;/a&gt; on &lt;em&gt;How can you help us get Fedora to the world?&lt;/em&gt;. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.&lt;/p&gt;
+&lt;p&gt;The first talk I went to was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Noriko&quot;&gt;Noriko Mizumoto&lt;/a&gt; on &lt;em&gt;How can you help us get Fedora to the world?&lt;/em&gt;. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -466,8 +466,8 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;p&gt;This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Mohan Prakash, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I’m going to cherish for long.&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Nov 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/FUDCon-PhnomPenh/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/FUDCon-PhnomPenh/</guid>
+        <link>http://srijancse.github.io/writing/FUDCon-PhnomPenh/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/FUDCon-PhnomPenh/</guid>
         
         
       </item>
@@ -496,8 +496,8 @@ MediaWikiToLearn Hackathon was organised to bring more new students into the fie
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 01 Oct 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</guid>
+        <link>http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</guid>
         
         
       </item>
@@ -506,18 +506,18 @@ MediaWikiToLearn Hackathon was organised to bring more new students into the fie
         <title>MediaWiki Hackathon BITS Pilani Hyderabad Campus 2016</title>
         <description>&lt;p&gt;I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at the MediaWiki Hackathon on 24th and 25th September, 2016.&lt;/p&gt;
 
-&lt;p&gt;It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on ‘How to contribute to WikiToLearn’ and the talk can be found &lt;a href=&quot;https://slides.com/srijancse/wikitolearn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on ‘How to contribute to WikiToLearn’ and the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Few amazing things, I found out at BITS was :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.&lt;/p&gt;
+    &lt;p&gt;0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Give students bad mess food, they would complain.
 Give students good mess food, they would complain in a month.
-Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; addressing their mess food as boring/bad etc.&lt;/p&gt;
+Baffled at crazy &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; addressing their mess food as boring/bad etc.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -545,8 +545,8 @@ Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</guid>
+        <link>http://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</guid>
         
         
       </item>
@@ -573,7 +573,7 @@ Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&
 
 &lt;p&gt;&lt;strong&gt;Select an organisation/project and contribute&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;This can come either after or before the last point. If you have no idea which organisation interests you, go to the &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/&quot;&gt;Google Summer of Code 2016&lt;/a&gt; and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,&lt;/p&gt;
+&lt;p&gt;This can come either after or before the last point. If you have no idea which organisation interests you, go to the &lt;a href=&quot;http://summerofcode.withgoogle.com/organizations/&quot;&gt;Google Summer of Code 2016&lt;/a&gt; and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,&lt;/p&gt;
 
 &lt;p&gt;1) Get in contact with the developers. Use &lt;a href=&quot;http://www.irccloud.com&quot;&gt;IRC&lt;/a&gt;, subscribe to the developer Mailing List of that org.&lt;/p&gt;
 
@@ -590,8 +590,8 @@ Baffled at crazy &lt;a href=&quot;https://en.wikipedia.org/wiki/User:Soni&quot;&
 &lt;p&gt;Hope this helps you guys. Also, if someone wants to contribute to &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; can contact me anytime. :)&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Jun 2016 13:13:39 +0530</pubDate>
-        <link>https://srijancse.github.io/writing/contribute-to-open-source/</link>
-        <guid isPermaLink="true">https://srijancse.github.io/writing/contribute-to-open-source/</guid>
+        <link>http://srijancse.github.io/writing/contribute-to-open-source/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/contribute-to-open-source/</guid>
         
         
       </item>

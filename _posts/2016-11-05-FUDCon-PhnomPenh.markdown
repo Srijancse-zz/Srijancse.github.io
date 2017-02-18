@@ -26,11 +26,11 @@ Phnom Penh looked more or less like an Indian city just with more **prettier** g
 
 As soon as we reached Hotel, it was almost Dinner time. Sirko Kemter was the local organizer and all the developers decided to go to a nearby BBQ place. Remember, Abhinand is a **pure** vegeterian and he came to eat BBQ (:P). Anyway, the food was great, since I had never tried Lobster and Prawn. Amazing experience, it was.
 
-At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. [Kushal Das](https://kushaldas.in/), [Sayan Chowdhary](http://sayanchowdhury.com/) were among the famous open source developers from India. It was great meeting and interacting with them.
+At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. [Kushal Das](http://kushaldas.in/), [Sayan Chowdhary](http://sayanchowdhury.com/) were among the famous open source developers from India. It was great meeting and interacting with them.
 
 **Day 1 : FUDCon APAC, Norton University, Phnom Penh**
 
-FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by *Fedora State of the Union* talk from [Brian Exelbierd](https://fedoraproject.org/wiki/User:Bex), Fedora Community Action and Impact Coordinator.
+FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by *Fedora State of the Union* talk from [Brian Exelbierd](http://fedoraproject.org/wiki/User:Bex), Fedora Community Action and Impact Coordinator.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -38,7 +38,7 @@ FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by
 </div>
 </div>
 
-The first talk I went to was *Introduction to Rust Programming Language by* [Kanika Murarka](https://twitter.com/a2batic). Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.
+The first talk I went to was *Introduction to Rust Programming Language by* [Kanika Murarka](http://twitter.com/a2batic). Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -46,7 +46,7 @@ The first talk I went to was *Introduction to Rust Programming Language by* [Kan
 </div>
 </div>
 
-Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with [Sumantro Mukherjee](http://sumantrom.blogspot.com) and [Parag Nemade](https://fedoraproject.org/wiki/User:Pnemade) about my project and it was great! After the discussion, we followed for the next series of talks.
+Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with [Sumantro Mukherjee](http://sumantrom.blogspot.com) and [Parag Nemade](http://fedoraproject.org/wiki/User:Pnemade) about my project and it was great! After the discussion, we followed for the next series of talks.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -54,7 +54,7 @@ Lunch was pretty interesting. Everyone gathered at a common lunch place with ful
 </div>
 </div>
 
-Next talk, I went onto was *How to globalize your software by* [Parag Nemade](https://fedoraproject.org/wiki/User:Pnemade). Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!
+Next talk, I went onto was *How to globalize your software by* [Parag Nemade](http://fedoraproject.org/wiki/User:Pnemade). Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!
 
 <div class="image-wrap">
 <div class="image-block">
@@ -62,7 +62,7 @@ Next talk, I went onto was *How to globalize your software by* [Parag Nemade](ht
 </div>
 </div>
 
-The following talk was by [Alex Eng](https://fedoraproject.org/wiki/User:Aeng) on *Zanata, a translation platform*. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.
+The following talk was by [Alex Eng](http://fedoraproject.org/wiki/User:Aeng) on *Zanata, a translation platform*. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.
 
 <div class="image-wrap">
 <div class="image-block">
@@ -92,7 +92,7 @@ The day ended with all the Indians and Ryan going to a Riverside Restaurant and 
 
 Day 2 started with heavy rains at Cambodia. Thanks to Sirko for providing raincoats! It was another day of interesting talks and I had my talk at 3pm.
 
-The first talk I went to was by [Noriko Mizumoto](https://fedoraproject.org/wiki/User:Noriko) on *How can you help us get Fedora to the world?*. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.
+The first talk I went to was by [Noriko Mizumoto](http://fedoraproject.org/wiki/User:Noriko) on *How can you help us get Fedora to the world?*. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.
 
 <div class="image-wrap">
 <div class="image-block">

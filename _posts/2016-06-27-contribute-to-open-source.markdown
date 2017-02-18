@@ -24,7 +24,7 @@ Once you’ve learnt all of the above(and trust me, it is not much), you are rea
 
 **Select an organisation/project and contribute**
 
-This can come either after or before the last point. If you have no idea which organisation interests you, go to the [Google Summer of Code 2016](https://summerofcode.withgoogle.com/organizations/) and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,
+This can come either after or before the last point. If you have no idea which organisation interests you, go to the [Google Summer of Code 2016](http://summerofcode.withgoogle.com/organizations/) and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,
 
 1) Get in contact with the developers. Use [IRC](http://www.irccloud.com), subscribe to the developer Mailing List of that org.
 
