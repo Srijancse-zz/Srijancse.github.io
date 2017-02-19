@@ -2,6 +2,7 @@
 layout: post
 title:  "Contributing to Open Source"
 date:   2016-06-27 01:43:39 -0600
+tags: opensource gsoc soc sok kde
 ---
 
 Since everyone was asking me this question regularly, I thought of writing a blog post of it. So, these are the points, once should be focusing on to crack Google Summer of Code or similar SoC programs.

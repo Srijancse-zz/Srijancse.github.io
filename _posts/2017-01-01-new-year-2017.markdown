@@ -2,6 +2,7 @@
 layout: post
 title:  "3586x2017 : New Year’s Resolution"
 date:   2017-01-01 01:00:39 -0600
+tags: personal
 ---
 
 **2016 — An amazing year**
@@ -34,4 +35,4 @@ This will be my year for *artificial intelligence*. I’ll take a course on AI a
 
 That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!
 
-and *Happy New Year!* :D 
+and *Happy New Year!* :D

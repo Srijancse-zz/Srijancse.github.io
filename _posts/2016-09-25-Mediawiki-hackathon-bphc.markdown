@@ -2,7 +2,7 @@
 layout: post
 title:  "MediaWiki Hackathon BITS Pilani Hyderabad Campus 2016"
 date:   2016-09-25 01:43:39 -0600
-tags: KDE WikiToLearn Talks Sprints Travel MediaWiki
+tags: KDE WikiToLearn Talks Sprints Travel MediaWiki opensource
 ---
 
 I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at the MediaWiki Hackathon on 24th and 25th September, 2016.

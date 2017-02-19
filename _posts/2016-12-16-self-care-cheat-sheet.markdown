@@ -2,6 +2,7 @@
 layout: post
 title:  "Everything Is Awful and I’m Not Okay: questions to ask before giving up!"
 date:   2016-12-16 01:43:39 -0600
+tags: personal 
 ---
 The other day, this article on self care floated across my timeline. I took a look and it looks like a very useful tool for anyone struggling with depression.
 

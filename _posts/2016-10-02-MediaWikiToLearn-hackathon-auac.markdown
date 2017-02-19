@@ -2,7 +2,7 @@
 layout: post
 title:  "MediaWikiToLearn Hackathon, Amrita University Amritapuri Campus 2016"
 date:   2016-10-01 01:43:39 -0600
-tags: KDE WikiToLearn Talks Sprints MediaWiki
+tags: KDE WikiToLearn Talks Sprints MediaWiki opensource
 ---
 
 FOSS@Amrita conducted Mediawiki Hackathon at Amrita University, Amritapuri Campus on 1st and 2nd October, 2016.

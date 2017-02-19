@@ -2,7 +2,7 @@
 layout: post
 title:  "FUDCon APAC Phnom Penh Cambodia 2016"
 date:   2016-11-05 01:43:39 -0600
-tags: KDE WikiToLearn Talks Sprints Travel
+tags: KDE WikiToLearn Talks Sprints Travel opensource
 ---
 
 I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Penh, Cambodia from 4th to 6th November, 2016.
