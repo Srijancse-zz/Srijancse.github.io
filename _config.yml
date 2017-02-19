@@ -28,6 +28,12 @@ sass:
   style: compressed
 gems:
   - jekyll-seo-tag
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_feed_layout: tag_feed
+tag_feed_dir: tag
+tag_permalink_style: pretty
+ignored_tags: [tags,to,ignore]
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.

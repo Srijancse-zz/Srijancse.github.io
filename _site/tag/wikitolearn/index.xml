@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Srijan Agarwal</title>
-    <description>Web Developer, 19. I code, eat and write.</description>
-    <link>http://srijancse.github.io/</link>
-    <atom:link href="http://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Feb 2017 12:34:57 +0530</pubDate>
-    <lastBuildDate>Sun, 19 Feb 2017 12:34:57 +0530</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
-    
-      <item>
-        <title>WikiToLearn India Conference 2017</title>
-        <description>&lt;p&gt;The annual &lt;a href=&quot;http://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - WikiToLearn</title>
+ <link href="http://example.com/tag/wikitolearn/index.xml" rel="self"/>
+ <link href="http://example.com/tag/WikiToLearn.html"/>
+ <updated>2017-02-19T12:34:57+05:30</updated>
+ <id>http://example.com/tag/WikiToLearn.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>WikiToLearn India Conference 2017</title>
+   <link href="http://example.com/writing/WTLIndiaConf2017/"/>
+   <updated>2017-01-20T20:30:39+05:30</updated>
+   <id>http://example.com/writing/WTLIndiaConf2017</id>
+   <content type="html">&lt;p&gt;The annual &lt;a href=&quot;http://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -150,163 +153,15 @@ Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http
 &lt;p&gt;It was the &lt;em&gt;end&lt;/em&gt; of the first &lt;strong&gt;#WTLIndiaConf&lt;/strong&gt; but not the end of my trip. It wasn’t until two more days that I went back to the university. We used this time to visit some of the bewildering ancient monuments at Agra and Fatepur Sikhri, but that’s a blog for some other time.&lt;/p&gt;
 
 &lt;p&gt;Concluding the blog, I extend my gratitude ​to KDE Family for believing in us to make this event happen.​ This was all possible due to the enormous support of KDE and WikiToLearn Developers (who supported us from Italy :D).&lt;/p&gt;
-</description>
-        <pubDate>Fri, 20 Jan 2017 20:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/WTLIndiaConf2017/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/WTLIndiaConf2017/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>Travel</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>My Experiences with NodeJS</title>
-        <description>&lt;p&gt;For the past few months, I have been working with Node.js aka The Node (:D).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Node : Easy to learn, Impossible to master&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If you want to summarize in a line, I would say this (^). If you’ve some experience with JavaScript, then Node is very easy to learn. Google for a few tutorials, play around with &lt;em&gt;Express.js&lt;/em&gt;, and you’re good to go. But as soon as you start playing, you remember, what about database? And, then &lt;em&gt;NPM&lt;/em&gt; comes to the rescue. Few SQL packages could be found, but I always go with Mongo. Easy to work it and open sourced.&lt;/p&gt;
-
-&lt;p&gt;Packages that consist of trivial code no more than 10 lines of code are downloaded in the thousands every day from NPM. Seriously!? You need a dependency for array type checking? And these packages are used by some huge tools such as React.
-You’ll never master something that moves at break-neck speed, not to mention the potential of dependency instability.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Want to catch errors? Good luck, boss!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Me, Coming from other languages such as Python or PHP I’d expect throwing and catching errors, or even returning an error from a function would be a straightforward way of handling errors. It’s not the case with Node.&lt;/p&gt;
-
-&lt;p&gt;Instead, one gets to pass errors around in the callbacks (or promises) — that’s right! No throwing of exceptions. Not to mention if you forget to return your callback on an error, it continues to run and triggers another set of errors after you returned the initial one.&lt;/p&gt;
-
-&lt;p&gt;Even if you do manage to come up with a solid standard for your own errors, you can’t confirm (without reading the source) that the many of the NPM packages you have installed follow the same pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final thoughts on Node&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 Jan 2017 20:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/Experiences-With-Node/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/Experiences-With-Node/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>3586x2017 : New Year’s Resolution</title>
-        <description>&lt;p&gt;&lt;strong&gt;2016 — An amazing year&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The best thing happened to me was &lt;a href=&quot;http://foss.amrita.ac.in&quot;&gt;FOSS at Amrita&lt;/a&gt;, my seniors, and mentors. Working with amazing peeps at &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; has made this year even better. Met and connected with awesome people, traveled to a foreign land for the first time (thanks to WikiToLearn again), learned new skills and now working on an exciting product with &lt;a href=&quot;http://under25.club&quot;&gt;Under 25 club&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In addition, 2016 was a great year, but that doesn’t necessarily mean this debuting 2017 can’t be a better one!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2017 — Future as we know it&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;January 1st is here and it was a long way. After a couple of years watching Mark Zuckerberg setting his goals at the beginning of the year and then showing his accomplishments in December, I decided to start the year with the same idea.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;First: Personal Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;My life is good right now. I have a happy family, friends whom I trust and I am &lt;em&gt;happy&lt;/em&gt;. For this 2017, I want to gain some weight, so I’ll start by exercising and running daily. This goal is difficult for me, so I’ll try my best. It’s my first step to get in shape so I’ll keep that in mind and then find a new goal.&lt;/p&gt;
-
-&lt;p&gt;My main goal is to make at least &lt;em&gt;5&lt;/em&gt; trips this year.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Second: Work Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Funny thing, since last year, I have focused my career on working and studying at the same time. This year, I want to continue contributing to WikiToLearn, work with startups and learn interesting and cool stuff like Machine Learning. If some cool app idea or something comes along the way, awesome, but I won’t be desperate about changing this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Third: Hardware Hacky-Stuff&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This will be my year for &lt;em&gt;artificial intelligence&lt;/em&gt;. I’ll take a course on AI and Machine Learning, so my main goal, much like Zuckerberg’s 2016 goal, is to build something cool using AI and Machine Learning. I want to build something that doesn’t exist yet (atleast planning to), so this summer will serve as exploration and then, in March, I’ll start coding. I hope to find something cool to do so I can show it in December.&lt;/p&gt;
-
-&lt;p&gt;That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!&lt;/p&gt;
-
-&lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Jan 2017 12:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/new-year-2017/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/new-year-2017/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>What is happiness?</title>
-        <description>&lt;p&gt;I never thought about this before, to be honest. Material things do not necessarily bring you happiness. That is a fact of life. We all know that, then why do we get happy by them? &lt;em&gt;‘If material things bring just a temporary and short-term happiness, then what does that mean?’&lt;/em&gt; Does it mean that we have to buy material objects at a rate of perhaps one per day to sustain the temporary and short-term high of getting something new? The problem is, that begins to sound a lot like a drug habit. This train of thinking got me into some very deep areas. Things like:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;What is happiness?&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;What does it mean to be happy?&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;What do I want to do in my life?&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Does life have meaning?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Very deep, isn’t it?&lt;/p&gt;
-</description>
-        <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/what-is-happiness/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/what-is-happiness/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Everything Is Awful and I’m Not Okay: questions to ask before giving up!</title>
-        <description>&lt;p&gt;The other day, this article on self care floated across my timeline. I took a look and it looks like a very useful tool for anyone struggling with depression.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Everything Is Awful and I’m Not Okay: questions to ask before giving up&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Are you hydrated?&lt;/strong&gt;  If not, have a glass of water.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you eaten in the past three hours?&lt;/strong&gt; If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you showered in the past day?&lt;/strong&gt;  If not, take a shower right now.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If daytime: are you dressed?&lt;/strong&gt;  If not, put on clean clothes that aren’t pajamas.  Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If nighttime: are you sleepy and fatigued but resisting going to sleep?&lt;/strong&gt;  Put on pajamas, make yourself cozy in bed with a teddy bear and the sound of falling rain, and close your eyes for fifteen minutes — no electronic screens allowed.  If you’re still awake after that, you can get up again; no pressure.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you stretched your legs in the past day?&lt;/strong&gt;  If not, do so right now.  If you don’t have the spoons for a run or trip to the gym, just walk around the block, then keep walking as long as you please.  If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you said something nice to someone in the past day?&lt;/strong&gt;  Do so, whether online or in person.  Make it genuine; wait until you see something really wonderful about someone, and tell them about it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you moved your body to music in the past day?&lt;/strong&gt;  If not, do so — jog for the length of an EDM song at your favorite BPM, or just dance around the room for the length of an upbeat song.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you cuddled a living being in the past two days?&lt;/strong&gt;  If not, do so.  Don’t be afraid to ask for hugs from friends or friends’ pets.  Most of them will enjoy the cuddles too; you’re not imposing on them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel ineffective?&lt;/strong&gt;  Pause right now and get something small completed, whether it’s responding to an e-mail, loading up the dishwasher, or packing your gym bag for your next trip.  Good job!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel unattractive?&lt;/strong&gt;  Take a goddamn selfie.  Your friends will remind you how great you look, and you’ll fight society’s restrictions on what beauty can look like.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel paralyzed by indecision?&lt;/strong&gt;  Give yourself ten minutes to sit back and figure out a game plan for the day.  If a particular decision or problem is still being a roadblock, simply set it aside for now, and pick something else that seems doable.  Right now, the important part is to break through that stasis, even if it means doing something trivial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you seen a therapist in the past few days?&lt;/strong&gt;  If not, hang on until your next therapy visit and talk through things then.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you been over-exerting yourself lately — physically, emotionally, socially, or intellectually?&lt;/strong&gt;  That can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you changed any of your medications in the past couple of weeks, including skipped doses or a change in generic prescription brand?&lt;/strong&gt; That may be screwing with your head.  Give things a few days, then talk to your doctor if it doesn’t settle down.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you waited a week?&lt;/strong&gt;  Sometimes our perception of life is skewed, and we can’t even tell that we’re not thinking clearly, and there’s no obvious external cause.  It happens.  Keep yourself going for a full week, whatever it takes, and see if you still feel the same way then.&lt;/p&gt;
-
-&lt;p&gt;You’ve made it this far, and you will make it through.  &lt;strong&gt;You are stronger than you think.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The author was kind enough to create a printable Google Doc that’s well-organized and can be found &lt;a href=&quot;http://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view&quot;&gt;here&lt;/a&gt;. They also released it under Creative Commons, which is awesome.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/self-care-cheat-sheet/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/self-care-cheat-sheet/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>FUDCon APAC Phnom Penh Cambodia 2016</title>
-        <description>&lt;p&gt;I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Penh, Cambodia from 4th to 6th November, 2016.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>FUDCon APAC Phnom Penh Cambodia 2016</title>
+   <link href="http://example.com/writing/FUDCon-PhnomPenh/"/>
+   <updated>2016-11-05T13:13:39+05:30</updated>
+   <id>http://example.com/writing/FUDCon-PhnomPenh</id>
+   <content type="html">&lt;p&gt;I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Penh, Cambodia from 4th to 6th November, 2016.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -451,27 +306,15 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;/div&gt;
 
 &lt;p&gt;This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Mohan Prakash, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I’m going to cherish for long.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Nov 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/FUDCon-PhnomPenh/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/FUDCon-PhnomPenh/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>Travel</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>MediaWikiToLearn Hackathon, Amrita University Amritapuri Campus 2016</title>
-        <description>&lt;p&gt;FOSS@Amrita conducted Mediawiki Hackathon at Amrita University, Amritapuri Campus on 1st and 2nd October, 2016.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>MediaWikiToLearn Hackathon, Amrita University Amritapuri Campus 2016</title>
+   <link href="http://example.com/writing/MediaWikiToLearn-hackathon-auac/"/>
+   <updated>2016-10-01T13:13:39+05:30</updated>
+   <id>http://example.com/writing/MediaWikiToLearn-hackathon-auac</id>
+   <content type="html">&lt;p&gt;FOSS@Amrita conducted Mediawiki Hackathon at Amrita University, Amritapuri Campus on 1st and 2nd October, 2016.
 MediaWikiToLearn Hackathon was organised to bring more new students into the field of Open Source Contribution, thereby giving them a chance to interact with developers online. Provide an opportunity to learn the workflow of bug fixing and patch submission in MediaWiki.&lt;/p&gt;
 
 &lt;p&gt;I spoke about &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; to the professors and students of Amrita University, Amritapuri Campus!&lt;/p&gt;
@@ -491,27 +334,15 @@ MediaWikiToLearn Hackathon was organised to bring more new students into the fie
     &lt;img src=&quot;/images/organizers.jpg&quot; alt=&quot;organizers&quot; /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-        <pubDate>Sat, 01 Oct 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>MediaWiki</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>MediaWiki Hackathon BITS Pilani Hyderabad Campus 2016</title>
-        <description>&lt;p&gt;I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at the MediaWiki Hackathon on 24th and 25th September, 2016.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>MediaWiki Hackathon BITS Pilani Hyderabad Campus 2016</title>
+   <link href="http://example.com/writing/Mediawiki-hackathon-bphc/"/>
+   <updated>2016-09-25T13:13:39+05:30</updated>
+   <id>http://example.com/writing/Mediawiki-hackathon-bphc</id>
+   <content type="html">&lt;p&gt;I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at the MediaWiki Hackathon on 24th and 25th September, 2016.&lt;/p&gt;
 
 &lt;p&gt;It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on ‘How to contribute to WikiToLearn’ and the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -550,70 +381,7 @@ Baffled at crazy &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Soni&quot;&g
     &lt;img src=&quot;/images/talk.jpg&quot; alt=&quot;profile image&quot; /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-        <pubDate>Sun, 25 Sep 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/Mediawiki-hackathon-bphc/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>Travel</category>
-        
-        <category>MediaWiki</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Contributing to Open Source</title>
-        <description>&lt;p&gt;Since everyone was asking me this question regularly, I thought of writing a blog post of it. So, these are the points, once should be focusing on to crack Google Summer of Code or similar SoC programs.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Good understanding of one programming language of your choice&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Understanding of a programming language is not just knowing the syntax or how recursion works. If you already know that, great! You are past the first hurdle. Next, you need to take up the task of learning the multiple major libraries and packages that are going to be used in any medium to large scale project. Look up the relevant libraries of your programming language and devote time to learning them. A good understanding of these will go a long way in helping you understand any code base better.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version Control System&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Yes, this is where Github comes in. Distributed revision control(DVCS) is a way of collaborative coding which makes sure that all the code remains secure and concurrent at any given point of time. All, and I mean ALL, organisations use some form of Version Control. Major ones are SVN and Git. Although now mostly every organisation have switched to Git for some of its features, some might still be using SVN. Github is just a Git client which lets you host your code online. Learning Github is not the same as learning Git. Therefore, first, learn Git — Book then, moves on to learn how to use Github. For quick reference, you can also use this: Try Git Having familiarity with version control will give you quite an edge over other candidates.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Learn to read the source code&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There is no substitute for the ability to read through seemingly gigantic code bases. Let’s face it, most of the documentation of any code available is very bad at the best. It may be useful to the end user, but for any new developer, it’s just gibberish. You are on your own when you need to go through the source code of something which spans hundreds of thousands of lines with hundreds of files. Where do you start? Well, it depends. Lear how to use Bug/Issue Trackers Every organisation will have a bug tracker. If you don’t know what a Software bug is, now will be a good time to start. Bug trackers are like the Version Control systems which we talked about earlier. In fact, most version control clients will have an implementation of the bug tracker themselves. Github has an “Issues” system, which is the same thing. A bug tracker, basically, lists all the “issues”(or bugs) currently identified with the software and their “status”(are they solved? Unsolved? Being worked upon). Bug trackers provide the non-developer end users with a way of pointing out a problem in the software. They might also be used to request a new feature, which is different from a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Submit Patches&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you’ve learnt all of the above(and trust me, it is not much), you are ready to submit some patches or bug fixes to a project of your choice. Choose any open source project which is written in a language you know, and more importantly, interests you, and go and browse through its bug tracker. Most bug trackers have issues marked as “volunteer” or “introductory”. Search for such issues, or go with any issue which you think you can fix. Comment/update the issue saying you are taking it up. Solve it on your local system (you’ll know what this is once you know how to use version control) and then push it to the organisation’s remote code base. This is easier said than done, let’s be honest. You’ll need to know at the very least, 1) What DVCS the project is using. 2) What are their workflows for code contribution? (Most organisations have a defined way to submit a patch and you &lt;strong&gt;MUST&lt;/strong&gt; follow that). 3) How to get involved with the community. Because even open source projects won’t accept unauthorised/unreliable code from some newcomer. More on this on the next point.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Select an organisation/project and contribute&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This can come either after or before the last point. If you have no idea which organisation interests you, go to the &lt;a href=&quot;http://summerofcode.withgoogle.com/organizations/&quot;&gt;Google Summer of Code 2016&lt;/a&gt; and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,&lt;/p&gt;
-
-&lt;p&gt;1) Get in contact with the developers. Use &lt;a href=&quot;http://www.irccloud.com&quot;&gt;IRC&lt;/a&gt;, subscribe to the developer Mailing List of that org.&lt;/p&gt;
-
-&lt;p&gt;2) Submit patches. Nothing will help your case as much as your coding capability. Fix bugs. Even one is good. Start with the easiest of bugs. If in doubt, ask the devs to direct you to the bug they think will be good for you to start with.&lt;/p&gt;
-
-&lt;p&gt;3) Get familiar with their workflow. This includes, how they contribute code, their coding style, if they hold any online meetings (do attend) etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ask (Smart) Questions&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you are up and running contributing to a project, you &lt;strong&gt;WILL&lt;/strong&gt; face difficulties. You might not know how a particular piece of code is working, or you might not know about the required technology. This is the time for you to ASK. Ask the established developers in that project, or anyone you think who might know the answer, in general. Asking is not stupid and will see you through a lot of unnecessary struggle. But at the same time remember, &lt;a href=&quot;http://www.catb.org/~esr/faqs/smart-questions.html&quot;&gt;How To Ask Questions The Smart Way&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is what you can do to lift your chances before the application period starts.&lt;/p&gt;
-
-&lt;p&gt;Hope this helps you guys. Also, if someone wants to contribute to &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; can contact me anytime. :)&lt;/p&gt;
-</description>
-        <pubDate>Mon, 27 Jun 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/contribute-to-open-source/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/contribute-to-open-source/</guid>
-        
-        
-      </item>
-    
-  </channel>
-</rss>
+</content>
+ </entry>
+ 
+</feed>
