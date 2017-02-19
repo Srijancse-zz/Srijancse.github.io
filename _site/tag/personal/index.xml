@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - personal</title>
+ <link href="http://example.com/tag/personal/index.xml" rel="self"/>
+ <link href="http://example.com/tag/personal.html"/>
+ <updated>2017-02-19T19:03:04+05:30</updated>
+ <id>http://example.com/tag/personal.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>3586x2017 : New Year’s Resolution</title>
+   <link href="http://example.com/writing/new-year-2017/"/>
+   <updated>2017-01-01T12:30:39+05:30</updated>
+   <id>http://example.com/writing/new-year-2017</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;2016 — An amazing year&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The best thing happened to me was &lt;a href=&quot;http://foss.amrita.ac.in&quot;&gt;FOSS at Amrita&lt;/a&gt;, my seniors, and mentors. Working with amazing peeps at &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; has made this year even better. Met and connected with awesome people, traveled to a foreign land for the first time (thanks to WikiToLearn again), learned new skills and now working on an exciting product with &lt;a href=&quot;http://under25.club&quot;&gt;Under 25 club&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In addition, 2016 was a great year, but that doesn’t necessarily mean this debuting 2017 can’t be a better one!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2017 — Future as we know it&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;January 1st is here and it was a long way. After a couple of years watching Mark Zuckerberg setting his goals at the beginning of the year and then showing his accomplishments in December, I decided to start the year with the same idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First: Personal Life&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My life is good right now. I have a happy family, friends whom I trust and I am &lt;em&gt;happy&lt;/em&gt;. For this 2017, I want to gain some weight, so I’ll start by exercising and running daily. This goal is difficult for me, so I’ll try my best. It’s my first step to get in shape so I’ll keep that in mind and then find a new goal.&lt;/p&gt;
+
+&lt;p&gt;My main goal is to make at least &lt;em&gt;5&lt;/em&gt; trips this year.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second: Work Life&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Funny thing, since last year, I have focused my career on working and studying at the same time. This year, I want to continue contributing to WikiToLearn, work with startups and learn interesting and cool stuff like Machine Learning. If some cool app idea or something comes along the way, awesome, but I won’t be desperate about changing this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Third: Hardware Hacky-Stuff&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This will be my year for &lt;em&gt;artificial intelligence&lt;/em&gt;. I’ll take a course on AI and Machine Learning, so my main goal, much like Zuckerberg’s 2016 goal, is to build something cool using AI and Machine Learning. I want to build something that doesn’t exist yet (atleast planning to), so this summer will serve as exploration and then, in March, I’ll start coding. I hope to find something cool to do so I can show it in December.&lt;/p&gt;
+
+&lt;p&gt;That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!&lt;/p&gt;
+
+&lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What is happiness?</title>
+   <link href="http://example.com/writing/what-is-happiness/"/>
+   <updated>2016-12-16T13:13:39+05:30</updated>
+   <id>http://example.com/writing/what-is-happiness</id>
+   <content type="html">&lt;p&gt;I never thought about this before, to be honest. Material things do not necessarily bring you happiness. That is a fact of life. We all know that, then why do we get happy by them? &lt;em&gt;‘If material things bring just a temporary and short-term happiness, then what does that mean?’&lt;/em&gt; Does it mean that we have to buy material objects at a rate of perhaps one per day to sustain the temporary and short-term high of getting something new? The problem is, that begins to sound a lot like a drug habit. This train of thinking got me into some very deep areas. Things like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;What is happiness?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What does it mean to be happy?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What do I want to do in my life?&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Does life have meaning?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Very deep, isn’t it?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Everything Is Awful and I’m Not Okay: questions to ask before giving up!</title>
+   <link href="http://example.com/writing/self-care-cheat-sheet/"/>
+   <updated>2016-12-16T13:13:39+05:30</updated>
+   <id>http://example.com/writing/self-care-cheat-sheet</id>
+   <content type="html">&lt;p&gt;The other day, this article on self care floated across my timeline. I took a look and it looks like a very useful tool for anyone struggling with depression.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Everything Is Awful and I’m Not Okay: questions to ask before giving up&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Are you hydrated?&lt;/strong&gt;  If not, have a glass of water.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you eaten in the past three hours?&lt;/strong&gt; If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you showered in the past day?&lt;/strong&gt;  If not, take a shower right now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If daytime: are you dressed?&lt;/strong&gt;  If not, put on clean clothes that aren’t pajamas.  Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If nighttime: are you sleepy and fatigued but resisting going to sleep?&lt;/strong&gt;  Put on pajamas, make yourself cozy in bed with a teddy bear and the sound of falling rain, and close your eyes for fifteen minutes — no electronic screens allowed.  If you’re still awake after that, you can get up again; no pressure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you stretched your legs in the past day?&lt;/strong&gt;  If not, do so right now.  If you don’t have the spoons for a run or trip to the gym, just walk around the block, then keep walking as long as you please.  If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you said something nice to someone in the past day?&lt;/strong&gt;  Do so, whether online or in person.  Make it genuine; wait until you see something really wonderful about someone, and tell them about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you moved your body to music in the past day?&lt;/strong&gt;  If not, do so — jog for the length of an EDM song at your favorite BPM, or just dance around the room for the length of an upbeat song.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you cuddled a living being in the past two days?&lt;/strong&gt;  If not, do so.  Don’t be afraid to ask for hugs from friends or friends’ pets.  Most of them will enjoy the cuddles too; you’re not imposing on them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Do you feel ineffective?&lt;/strong&gt;  Pause right now and get something small completed, whether it’s responding to an e-mail, loading up the dishwasher, or packing your gym bag for your next trip.  Good job!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Do you feel unattractive?&lt;/strong&gt;  Take a goddamn selfie.  Your friends will remind you how great you look, and you’ll fight society’s restrictions on what beauty can look like.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Do you feel paralyzed by indecision?&lt;/strong&gt;  Give yourself ten minutes to sit back and figure out a game plan for the day.  If a particular decision or problem is still being a roadblock, simply set it aside for now, and pick something else that seems doable.  Right now, the important part is to break through that stasis, even if it means doing something trivial.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you seen a therapist in the past few days?&lt;/strong&gt;  If not, hang on until your next therapy visit and talk through things then.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you been over-exerting yourself lately — physically, emotionally, socially, or intellectually?&lt;/strong&gt;  That can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you changed any of your medications in the past couple of weeks, including skipped doses or a change in generic prescription brand?&lt;/strong&gt; That may be screwing with your head.  Give things a few days, then talk to your doctor if it doesn’t settle down.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have you waited a week?&lt;/strong&gt;  Sometimes our perception of life is skewed, and we can’t even tell that we’re not thinking clearly, and there’s no obvious external cause.  It happens.  Keep yourself going for a full week, whatever it takes, and see if you still feel the same way then.&lt;/p&gt;
+
+&lt;p&gt;You’ve made it this far, and you will make it through.  &lt;strong&gt;You are stronger than you think.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The author was kind enough to create a printable Google Doc that’s well-organized and can be found &lt;a href=&quot;http://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view&quot;&gt;here&lt;/a&gt;. They also released it under Creative Commons, which is awesome.&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>
