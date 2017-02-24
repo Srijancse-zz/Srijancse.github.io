@@ -8,7 +8,7 @@ tags: personal
 It's not about *me*. It's about this guy I know.
 
 He’s about my age and about my height, he has my face and the colour of our eyes they match in shade and the texture of our skin, is exactly the same.
-He walks like me but his gait is softer. And when he passes by you, you’ll want him to smile at you, touch your arm, fill you with his laughter.
+He walks like me but his gait is softer. And when he passes by you, you’ll want him to smile at you, and fill you with his laughter.
 I’ve heard him speak and he’s shy. His face contorts into funny lines you might not want to hear, so he keeps quiet. Don’t mind him, he’s just trying not to get in your way.
 
 When he doesn't meet your eyes, he’s really quite okay. But once you get to know him, in fact, he’s almost lovely, you just need to show him that you’ll help him build a conversation. That’s all will make him go weak in the knees and then you pretty much own him.
