@@ -30,4 +30,4 @@ See, he’s a lot like me but he’s braver. Harsh words and crude comments don�
 
 He’s the better version even though he’s a lot like me and I think that’s because he’s not what I see. I think that maybe if I stepped out of my shoes and I looked at his objectively maybe, I’d call him awesome because maybe, he is.
 
-Credits : [Rabia Kapoor](papercupplastic.blogspot.com)
+Credits : [Rabia Kapoor](http://papercupplastic.blogspot.com)
