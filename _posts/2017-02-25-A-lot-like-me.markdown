@@ -29,3 +29,5 @@ his guard and and show you his vulnerable side.
 See, he’s a lot like me but he’s braver. Harsh words and crude comments don’t faze him at all, he draws strength, unlike me, from failure. He’s a lot like me but when faced with the scissor; he’s a lot more like rock and I’m a lot more like paper. There is this guy I know and we’re exactly the same. From the height of our body to the length of our names and I have to admit this even though I’m ashamed but I think it’s because I’m to blame.
 
 He’s the better version even though he’s a lot like me and I think that’s because he’s not what I see. I think that maybe if I stepped out of my shoes and I looked at his objectively maybe, I’d call him awesome because maybe, he is.
+
+Credits : Shabia Kapoor
