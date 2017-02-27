@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - sok</title>
+ <link href="http://example.com/tag/sok/index.xml" rel="self"/>
+ <link href="http://example.com/tag/sok.html"/>
+ <updated>2017-02-20T03:05:05+05:30</updated>
+ <id>http://example.com/tag/sok.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>Contributing to Open Source</title>
+   <link href="http://example.com/writing/contribute-to-open-source/"/>
+   <updated>2016-06-27T13:13:39+05:30</updated>
+   <id>http://example.com/writing/contribute-to-open-source</id>
+   <content type="html">&lt;p&gt;Since everyone was asking me this question regularly, I thought of writing a blog post of it. So, these are the points, once should be focusing on to crack Google Summer of Code or similar SoC programs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Good understanding of one programming language of your choice&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Understanding of a programming language is not just knowing the syntax or how recursion works. If you already know that, great! You are past the first hurdle. Next, you need to take up the task of learning the multiple major libraries and packages that are going to be used in any medium to large scale project. Look up the relevant libraries of your programming language and devote time to learning them. A good understanding of these will go a long way in helping you understand any code base better.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version Control System&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, this is where Github comes in. Distributed revision control(DVCS) is a way of collaborative coding which makes sure that all the code remains secure and concurrent at any given point of time. All, and I mean ALL, organisations use some form of Version Control. Major ones are SVN and Git. Although now mostly every organisation have switched to Git for some of its features, some might still be using SVN. Github is just a Git client which lets you host your code online. Learning Github is not the same as learning Git. Therefore, first, learn Git — Book then, moves on to learn how to use Github. For quick reference, you can also use this: Try Git Having familiarity with version control will give you quite an edge over other candidates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Learn to read the source code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There is no substitute for the ability to read through seemingly gigantic code bases. Let’s face it, most of the documentation of any code available is very bad at the best. It may be useful to the end user, but for any new developer, it’s just gibberish. You are on your own when you need to go through the source code of something which spans hundreds of thousands of lines with hundreds of files. Where do you start? Well, it depends. Lear how to use Bug/Issue Trackers Every organisation will have a bug tracker. If you don’t know what a Software bug is, now will be a good time to start. Bug trackers are like the Version Control systems which we talked about earlier. In fact, most version control clients will have an implementation of the bug tracker themselves. Github has an “Issues” system, which is the same thing. A bug tracker, basically, lists all the “issues”(or bugs) currently identified with the software and their “status”(are they solved? Unsolved? Being worked upon). Bug trackers provide the non-developer end users with a way of pointing out a problem in the software. They might also be used to request a new feature, which is different from a bug.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Submit Patches&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you’ve learnt all of the above(and trust me, it is not much), you are ready to submit some patches or bug fixes to a project of your choice. Choose any open source project which is written in a language you know, and more importantly, interests you, and go and browse through its bug tracker. Most bug trackers have issues marked as “volunteer” or “introductory”. Search for such issues, or go with any issue which you think you can fix. Comment/update the issue saying you are taking it up. Solve it on your local system (you’ll know what this is once you know how to use version control) and then push it to the organisation’s remote code base. This is easier said than done, let’s be honest. You’ll need to know at the very least, 1) What DVCS the project is using. 2) What are their workflows for code contribution? (Most organisations have a defined way to submit a patch and you &lt;strong&gt;MUST&lt;/strong&gt; follow that). 3) How to get involved with the community. Because even open source projects won’t accept unauthorised/unreliable code from some newcomer. More on this on the next point.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Select an organisation/project and contribute&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can come either after or before the last point. If you have no idea which organisation interests you, go to the &lt;a href=&quot;http://summerofcode.withgoogle.com/organizations/&quot;&gt;Google Summer of Code 2016&lt;/a&gt; and browse through the list of accepted organisation. Most organisations get accepted recurringly, so you are safe in picking an org which has been accepted 2–3 times already, filter according to the language of your choice. Once you’ve picked an organisation, start creating a good reputation for yourself. To do this,&lt;/p&gt;
+
+&lt;p&gt;1) Get in contact with the developers. Use &lt;a href=&quot;http://www.irccloud.com&quot;&gt;IRC&lt;/a&gt;, subscribe to the developer Mailing List of that org.&lt;/p&gt;
+
+&lt;p&gt;2) Submit patches. Nothing will help your case as much as your coding capability. Fix bugs. Even one is good. Start with the easiest of bugs. If in doubt, ask the devs to direct you to the bug they think will be good for you to start with.&lt;/p&gt;
+
+&lt;p&gt;3) Get familiar with their workflow. This includes, how they contribute code, their coding style, if they hold any online meetings (do attend) etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ask (Smart) Questions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you are up and running contributing to a project, you &lt;strong&gt;WILL&lt;/strong&gt; face difficulties. You might not know how a particular piece of code is working, or you might not know about the required technology. This is the time for you to ASK. Ask the established developers in that project, or anyone you think who might know the answer, in general. Asking is not stupid and will see you through a lot of unnecessary struggle. But at the same time remember, &lt;a href=&quot;http://www.catb.org/~esr/faqs/smart-questions.html&quot;&gt;How To Ask Questions The Smart Way&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is what you can do to lift your chances before the application period starts.&lt;/p&gt;
+
+&lt;p&gt;Hope this helps you guys. Also, if someone wants to contribute to &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; can contact me anytime. :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>
