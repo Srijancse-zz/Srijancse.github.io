@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <style class="cp-pen-styles">
+        @import url("http://fonts.googleapis.com/css?family=Open+Sans");
+        body {
+            font-family: 'Open Sans';
+            padding: 2em;
+            background-image: url("http://subtlepatterns.com/images/transp_bg.png");
+        }
+
+        #toolTipGenerator {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 1em;
+            font-size: .9em;
+            overflow: hidden;
+        }
+
+        #toolTipGenerator .properties {
+            float: left;
+            width: 30%;
+        }
+
+        #toolTipGenerator .properties div {
+            padding: .5em 0;
+        }
+
+        #toolTipGenerator .properties div input[type="text"],
+        #toolTipGenerator .properties div select,
+        #toolTipGenerator .properties div textarea {
+            border: 1px solid #ccc;
+            padding: .3em;
+            margin: 0;
+        }
+
+        #toolTipGenerator .properties div label {
+            display: inline-block;
+            width: 130px;
+            white-space: nowrap;
+        }
+
+        #toolTipGenerator .properties div label[for="t_toolTipWidthAuto"],
+        #toolTipGenerator .properties div label[for="t_toolTipVisible"] {
+            display: inline;
+        }
+
+        #toolTipGenerator .properties div #t_toolTipWidthAuto,
+        #toolTipGenerator .properties div #t_toolTipVisible {
+            margin-left: 140px;
+            margin-top: 10px;
+        }
+
+        #toolTipGenerator .properties div #t_toolTipWidth {
+            width: 50px;
+        }
+
+        #toolTipGenerator .properties div #t_content {
+            height: 150px;
+            width: 100%;
+        }
+
+        #toolTipGenerator .image {
+            position: relative;
+            margin-left: 35%;
+            cursor: crosshair;
+        }
+
+        #toolTipGenerator .image img.target {
+            width: 100%;
+            height: auto;
+        }
+
+        #toolTipGenerator .t_hotSpot.selected:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 6px;
+            top: -7px;
+            left: -7px;
+            border: 1px dashed #000;
+        }
+
+        #toolTipGenerator .t_hotSpot.selected:hover:after {
+            content: 'drag me';
+            position: absolute;
+            bottom: -30px;
+            right: -55px;
+            font-size: 12px;
+            white-space: nowrap;
+            background: rgba(24, 24, 24, 0.9);
+            color: #fff;
+            padding: 0 4px 2px;
+            border-radius: 3px;
+        }
+
+        .t_hotSpot {
+            position: absolute;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+        }
+
+        .t_hotSpot.red {
+            background: #DC143C;
+        }
+
+        .t_hotSpot.green {
+            background: #228B22;
+        }
+
+        .t_hotSpot.blue {
+            background: #0000CD;
+        }
+
+        .t_hotSpot.purple {
+            background: #4B0082;
+        }
+
+        .t_hotSpot.pink {
+            background: #FF69B4;
+        }
+
+        .t_hotSpot.orange {
+            background: #FF8C00;
+        }
+
+        .t_hotSpot.medium {
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -15px;
+        }
+
+        .t_hotSpot.large {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        .t_hotSpot.red {
+            background: #DC143C;
+        }
+
+        .t_hotSpot.green {
+            background: #228B22;
+        }
+
+        .t_hotSpot.blue {
+            background: #0000CD;
+        }
+
+        .t_hotSpot.purple {
+            background: #4B0082;
+        }
+
+        .t_hotSpot.pink {
+            background: #FF69B4;
+        }
+
+        .t_hotSpot.orange {
+            background: #FF8C00;
+        }
+
+        .t_hotSpot.square {
+            border-radius: 0;
+        }
+
+        .t_hotSpot.circleOutline {
+            background: transparent;
+        }
+
+        .t_hotSpot.circleOutline.red {
+            border-color: #DC143C;
+        }
+
+        .t_hotSpot.circleOutline.green {
+            border-color: #228B22;
+        }
+
+        .t_hotSpot.circleOutline.blue {
+            border-color: #0000CD;
+        }
+
+        .t_hotSpot.circleOutline.purple {
+            border-color: #4B0082;
+        }
+
+        .t_hotSpot.circleOutline.pink {
+            border-color: #FF69B4;
+        }
+
+        .t_hotSpot.circleOutline.orange {
+            border-color: #FF8C00;
+        }
+
+        .t_hotSpot.squareOutline {
+            background: transparent;
+            border-radius: 0;
+        }
+
+        .t_hotSpot.squareOutline.red {
+            border-color: #DC143C;
+        }
+
+        .t_hotSpot.squareOutline.green {
+            border-color: #228B22;
+        }
+
+        .t_hotSpot.squareOutline.blue {
+            border-color: #0000CD;
+        }
+
+        .t_hotSpot.squareOutline.purple {
+            border-color: #4B0082;
+        }
+
+        .t_hotSpot.squareOutline.pink {
+            border-color: #FF69B4;
+        }
+
+        .t_hotSpot.squareOutline.orange {
+            border-color: #FF8C00;
+        }
+
+        .t_hotSpot:hover .t_tooltip_content_wrap {
+            opacity: 1;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            position: absolute;
+            padding: 8px;
+            color: #fff;
+            font-size: .8em;
+            border-radius: 5px;
+            background: rgba(24, 24, 24, 0.9);
+            min-width: 20px;
+            min-height: 20px;
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: auto auto auto auto;
+            top: -6px;
+            right: 100%;
+            margin-right: 19px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap a {
+            color: #fff;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap a:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.alwaysVisible {
+            opacity: 1;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.specificWidth img {
+            max-width: 100%;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap:after {
+            content: '';
+            border: 6px solid transparent;
+            position: absolute;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap:after {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            border-color: transparent;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap:after {
+            border-left-color: rgba(24, 24, 24, 0.9);
+            right: -12px;
+            top: 6px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.right {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: auto auto auto auto;
+            top: -6px;
+            left: 100%;
+            margin-left: 19px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.right:after {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            border-color: transparent;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.right:after {
+            border-right-color: rgba(24, 24, 24, 0.9);
+            left: -12px;
+            top: 6px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.top {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: auto auto auto auto;
+            left: -6px;
+            bottom: 100%;
+            margin-bottom: 19px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.top:after {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            border-color: transparent;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.top:after {
+            left: 6px;
+            border-top-color: rgba(24, 24, 24, 0.9);
+            bottom: -12px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.bottom {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: auto auto auto auto;
+            left: -6px;
+            top: 100%;
+            margin-top: 19px;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.bottom:after {
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            border-color: transparent;
+        }
+
+        .t_hotSpot .t_tooltip_content_wrap.bottom:after {
+            left: 6px;
+            border-bottom-color: rgba(24, 24, 24, 0.9);
+            top: -12px;
+        }
+
+        .t_hotSpot.medium .t_tooltip_content_wrap.left,
+        .t_hotSpot.medium .t_tooltip_content_wrap.right {
+            top: -2px;
+        }
+
+        .t_hotSpot.medium .t_tooltip_content_wrap.top,
+        .t_hotSpot.medium .t_tooltip_content_wrap.bottom {
+            left: 0;
+        }
+
+        .t_hotSpot.large .t_tooltip_content_wrap.left,
+        .t_hotSpot.large .t_tooltip_content_wrap.right {
+            top: 0;
+        }
+
+        .t_hotSpot.large .t_tooltip_content_wrap.top,
+        .t_hotSpot.large .t_tooltip_content_wrap.bottom {
+            left: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toolTipGenerator">
+        <section class="properties">
+            <form>
+                <div>
+                    <label for="t_spotType">Spot Type:</label>
+                    <select id="t_spotType">
+          <option value="circle">Circle</option>
+          <option value="square">Square</option>
+          <option value="circleOutline">Circle Outline</option>
+          <option value="squareOutline">Square Outline</option>
+        </select>
+                </div>
+                <div>
+                    <label for="t_spotSize">Spot Size:</label>
+                    <select id="t_spotSize">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+                </div>
+                <div>
+                    <label for="t_spotColor">Spot Color:</label>
+                    <select id="t_spotColor">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+          <option value="pink">Pink</option>
+          <option value="orange">Orange</option>
+        </select>
+                </div>
+                <div>
+                    <label for="t_toolTipWidth">Tooltip Width:</label>
+                    <input type="text" id="t_toolTipWidth" value="200" /> px
+                    <br />
+                    <input type="checkbox" id="t_toolTipWidthAuto" checked> <label for="t_toolTipWidthAuto">Auto</label>
+                </div>
+                <div>
+                    <label for="t_popupPosition">Tooltip Position:</label>
+                    <select id="t_popupPosition">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+                    <br />
+                    <input type="checkbox" id="t_toolTipVisible"> <label for="t_toolTipVisible">Always Visible</label>
+                </div>
+                <div>
+                    <label for="t_content">Content (html):</label>
+                    <textarea id="t_content"></textarea>
+                </div>
+                <div>
+                    <label for="t_deleteSpot">Delete?</label>
+                    <input id="t_deleteSpot" type="button" value="Delete Spot" />
+                </div>
+            </form>
+        </section>
+        <section class="image">
+            <img class="target" src="http://images.performgroup.com/di/library/GOAL_INTERNATIONAL/c2/97/hd-lionel-messi-barcelona_5toanmhsh09f11z1b8ucasj4p.jpg?t=1838656488&w=620&h=430" />
+        </section>
+    </div>
+
+    <div id="debug"></div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script>
+        (function() {
+            // global vars
+            var hotSpotWidth = 30;
+            var spotId = 0;
+            var form = $('#toolTipGenerator form');
+            var image = $('#toolTipGenerator .image');
+
+            var imageOffsetTop = $(image).offset().top;
+            var imageOffsetLeft = $(image).offset().left;
+
+            var hotSpots = [];
+
+            var selectedSpot;
+            var moving = false;
+
+            init();
+
+            function init() {
+                disableForm();
+                formActions();
+                $(image).on('mousedown', function(e) {
+                    if ($(e.target).hasClass('t_hotSpot')) {
+                        hotSpots[$(e.target).attr('id').replace('t_hotspot_', '')].select();
+                    } else {
+                        if (selectedSpot) {
+                            selectedSpot.deselect();
+                        } else {
+                            drawHotSpot(e);
+                        }
+                    }
+                });
+            }
+
+            function drawHotSpot(e) {
+                var x = e.pageX;
+                var y = e.pageY;
+                var relativeToImageTop = y - imageOffsetTop;
+                var relativeToImageLeft = x - imageOffsetLeft;
+
+                var hotSpot = new HotSpot(relativeToImageLeft, relativeToImageTop, $(image));
+                hotSpot.init();
+                hotSpots.push(hotSpot);
+            }
+
+            function disableForm() {
+                $(form).find('input, select, textarea').attr('disabled', 'disabled');
+            }
+
+            function enableForm() {
+                $(form).find('input, select, textarea').removeAttr('disabled');
+            }
+
+            function applySettingToSpot(id) {
+                $('#' + id).on('change', function() {
+                    if (selectedSpot) {
+                        selectedSpot.settings[id] = $(this).val();
+                        selectedSpot.applySettings();
+                    }
+                });
+            }
+
+            function formActions() {
+                applySettingToSpot('t_spotType');
+                applySettingToSpot('t_spotSize');
+                applySettingToSpot('t_spotColor');
+                $('#t_toolTipWidth').on('change', function() {
+                    if (selectedSpot) {
+                        if ($('#t_toolTipWidthAuto')[0].checked) {
+                            $('#t_toolTipWidthAuto').click();
+                        }
+                        selectedSpot.settings['t_toolTipWidth'] = parseInt($(this).val());
+                        selectedSpot.applySettings();
+                    }
+                });
+                $('#t_toolTipWidthAuto').on('change', function() {
+                    if (selectedSpot) {
+                        if ($(this)[0].checked) {
+                            selectedSpot.settings['t_toolTipWidthAuto'] = true;
+                        } else {
+                            selectedSpot.settings['t_toolTipWidthAuto'] = false;
+                        }
+                        selectedSpot.applySettings();
+                    }
+                });
+                $('#t_toolTipVisible').on('change', function() {
+                    if (selectedSpot) {
+                        if ($(this)[0].checked) {
+                            selectedSpot.settings['t_toolTipVisible'] = true;
+                        } else {
+                            selectedSpot.settings['t_toolTipVisible'] = false;
+                        }
+                        selectedSpot.applySettings();
+                    }
+                });
+                applySettingToSpot('t_popupPosition');
+                applySettingToSpot('t_content');
+                $('#t_content').on('keyup', function() {
+                    if (selectedSpot) {
+                        selectedSpot.settings['t_content'] = $(this).val();
+                        selectedSpot.applySettings();
+                    }
+                });
+                $('#t_deleteSpot').on('click', function() {
+                    if (selectedSpot) {
+                        selectedSpot.delete();
+                    }
+                });
+            }
+
+            function applySpotSettingsToForm() {
+                var settings = selectedSpot.settings;
+
+                for (var i in settings) {
+                    if (window.CP.shouldStopExecution(1)) {
+                        break;
+                    }
+                    $('#' + i).val(settings[i]);
+                }
+                window.CP.exitedLoop(1);
+
+                if (selectedSpot.settings['t_toolTipWidthAuto']) {
+                    $('#t_toolTipWidthAuto').attr('checked', 'checked');
+                } else {
+                    $('#t_toolTipWidthAuto').removeAttr('checked');
+                }
+            }
+
+
+
+            function HotSpot(x, y, parent) {
+                this.parent = parent;
+                this.id = spotId;
+                this.x = x;
+                this.y = y;
+                this.html = '<div class="t_hotSpot" id="t_hotspot_' + this.id + '"><div class="t_tooltip_content_wrap"><div class="t_tooltip_content"></div></div></div>';
+                this.root = '';
+
+                this.settings = {
+                    "t_spotType": "circle",
+                    "t_spotSize": "small",
+                    "t_spotColor": "red",
+                    "t_popupPosition": "left",
+                    "t_toolTipVisible": false,
+                    "t_content": "",
+                    "t_toolTipWidth": 200,
+                    "t_toolTipWidthAuto": true
+                };
+
+                spotId++;
+
+            }
+
+
+
+            HotSpot.prototype.init = function() {
+                this.parent.append(this.html);
+                this.root = $('#t_hotspot_' + this.id).draggable({
+                    containment: "parent"
+                });
+
+                this.root.css({
+                    "left": this.x,
+                    "top": this.y
+                });
+
+                this.applySettings();
+
+            };
+
+            HotSpot.prototype.select = function() {
+                $('.t_hotSpot.selected').removeClass('selected');
+                this.root.addClass('selected');
+
+                this.root.find('.t_tooltip_content_wrap').css({
+                    opacity: 1
+                });
+                selectedSpot = this;
+                applySpotSettingsToForm();
+                enableForm();
+            };
+            HotSpot.prototype.deselect = function() {
+                $('.t_hotSpot.selected').removeClass('selected');
+
+                this.root.find('.t_tooltip_content_wrap').css("opacity", "");
+
+                selectedSpot = null;
+                disableForm();
+            };
+            HotSpot.prototype.delete = function() {
+                this.deselect();
+                this.root.remove();
+
+                hotSpots[this.id] = null;
+            };
+
+            HotSpot.prototype.applySettings = function() {
+                this.root.removeClass('circle').removeClass('square').removeClass('circleOutline').removeClass('squareOutline').removeClass('small').removeClass('medium').removeClass('large').removeClass('red').removeClass('green').removeClass(
+                    'blue').removeClass('purple').removeClass('pink').removeClass('orange');
+
+                var wrap = this.root.find('.t_tooltip_content_wrap');
+                wrap.removeClass('top').removeClass('left').removeClass('bottom').removeClass('right');
+
+
+                this.root.addClass(this.settings['t_spotType']);
+                this.root.addClass(this.settings['t_spotSize']);
+                this.root.addClass(this.settings['t_spotColor']);
+                wrap.addClass(this.settings['t_popupPosition']);
+                wrap.find('.t_tooltip_content').html(this.settings['t_content']);
+
+                wrap.removeClass('alwaysVisible');
+                if (this.settings['t_toolTipVisible']) {
+                    wrap.addClass('alwaysVisible')
+                }
+
+                if (!this.settings['t_toolTipWidthAuto']) {
+                    wrap.css({
+                        'width': this.settings['t_toolTipWidth']
+                    }).addClass('specificWidth');
+                } else {
+                    wrap.css({
+                        'width': 'auto'
+                    }).removeClass('specificWidth');
+                }
+
+            };
+        })();
+    </script>
+    <script>
+        var CSSReload = {
+            head: null,
+            init: function() {
+                this._storeHead(), this._listenToPostMessages()
+            },
+            _storeHead: function() {
+                this.head = document.head || document.getElementsByTagName("head")[0]
+            },
+            _listenToPostMessages: function() {
+                var e = this;
+                window[this._eventMethod()](this._messageEvent(), function(t) {
+                    try {
+                        var s = JSON.parse(t.data);
+                        "string" == typeof s.css && e._refreshCSS(s)
+                    } catch (e) {}
+                }, !1)
+            },
+            _messageEvent: function() {
+                return "attachEvent" === this._eventMethod() ? "onmessage" : "message"
+            },
+            _eventMethod: function() {
+                return window.addEventListener ? "addEventListener" : "attachEvent"
+            },
+            _refreshCSS: function(e) {
+                var t = this._findPrevCPStyle(),
+                    s = document.createElement("style");
+                s.type = "text/css", s.className = "cp-pen-styles", s.styleSheet ? s.styleSheet.cssText = e.css : s.appendChild(document.createTextNode(e.css)), this.head.appendChild(s), t && t.parentNode.removeChild(t), "prefixfree" === e.css_prefix &&
+                    StyleFix.process()
+            },
+            _findPrevCPStyle: function() {
+                for (var e = document.getElementsByTagName("style"), t = e.length - 1; t >= 0; t--)
+                    if ("cp-pen-styles" === e[t].className) return e[t];
+                return !1
+            }
+        };
+        CSSReload.init();
+    </script>
+    <script>
+        ! function() {
+            function n() {
+                l(), t()
+            }
+
+            function t() {
+                window.addEventListener("message", a, !0)
+            }
+
+            function e(n) {
+                var t;
+                try {
+                    t = {}.toString.call(n)
+                } catch (n) {
+                    t = "[object Object]"
+                }
+                return t
+            }
+
+            function o(n, t) {
+                for (var e = n.length; e--;)
+                    if (n[e] === t) return !0;
+                return !1
+            }
+
+            function r(n) {
+                return !!(n && "object" == typeof n && "nodeType" in n && 1 === n.nodeType && n.outerHTML)
+            }
+
+            function c(n, t) {
+                return n.toLowerCase() < t.toLowerCase() ? -1 : 1
+            }
+
+            function i(n) {
+                if (null === n || "undefined" == typeof n) return 1;
+                var t, o = e(n);
+                if ("[object Number]" === o || "[object Boolean]" === o || "[object String]" === o) return 1;
+                if ("[object Function]" === o || "[object global]" === o) return 2;
+                if ("[object Object]" === o) {
+                    var r = Object.keys(n);
+                    for (t = 0; t < r.length; t++) {
+                        var c = n[r[t]];
+                        if (i = {}.toString.call(c), "[object Function]" === i || "[object Object]" === i || "[object Array]" === i) return 2
+                    }
+                    return 1
+                }
+                if ("[object Array]" === o) {
+                    for (t = 0; t < n.length; t++) {
+                        var c = n[t],
+                            i = {}.toString.call(c);
+                        if ("[object Function]" === i || "[object Object]" === i || "[object Array]" === i) return 2
+                    }
+                    return 1
+                }
+                return 2
+            }
+
+            function u(n, t, o) {
+                var r, i, l = "",
+                    a = [];
+                if (o = o || "", t = t || [], null === n) return "null";
+                if ("undefined" == typeof n) return "undefined";
+                if (l = e(n), "[object Object]" == l && (l = "Object"), "[object Number]" == l) return "" + n;
+                if ("[object Boolean]" == l) return n ? "true" : "false";
+                if ("[object Function]" == l) return n.toString().split("\n  ").join("\n" + o);
+                if ("[object String]" == l) return '"' + n.replace(/"/g, "'") + '"';
+                for (i = 0; i < t.length; i++)
+                    if (n === t[i]) return "[circular " + l.slice(1) + ("outerHTML" in n ? " :\n" + n.outerHTML.split("\n").join("\n" + o) : "");
+                if (t.push(n), "[object Array]" == l) {
+                    for (r = 0; r < n.length; r++) a.push(u(n[r], t));
+                    return "[" + a.join(", ") + "]"
+                }
+                if (l.match(/Array/)) return l;
+                var f = l + " ",
+                    s = o + "  ";
+                if (o.length / 2 < 2) {
+                    var b = [];
+                    try {
+                        for (r in n) b.push(r)
+                    } catch (n) {}
+                    for (b.sort(c), r = 0; r < b.length; r++) try {
+                        a.push(s + b[r] + ": " + u(n[b[r]], t, s))
+                    } catch (n) {}
+                }
+                return a.length ? f + "{\n" + a.join(",\n") + "\n" + o + "}" : f + "{}"
+            }
+
+            function l() {
+                if (window.console)
+                    for (var n = 0; n < f.length; n++) ! function() {
+                        var t = f[n];
+                        window.console[t] && (window.console[t] = function() {
+                            for (var n = [].slice.call(arguments), e = [], o = [], c = 0; c < n.length; c++) r(n[c]) ? (o.push(u(n[c].outerHTML)), e.push(1)) : (o.push(u(n[c])), e.push(i(n[c])));
+                            b.postMessage(["console", {
+                                "function": t,
+                                arguments: o,
+                                complexity: Math.max.apply(null, e)
+                            }], "*"), this.apply(console, n)
+                        }.bind(console[t]))
+                    }()
+            }
+
+            function a(n) {
+                var t = n.data;
+                if ("object" == typeof t && "command" === t.type) {
+                    try {
+                        var e = window.eval(t.command)
+                    } catch (n) {
+                        return void console.error(n.message)
+                    }
+                    if (.30000000000000004 === e) return void console.log("I love JavaScript too.");
+                    if (o(s, t.command)) return void console.log("Plz no WATS.");
+                    console.log(e)
+                }
+            }
+            var f = ["log", "error", "warn", "info", "debug", "table", "time", "timeEnd", "count", "clear"],
+                s = ["({} + [])", "({} + []);", "({} + [])", "({} + []);", "{} + {}", "{} + {};", "({} + {})", "({} + {});", "[] == []", "[] == [];", "[] == ![]", "[] == ![];", "[] + []", "[] + [];"],
+                b = window.parent;
+            n()
+        }();
+    </script>
+    <script>
+        ! function() {
+            function e() {
+                if (void 0 != window.pageYOffset) return {
+                    x: pageXOffset,
+                    y: t(pageYOffset)
+                };
+                var e, n, o = document,
+                    r = o.documentElement,
+                    i = o.body;
+                return e = r.scrollLeft || i.scrollLeft || 0, n = r.scrollTop || i.scrollTop || 0, {
+                    x: e,
+                    y: t(n)
+                }
+            }
+
+            function t(e) {
+                return Number((e / (n() - window.innerHeight)).toFixed(2))
+            }
+
+            function n() {
+                var e = document.body,
+                    t = document.documentElement,
+                    n = Math.max(e.scrollHeight, e.offsetHeight, t.clientHeight, t.scrollHeight, t.offsetHeight);
+                return n
+            }
+
+            function o(e, t, n, o) {
+                return e /= o / 2, e < 1 ? n / 2 * e * e + t : (e--, -n / 2 * (e * (e - 2) - 1) + t)
+            }
+
+            function r(e) {
+                if (e) {
+                    for (var t = [], n = !1; null != e.parentNode;) {
+                        for (var o = 0, r = 0, i = 0; i < e.parentNode.childNodes.length; i++) {
+                            var a = e.parentNode.childNodes[i];
+                            a.nodeName == e.nodeName && (a === e && (r = o), o++)
+                        }
+                        var c = e.nodeName.toLowerCase();
+                        n && (c += "::shadow", n = !1), o > 1 ? t.unshift(c + ":nth-of-type(" + (r + 1) + ")") : t.unshift(c), e = e.parentNode, 11 === e.nodeType && (n = !0, e = e.host)
+                    }
+                    return t.splice(0, 1), t.join(" > ")
+                }
+            }
+
+            function i(e) {
+                N || (N = e);
+                var t = e - N,
+                    n = o(t, E, b - E, X);
+                if (window.scrollTo(0, n), t < X) {
+                    requestAnimationFrame(i)
+                } else N = null, E = null, L = !1
+            }
+
+            function a() {
+                c()
+            }
+
+            function c() {
+                window.addEventListener("message", f, !0);
+                for (var e = 0; e < k.length; e++) window.addEventListener(k[e], u, !0);
+                window.addEventListener("scroll", s, !0)
+            }
+
+            function s() {
+                clearTimeout(w), w = setTimeout(function() {
+                    l()
+                }, T)
+            }
+
+            function l() {
+                C.postMessage(["event", {
+                    type: "scroll",
+                    positions: e()
+                }], "*")
+            }
+
+            function u(e) {
+                for (var t = r(e.target), n = e.constructor.name, o = e.type, i = {
+                        type: o,
+                        targetPath: t,
+                        eventClass: n
+                    }, a = {}, c = 0; c < x.length; c++) {
+                    var s = x[c];
+                    "undefined" != typeof e[s] && (a[s] = e[s])
+                }
+                i.options = a, Y.push(i), clearTimeout(g), g = setTimeout(function() {
+                    d()
+                }, H)
+            }
+
+            function d() {
+                C.postMessage(["event", Y], "*"), Y = []
+            }
+
+            function f(e) {
+                var t = e.data;
+                t.length && "event" === t[0] && t[1] && ("scroll" === t[1].type ? p(t[1].positions) : v(t[1]))
+            }
+
+            function p(e) {
+                L !== !0 && (L = !0, E = document.documentElement.scrollTop || document.body.scrollTop, b = e.y * (n() - window.innerHeight), requestAnimationFrame(i))
+            }
+
+            function v(e) {
+                for (var t = 0; t < e.length; t++) h(e[t])
+            }
+
+            function h(e) {
+                "MouseEvent" === e.eventClass ? m(e) : "KeyboardEvent" === e.eventClass && y(e)
+            }
+
+            function m(e) {
+                var t = document.querySelector(e.targetPath),
+                    n = new MouseEvent(e.type, {
+                        bubbles: !0,
+                        cancelable: !0,
+                        view: window
+                    });
+                t.dispatchEvent(n)
+            }
+
+            function y(e) {
+                var t = document.querySelector(e.targetPath),
+                    n = new KeyboardEvent(e.type, e.options);
+                t.dispatchEvent(n)
+            }
+            var w, g, E, b, N, T = 300,
+                H = 500,
+                Y = [],
+                L = !1,
+                X = 300,
+                k = ["click", "keydown", "keypress", "keyup"],
+                x = ["altKey", "code", "ctrlKey", "keyCode", "which", "clientX", "clientY", "layerX", "layerY", "offsetX", "offsetY", "pageX", "pageY", "screenX", "screenY", "x", "y"],
+                C = window.parent;
+            a()
+        }();
+    </script>
+
+</body>
+
+</html>

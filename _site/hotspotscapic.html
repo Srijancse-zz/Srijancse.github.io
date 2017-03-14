@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-noir.min.css'>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .wrapper {
+            position: relative;
+        }
+
+        .hotspots {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            z-index: 100;
+        }
+
+        .hotspots .hotspot-item {
+            position: absolute;
+        }
+
+        .hotspots .hotspot-item.hotspot-item-1 {
+            left: 30%;
+            top: 20%;
+        }
+
+        .hotspots .hotspot-item.hotspot-item-2 {
+            left: 50%;
+            top: 50%;
+        }
+
+        .hotspots .hotspot-item.hotspot-item-3 {
+            left: 70%;
+            top: 20%;
+        }
+
+        .hotspots .hotspot-item.hotspot-item-4 {
+            left: 10%;
+            top: 80%;
+        }
+
+        .hotspots .hotspot-item a {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #FFF;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            left: auto;
+            top: auto;
+            border-radius: 100%;
+            -moz-transition: all 0.2s 0;
+            -o-transition: all 0.2s 0;
+            -webkit-transition: all 0.2s 0;
+            transition: all 0.2s 0;
+        }
+
+        .hotspots .hotspot-item a:hover {
+            -moz-transform: scale(1.3, 1.3);
+            -ms-transform: scale(1.3, 1.3);
+            -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+        }
+
+        .hotspots .hotspot-item a span {
+            width: 10px;
+            height: 10px;
+            margin: -5px 0 0 -5px;
+            border-radius: 100%;
+            position: absolute;
+            display: block;
+            background: #FFF;
+            left: 50%;
+            top: 50%;
+        }
+
+        .hotspots .hotspot-item a.hotspot-red {
+            background: rgba(255, 0, 0, 0.4);
+            border-color: red;
+        }
+
+        .hotspots .hotspot-item a.hotspot-green {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: green;
+        }
+
+        .hotspots .hotspot-item a.hotspot-blue {
+            background: rgba(0, 0, 255, 0.5);
+            border-color: blue;
+        }
+
+        .hotspots .hotspot-item a.hotspot-yellow {
+            background: rgba(255, 255, 0, 0.5);
+            border-color: yellow;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+</head>
+
+<body translate="no">
+
+    <div class="wrapper">
+        <img src="http://o.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/750x422/quality/95/http://www.blogcdn.com/slideshows/images/slides/373/085/3/S3730853/slug/l/001-2017-mercedes-e-class-interior-1.jpg" />
+        <div class="hotspots">
+            <div class="hotspot-item hotspot-item-1">
+                <a rel="nofollow" rel="noreferrer" href="#" class="hotspot-red tooltip-1" title="Here is some tooltip content">
+                    <span></span>
+                </a>
+            </div>
+            <div class="hotspot-item hotspot-item-2">
+                <a rel="nofollow" rel="noreferrer" href="#" class="hotspot-green tooltip-1" title="Here is some tooltip content">
+                    <span></span>
+                </a>
+            </div>
+            <div class="hotspot-item hotspot-item-3">
+                <a rel="nofollow" rel="noreferrer" href="#" class="hotspot-blue tooltip-2">
+                    <span></span>
+                </a>
+            </div>
+            <div class="hotspot-item hotspot-item-4">
+                <a rel="nofollow" rel="noreferrer" href="#" class="hotspot-yellow tooltip-1" title="Here is some tooltip content">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js'></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.tooltip-1').tooltipster({
+                delay: 100,
+                maxWidth: 500,
+                speed: 300,
+                interactive: true,
+                animation: 'grow',
+                theme: 'tooltipster-noir',
+            });
+
+            $('.tooltip-2').tooltipster({
+                content: $('<iframe width="640" height="360" src="http://www.youtube.com/watch?v=EpDPwksS-iA" frameborder="0" allowfullscreen></iframe>'),
+                animation: 'grow',
+                fixedWidth: 300,
+                position: 'left',
+                theme: 'tooltipster-noir',
+                interactive: true,
+            });
+        });
+    </script>
+</body>
+</html>

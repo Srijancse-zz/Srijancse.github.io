@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>Your Title - code</title>
- <link href="http://example.com/tag/code/index.xml" rel="self"/>
- <link href="http://example.com/tag/code.html"/>
+ <link href="http://srijanagarwal.me/tag/code/index.xml" rel="self"/>
+ <link href="http://srijanagarwal.me/tag/code.html"/>
  <updated>2017-02-20T03:05:05+05:30</updated>
- <id>http://example.com/tag/code.html</id>
+ <id>http://srijanagarwal.me/tag/code.html</id>
  <author>
    <name>Author Here</name>
  </author>
- 
+
  <entry>
    <title>My Experiences with NodeJS</title>
-   <link href="http://example.com/writing/Experiences-With-Node/"/>
+   <link href="http://srijanagarwal.me/writing/Experiences-With-Node/"/>
    <updated>2017-01-04T20:30:39+05:30</updated>
-   <id>http://example.com/writing/Experiences-With-Node</id>
+   <id>http://srijanagarwal.me/writing/Experiences-With-Node</id>
    <content type="html">&lt;p&gt;For the past few months, I have been working with Node.js aka The Node (:D).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Node : Easy to learn, Impossible to master&lt;/strong&gt;&lt;/p&gt;
@@ -36,5 +36,5 @@ You’ll never master something that moves at break-neck speed, not to mention t
 &lt;p&gt;Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.&lt;/p&gt;
 </content>
  </entry>
- 
+
 </feed>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>Your Title - soc</title>
- <link href="http://example.com/tag/soc/index.xml" rel="self"/>
- <link href="http://example.com/tag/soc.html"/>
+ <link href="http://srijanagarwal.me/tag/soc/index.xml" rel="self"/>
+ <link href="http://srijanagarwal.me/tag/soc.html"/>
  <updated>2017-02-20T03:05:05+05:30</updated>
- <id>http://example.com/tag/soc.html</id>
+ <id>http://srijanagarwal.me/tag/soc.html</id>
  <author>
    <name>Author Here</name>
  </author>
  
  <entry>
    <title>Contributing to Open Source</title>
-   <link href="http://example.com/writing/contribute-to-open-source/"/>
+   <link href="http://srijanagarwal.me/writing/contribute-to-open-source/"/>
    <updated>2016-06-27T13:13:39+05:30</updated>
-   <id>http://example.com/writing/contribute-to-open-source</id>
+   <id>http://srijanagarwal.me/writing/contribute-to-open-source</id>
    <content type="html">&lt;p&gt;Since everyone was asking me this question regularly, I thought of writing a blog post of it. So, these are the points, once should be focusing on to crack Google Summer of Code or similar SoC programs.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Good understanding of one programming language of your choice&lt;/strong&gt;&lt;/p&gt;
