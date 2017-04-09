@@ -29,6 +29,7 @@ sass:
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - amp-jekyll
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_feed_layout: tag_feed
