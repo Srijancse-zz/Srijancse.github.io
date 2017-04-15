@@ -83,4 +83,4 @@ var name = `Your name is ${first} ${last}.`
 var url = `http://localhost/api/${id}`
 ```
 
-You can learn more about ES6 features [here](http://exploringjs.com/es6/). A [cheatsheet[(https://github.com/azat-co/cheatsheets/tree/master/es6)] too.
+You can learn more about ES6 features [here](http://exploringjs.com/es6/). A [cheatsheet](https://github.com/azat-co/cheatsheets/tree/master/es6) too.
