@@ -2,7 +2,7 @@
 layout: post
 title:  "Awesome features you must be using in JavaScript ES6!"
 date:   2017-04-15 01:43:39 -0600
-tags: technical javascript js
+tags: technical javascript js code
 ---
 
 <div class="image-wrap">
