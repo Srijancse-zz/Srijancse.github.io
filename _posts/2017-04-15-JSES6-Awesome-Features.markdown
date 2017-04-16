@@ -55,7 +55,7 @@ $('.btn').click(function(event){
 })
 ```
 
-This is the ES6 code without *_this = this:*
+This is the ES6 code without `_this = this:`
 
 ```
 $('.btn').click((event) =>{
