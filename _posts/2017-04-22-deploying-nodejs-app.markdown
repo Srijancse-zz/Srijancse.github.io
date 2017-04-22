@@ -46,8 +46,11 @@ In the case of Node.js, it will start a default web process via the start script
 2. Create Heroku remote repository `heroku create appName`
 
 3. Add the new changes made to the app `git add .`
+
 3. Commit the snapshot `git commit -m “Added a Procfile.”`
+
 4. Push to your app to the newly created heroku remote repository `git push heroku master` 
+
 Bonus: `run heroku logs` to see logs. 
 Note: If your app runs on a database, you will need to add the database as an add-on.
 
