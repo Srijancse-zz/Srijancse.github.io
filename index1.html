@@ -1,7 +1,8 @@
 <html>
-<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+<head>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -17,15 +18,12 @@
   var textboxRef = database.child('textbox'); //Get a reference to the "textbox" child
   var $textbox = $('#textbox'); //Saves a referenve to the textarea element using jQuery
 
-  //When anything changes (added, removed, updated) in the "textbox" child in the database
   textboxRef.on('value', function(snapshot) {
     console.log("From Firebase:", snapshot.val());
-    $textbox.val(snapshot.val().text); //Set the value of the textarea to the value returned by Firebase (specifically the "text" property of the "textbox" child)
+    $textbox.val(snapshot.val().text);
   });
 
-  //When any key is released while the textarea is in focus
   $textbox.keyup(function() {
-    //Updates the properties and values in the database child called "textbox" with the object provided. The "set" function is used instead of the "update" function so that if the database child "textbox" of its properties are removed, this will create it as well as update it
     textboxRef.set({
       text: $textbox.val()
     });
@@ -33,6 +31,7 @@
 </script>
 
 <link rel="stylesheet" href="style.css">
+</head>
 <textarea name="textbox" id="textbox" placeholder="Type here"></textarea>
 
 </html>
