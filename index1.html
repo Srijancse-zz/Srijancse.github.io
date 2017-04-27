@@ -28,7 +28,7 @@ var $textbox = $('#textbox'); //Saves a reference to the textarea element using 
 textboxRef.on('value', function(snapshot) {
   console.log("From Firebase:", snapshot.val());
   $textbox.val(snapshot.val().text); //Set the value of the textarea to the value returned by Firebase (specifically the "text" property of the "textbox" child)
-})(jQuery);
+});
 
 //When any key is released while the textarea is in focus
 $textbox.keyup(function() {
