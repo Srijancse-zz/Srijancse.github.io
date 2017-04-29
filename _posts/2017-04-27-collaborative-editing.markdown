@@ -24,28 +24,30 @@ Introducing latency between the client and server is where the problems arise. L
 
 Let's take an example :
 
-**Starting Client's state : **
+**Starting Client's state :**
 
 ` abcd `
 
-**Starting Server's state : **
+**Starting Server's state :**
 
 ` abcd `
 
 *Client* enters `x` in between `c` and `d` , the operation would look something like this :
 
-```
+`
 {
     insert(x,3); //where 3 is the position where x is going to be added (0=a, 1=b, 2=c ..)
 }
-```
+`
+
 And at the same time, *Server* deletes `b` , the operation would be :
 
-```
+`
 {
     delete(b,1);
 }
-```
+`
+
 What actually should happen is that the client and server should both end with ```acxd``` but in reality, *client* ends with ```acxd``` but the *server* ends with ```acdx```. Ofcourse, ```acxd != acdx``` and the document which is shared now is in wrong state.
 
 Here is where the **Operational Transformation** comes to the rescue. 
