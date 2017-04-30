@@ -12,12 +12,6 @@ Recently, I've been diving deep on how **real-time collaborative** editing works
 
 If you know how real-time collaborative editing works, then you may know that handling concurrent editing in multi user environment gracefully is very challenging. However, a few simple concepts can simplify this problem. The main challenge, as mentioned, with collaborative editing is the concurrency control [**concurrent edits**] to the document are not commutative. This needs to be causally ordered before applying either by undoing history, or by transforming the operations [**operational transformation**] before applying them to make them seem commutative.
 
-### Client - Server [OT] Approach to Collaborative Editing
-
-Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily. 
-
-This source of truth also forces the client to wait for the server to **acknowledge** the operation that the client has just sent which would mean that the client always stays on the server's OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. 
-
 ### Bringing Latency into action
 
 Introducing latency between the client and server is where the problems arise. Latency in a collaborative editor introduces the possibility of version conflicts. Here, where, I said Operational Transformation will come into action. 
@@ -53,6 +47,9 @@ What actually should happen is that the client and server should both end with `
 Here is where the **Operational Transformation** comes to the rescue. 
 
 
+### Client - Server [OT] Approach to Collaborative Editing
 
+Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily. 
 
+This source of truth also forces the client to wait for the server to **acknowledge** the operation that the client has just sent which would mean that the client always stays on the server's OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. 
 
