@@ -40,7 +40,6 @@ What actually should happen is that the client and server should both end with `
 Starting Document State -> ABCD
 "Insert 'x'" operation at offset 3 [local] -> ABCXD
 "Delete 'b'" operation at offset 1 [remote] -> ACXD
-
 ```
 
 but the *server* ends with ```acdx```. 
@@ -49,15 +48,49 @@ but the *server* ends with ```acdx```.
 Starting Document State -> ABCD
 "Delete 'b'" operation at offset 1 [local] -> ACD
 "Insert 'x'" operation at offset 3 [remote] -> ACDX
-
 ```
 
 Ofcourse, ```ACXD != ACDX``` and the document which is shared now is in wrong state.
 
 Here is where the **Operational Transformation** algorithm comes to the rescue. 
 
+### Operational Transformation Algorithm
+
+Operational Transformation (OT) is an algorithm/technique for the transformation of operations such that they can be applied to documents whose states have diverged, bringing them both back to the same state.
+
+#### How does Operational Transformation work?
+
+A short overview of how OT works :
+
+* Every change (insertion or deletion) is represented as an **operation**. An operation can be applied to the current document which results into a new document state.
+
+
+* To handle concurrent operations, we use the **tranform** function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change. 
+
+Let's apply Operational Transformation in the original example.
+
+If we apply OT, *Client* will see :
+
+```
+Starting Document State -> ABCD
+"Insert 'x'" operation at offset 3 [local] -> ABCXD
+"Delete 'b'" operation at offset 1 [transformed] -> ACXD
+```
+
+and *Server* will see :
+
+```
+Starting Document State -> ABCD
+"Delete 'b'" operation at offset 1 [local] -> ACD
+"Insert 'x'" operation at offset 2 [transformed] -> ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
+```
+
+
 
 ### Client - Server [OT] Approach to Collaborative Editing
+
+
+The **transform** function is used to build a client-server protocol that can handle collaboration between any number of clients.
 
 Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily. 
 
