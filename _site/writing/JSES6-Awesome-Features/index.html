@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- http redirect for github pages -->
+    <script type="text/javascript">
+        var host = 'srijancse.github.io';
+        if ((host === window.location.host) && (window.location.protocol === 'http:')) {
+            window.location.protocol = 'http'; // without ':' for firefox compatibility
+        }
+    </script>
+    <!-- styles -->
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Srijan Agarwal: Web Developer" property="og:title">
+    <meta content="Srijan Agarwal: Web Developer" property="twitter:title">
+    <meta content="website" property="og:type">
+    <meta content="Srijan Agarwal" property="og:site_name">
+    <meta property="fb:admins" content="1103227056" />
+    <meta name="google-site-verification" content="bnuGRmgx_XG_VFyzEgt7GUg9BX6349k3A2aGUZjn2wY" />
+    <!-- title and desc -->
+    <title>Awesome features you must be using in JavaScript ES6! | Srijan Agarwal</title>
+    <meta name="description" content="    ">
+
+    <link rel="canonical" href="http://srijancse.github.io/writing/JSES6-Awesome-Features/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="width mx-auto px3 my4">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="top-subtitle">
+        <a href="/writing/">Writing</a>
+        <a href="/"><div class="dot"></div></a>
+    </h1>
+    <h1 class="title" itemprop="name headline"><a href="">Awesome features you must be using in JavaScript ES6!</a></h1>
+    <div class="meta">
+        <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
+        </span>
+        <time datetime="2017-04-15T13:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+            15 Apr 2017
+        </time>
+    </div>
+  </header>
+
+  <div class="content" itemprop="articleBody">
+    <div class="image-wrap">
+<div class="image-block">
+    <img src="/images/js.png" alt="js" />
+</div>
+</div>
+
+<p>As the JavaScript community continued to expand rapidly in last few years, a lot of good things have happened to JavaScript as a language. One of those good things was its penetration into the server-side development world via Node.js (yaay).</p>
+
+<p><strong>Disclaimer</strong>: the list if highly biased and subjective. It is in no way was intended to diminish usefulness of other ES6 features, which didn’t make it to the list simply because I had to limit the number to 3.</p>
+
+<h3> 1. Default Parameters in ES6 </h3>
+<p>Before the arrival of ES2015, when one wanted to specify a default parameter in a function, he/she had to do it in the body of the function like so:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function greetHuman(name) {
+    name = name || 'human';
+    return 'Hello ' + name + ', we come in peace';
+}
+    greetHuman();
+    greetHuman('Srijan');
+</code></pre>
+</div>
+
+<p>They were okay until the value was 0, because 0 is falsy in JavaScript and it would default to the hard-coded value instead of becoming the value itself. Of course, who needs 0 as a value (:P), so we just ignored this flaw and used the logic OR anyway. No more!</p>
+
+<p>With ES6, one can now do this in a function head and as such, we no longer have to perform checks for undefined parameters in the function’s body.</p>
+
+<p>Here’s what the code in ES6 would look like if you’re combining arrow functions, template literal, and default:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const greetHuman = (name = 'human') =&gt; `Hello ${human}, we come in peace`;
+greetHuman('Srijan'); 'Hello Srijan, we come in peace'
+greetHuman(); 'Hello human, we come in peace'
+
+</code></pre>
+</div>
+<h3> 2. Arrow Functions in ES6 </h3>
+<p>If you are a JavaScript developer, you would already know the good old way of declaring functions.</p>
+
+<p>This is probably one feature I waited the most. Now we have them in ES6. The arrows are amazing because they would make your this behave properly, i.e., <code class="highlighter-rouge">this</code> will have the same value as in the context of the function—it won’t mutate. The mutation typically happens each time you create a closure.</p>
+
+<p>Using arrows functions in ES6 allows us to stop using <code class="highlighter-rouge">that = this or self = this or _this = this or .bind(this)</code>.</p>
+
+<p>Good ol’ ES5 code :
+<code class="highlighter-rouge">
+var _this = this
+$('.btn').click(function(event){
+  _this.send()
+})
+</code></p>
+
+<p>This is the ES6 code without <code class="highlighter-rouge">_this = this:</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$('.btn').click((event) =&gt;{
+  this.send()
+})
+</code></pre>
+</div>
+
+<p>As you can see, the code looks shorter and cleaner — we can even omit the curly braces <code class="highlighter-rouge"><span class="p">{}</span></code> (one-liners only). There is support for implicit return as well, so we can conveniently omit the <code class="highlighter-rouge">return</code> keyword.</p>
+
+<h3> 3. Template Literals in ES6 </h3>
+
+<p>Template literals or interpolation in other languages is a way to output variables in the string. This remains one of the most important feature as it really makes string concatenation easier and much more bearable.</p>
+
+<p>So in ES5 we had to break the string like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var name = 'Your name is ' + first + ' ' + last + '.'
+var url = 'http://localhost/api/' + id
+</code></pre>
+</div>
+
+<p>Luckily, in ES6 we can use a new syntax <code class="highlighter-rouge">${NAME}</code> inside of the back-ticked string:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var name = `Your name is ${first} ${last}.`
+var url = `http://localhost/api/${id}`
+</code></pre>
+</div>
+
+<p>You can learn more about ES6 features <a href="http://exploringjs.com/es6/">here</a>. A <a href="https://github.com/azat-co/cheatsheets/tree/master/es6">cheatsheet</a> too.</p>
+
+  </div>
+</article>
+
+  
+
+
+
+    <script>
+    (function() {
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        var GOOGLE_ANALYTICS_TRACKING_ID = "UA-83244237-1";
+
+        ga('create', GOOGLE_ANALYTICS_TRACKING_ID, 'auto');
+        ga('send', 'pageview');
+    })();
+</script>
+
+</body>
+
+</html>

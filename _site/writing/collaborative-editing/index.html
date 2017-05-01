@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- http redirect for github pages -->
+    <script type="text/javascript">
+        var host = 'srijancse.github.io';
+        if ((host === window.location.host) && (window.location.protocol === 'http:')) {
+            window.location.protocol = 'http'; // without ':' for firefox compatibility
+        }
+    </script>
+    <!-- styles -->
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Srijan Agarwal: Web Developer" property="og:title">
+    <meta content="Srijan Agarwal: Web Developer" property="twitter:title">
+    <meta content="website" property="og:type">
+    <meta content="Srijan Agarwal" property="og:site_name">
+    <meta property="fb:admins" content="1103227056" />
+    <meta name="google-site-verification" content="bnuGRmgx_XG_VFyzEgt7GUg9BX6349k3A2aGUZjn2wY" />
+    <!-- title and desc -->
+    <title>Operational Transformation and Conflict-free Replicated Data Types! | Srijan Agarwal</title>
+    <meta name="description" content="Recently, I’ve been diving deep on how real-time collaborative editing works. I have been reading various papers on both the methods of implementing collabor...">
+
+    <link rel="canonical" href="http://srijancse.github.io/writing/collaborative-editing/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="width mx-auto px3 my4">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="top-subtitle">
+        <a href="/writing/">Writing</a>
+        <a href="/"><div class="dot"></div></a>
+    </h1>
+    <h1 class="title" itemprop="name headline"><a href="">Operational Transformation and Conflict-free Replicated Data Types!</a></h1>
+    <div class="meta">
+        <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
+        </span>
+        <time datetime="2017-05-01T06:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+            1 May 2017
+        </time>
+    </div>
+  </header>
+
+  <div class="content" itemprop="articleBody">
+    <p>Recently, I’ve been diving deep on how <strong>real-time collaborative</strong> editing works. I have been reading various papers on both the methods of implementing collaborative editing : <strong>Operational Transformation</strong>, which goes back to 1989, when it was first implemented by the <a href="https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf">GROVE (GRoup Outtie Viewing Editor)</a> system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, etc; Wave) and <strong>Conflict-Free Replicated Data Types</strong>, which is a much newer approach to real-time editing.</p>
+
+<h3 id="real-challenge-of-collaborative-editing">Real challenge of collaborative editing</h3>
+
+<p>If you know how real-time collaborative editing works, then you may know that handling concurrent editing in multi user environment gracefully is very challenging. However, a few simple concepts can simplify this problem. The main challenge, as mentioned, with collaborative editing is the concurrency control [<strong>concurrent edits</strong>] to the document are not commutative. This needs to be causally ordered before applying either by undoing history, or by transforming the operations [<strong>operational transformation</strong>] before applying them to make them seem commutative.</p>
+
+<h3 id="bringing-latency-into-action">Bringing Latency into action</h3>
+
+<p>Introducing latency between the client and server is where the problems arise. Latency in a collaborative editor introduces the possibility of version conflicts. Here, where, I said Operational Transformation will come into action.</p>
+
+<p>Let’s take an example :</p>
+
+<p><strong>Starting Client’s state :</strong></p>
+
+<p><code class="highlighter-rouge"> abcd </code></p>
+
+<p><strong>Starting Server’s state :</strong></p>
+
+<p><code class="highlighter-rouge"> abcd </code></p>
+
+<p><em>Client</em> enters <code class="highlighter-rouge">x</code> in between <code class="highlighter-rouge">c</code> and <code class="highlighter-rouge">d</code> , the operation would look something like this :</p>
+
+<p><code class="highlighter-rouge">insert(x,3) //where 3 is the position where x is going to be added (0=a, 1=b, 2=c ..)</code></p>
+
+<p>And at the same time, <em>Server</em> deletes <code class="highlighter-rouge">b</code> , the operation would be :</p>
+
+<p><code class="highlighter-rouge">delete(b,1)</code></p>
+
+<p>What actually should happen is that the client and server should both end with <code class="highlighter-rouge">acxd</code> but in reality, <em>client</em> ends with <code class="highlighter-rouge">acxd</code> but the <em>server</em> ends with <code class="highlighter-rouge">acdx</code>. Ofcourse, <code class="highlighter-rouge">acxd != acdx</code> and the document which is shared now is in wrong state.</p>
+
+<p>Here is where the <strong>Operational Transformation</strong> comes to the rescue.</p>
+
+<h3 id="client---server-ot-approach-to-collaborative-editing">Client - Server [OT] Approach to Collaborative Editing</h3>
+
+<p>Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily.</p>
+
+<p>This source of truth also forces the client to wait for the server to <strong>acknowledge</strong> the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server.</p>
+
+
+  </div>
+</article>
+
+  
+
+
+
+    <script>
+    (function() {
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        var GOOGLE_ANALYTICS_TRACKING_ID = "UA-83244237-1";
+
+        ga('create', GOOGLE_ANALYTICS_TRACKING_ID, 'auto');
+        ga('send', 'pageview');
+    })();
+</script>
+
+</body>
+
+</html>

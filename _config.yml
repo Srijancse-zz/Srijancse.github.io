@@ -22,7 +22,7 @@ exclude: [".ruby-version", "Gemfile", "Gemfile.lock", "wercker.yml"]
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: coderay
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed

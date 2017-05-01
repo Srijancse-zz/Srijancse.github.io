@@ -5,9 +5,241 @@
     <description>Web Developer, 19. I code, eat and write.</description>
     <link>http://srijancse.github.io/</link>
     <atom:link href="http://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Apr 2017 11:22:31 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2017 11:22:31 +0530</lastBuildDate>
+    <pubDate>Mon, 01 May 2017 14:10:04 +0530</pubDate>
+    <lastBuildDate>Mon, 01 May 2017 14:10:04 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Operational Transformation and Conflict-free Replicated Data Types!</title>
+        <description>&lt;p&gt;Recently, I’ve been diving deep on how &lt;strong&gt;real-time collaborative&lt;/strong&gt; editing works. I have been reading various papers on both the methods of implementing collaborative editing : &lt;strong&gt;Operational Transformation&lt;/strong&gt;, which goes back to 1989, when it was first implemented by the &lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;GROVE (GRoup Outtie Viewing Editor)&lt;/a&gt; system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, etc; Wave) and &lt;strong&gt;Conflict-Free Replicated Data Types&lt;/strong&gt;, which is a much newer approach to real-time editing.&lt;/p&gt;
+
+&lt;h3 id=&quot;real-challenge-of-collaborative-editing&quot;&gt;Real challenge of collaborative editing&lt;/h3&gt;
+
+&lt;p&gt;If you know how real-time collaborative editing works, then you may know that handling concurrent editing in multi user environment gracefully is very challenging. However, a few simple concepts can simplify this problem. The main challenge, as mentioned, with collaborative editing is the concurrency control [&lt;strong&gt;concurrent edits&lt;/strong&gt;] to the document are not commutative. This needs to be causally ordered before applying either by undoing history, or by transforming the operations [&lt;strong&gt;operational transformation&lt;/strong&gt;] before applying them to make them seem commutative.&lt;/p&gt;
+
+&lt;h3 id=&quot;bringing-latency-into-action&quot;&gt;Bringing Latency into action&lt;/h3&gt;
+
+&lt;p&gt;Introducing latency between the client and server is where the problems arise. Latency in a collaborative editor introduces the possibility of version conflicts. Here, where, I said Operational Transformation will come into action.&lt;/p&gt;
+
+&lt;p&gt;Let’s take an example :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Starting Client’s state :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; abcd &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Starting Server’s state :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; abcd &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Client&lt;/em&gt; enters &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; in between &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; , the operation would look something like this :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;insert(x,3) //where 3 is the position where x is going to be added (0=a, 1=b, 2=c ..)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And at the same time, &lt;em&gt;Server&lt;/em&gt; deletes &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; , the operation would be :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;delete(b,1)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;What actually should happen is that the client and server should both end with &lt;code class=&quot;highlighter-rouge&quot;&gt;acxd&lt;/code&gt; but in reality, &lt;em&gt;client&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;acxd&lt;/code&gt; but the &lt;em&gt;server&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;acdx&lt;/code&gt;. Ofcourse, &lt;code class=&quot;highlighter-rouge&quot;&gt;acxd != acdx&lt;/code&gt; and the document which is shared now is in wrong state.&lt;/p&gt;
+
+&lt;p&gt;Here is where the &lt;strong&gt;Operational Transformation&lt;/strong&gt; comes to the rescue.&lt;/p&gt;
+
+&lt;h3 id=&quot;client---server-ot-approach-to-collaborative-editing&quot;&gt;Client - Server [OT] Approach to Collaborative Editing&lt;/h3&gt;
+
+&lt;p&gt;Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily.&lt;/p&gt;
+
+&lt;p&gt;This source of truth also forces the client to wait for the server to &lt;strong&gt;acknowledge&lt;/strong&gt; the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 01 May 2017 06:13:39 +0530</pubDate>
+        <link>http://srijancse.github.io/writing/collaborative-editing/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/collaborative-editing/</guid>
+        
+        <category>technical</category>
+        
+        <category>javascript</category>
+        
+        <category>js</category>
+        
+        <category>code</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Deploy a Node.js app in minutes using Heroku!</title>
+        <description>&lt;p&gt;As more and more Node.js projects are being coded, deploying a nodejs app just got easier. I would guide you through on how one can deploy a node.js app in minutes using Heroku.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is Heroku?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Heroku&lt;/em&gt; is a cloud platform that lets companies/individuals build, deliver, monitor, and scale applications. It is often regarded as the fastest way to go from an idea to URL bypassing all those infrastructure headaches (i.e, one doesn’t has to worry about infrastructure; just focus on the application).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What Heroku offers?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Heroku offers &lt;em&gt;Platform as a Service [PaaS]&lt;/em&gt; type of cloud computing, the delivery of computing services : servers, storage, databases, networking, software, and more over the Internet (“the cloud”).&lt;/p&gt;
+
+&lt;p&gt;Operating at the layer above raw computing hardware, whether physical or virtual, Platform as a Service [PaaS] provides a method for programming languages to interact with services like databases, web servers, and file storage, without having to deal with lower level requirements like how much space a database needs, whether the data must be protected by making a copy between 3 servers, or distributing the workload across servers that can be spread throughout the world. Typically, applications must be written for a specific PaaS offering to take full advantage of the service, and most platforms only support a limited set of programming languages.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages/Benefits&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There is no doubt that Heroku takes away all the pain of installing softwares, configuring servers, maintaining, and monitoring the software — it takes care of most of the configurations. Other services could easily be added as add-ons.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heroku&lt;/strong&gt; is:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Easy deployment&lt;/li&gt;
+  &lt;li&gt;Uses version control system commands (git)&lt;/li&gt;
+  &lt;li&gt;Security&lt;/li&gt;
+  &lt;li&gt;Plenty of Add-on resources (applications, databases etc.)&lt;/li&gt;
+  &lt;li&gt;Processes scaling : independent scaling for each component of your app without affecting functionality and performance&lt;/li&gt;
+  &lt;li&gt;Isolation : each process (i.e dyno) is completely isolated from each other thorough Documentation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;How to deploy a Node.js app :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some prerequisites you need to have before deploying :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A Node.js app. [ofcourse xD]&lt;/li&gt;
+  &lt;li&gt;A free Heroku account.&lt;/li&gt;
+  &lt;li&gt;The Heroku CLI.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s get down to it!
+1.  Login to your Heroku via the command line heroku login. This will prompt for your credential.
+Add Procfile to your application echo &lt;code class=&quot;highlighter-rouge&quot;&gt;‘web: ./node_modules/.bin/forever -m 5 server.js’ &amp;gt;Procfile&lt;/code&gt;
+A Procfile is not necessary to deploy apps written in most languages supported by Heroku. The platform automatically detects the language, and creates a default web process type to boot the application server. 
+In the case of Node.js, it will start a default web process via the start script in your &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;. Creating an explicit Procfile is recommended for greater control and flexibility for your app.As the case maybe, &lt;code class=&quot;highlighter-rouge&quot;&gt;web: ./node_modules/.bin/forever -m 5 server.js&lt;/code&gt;, I am using Node.js’ forever module to start my server named server.js&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create Heroku remote repository &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku create appName&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the new changes made to the app &lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Commit the snapshot &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m “Added a Procfile.”&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Push to your app to the newly created heroku remote repository &lt;code class=&quot;highlighter-rouge&quot;&gt;git push heroku master&lt;/code&gt; &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Bonus: &lt;code class=&quot;highlighter-rouge&quot;&gt;run heroku logs&lt;/code&gt; to see logs. 
+Note: If your app runs on a database, you will need to add the database as an add-on.&lt;/p&gt;
+
+&lt;p&gt;Feel free to ping me on &lt;a href=&quot;www.twitter.com/srijancse&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Apr 2017 06:13:39 +0530</pubDate>
+        <link>http://srijancse.github.io/writing/deploying-nodejs-app/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/deploying-nodejs-app/</guid>
+        
+        <category>technical</category>
+        
+        <category>javascript</category>
+        
+        <category>js</category>
+        
+        <category>code</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Awesome features you must be using in JavaScript ES6!</title>
+        <description>&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/js.png&quot; alt=&quot;js&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As the JavaScript community continued to expand rapidly in last few years, a lot of good things have happened to JavaScript as a language. One of those good things was its penetration into the server-side development world via Node.js (yaay).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: the list if highly biased and subjective. It is in no way was intended to diminish usefulness of other ES6 features, which didn’t make it to the list simply because I had to limit the number to 3.&lt;/p&gt;
+
+&lt;h3&gt; 1. Default Parameters in ES6 &lt;/h3&gt;
+&lt;p&gt;Before the arrival of ES2015, when one wanted to specify a default parameter in a function, he/she had to do it in the body of the function like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function greetHuman(name) {
+    name = name || &#39;human&#39;;
+    return &#39;Hello &#39; + name + &#39;, we come in peace&#39;;
+}
+    greetHuman();
+    greetHuman(&#39;Srijan&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;They were okay until the value was 0, because 0 is falsy in JavaScript and it would default to the hard-coded value instead of becoming the value itself. Of course, who needs 0 as a value (:P), so we just ignored this flaw and used the logic OR anyway. No more!&lt;/p&gt;
+
+&lt;p&gt;With ES6, one can now do this in a function head and as such, we no longer have to perform checks for undefined parameters in the function’s body.&lt;/p&gt;
+
+&lt;p&gt;Here’s what the code in ES6 would look like if you’re combining arrow functions, template literal, and default:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const greetHuman = (name = &#39;human&#39;) =&amp;gt; `Hello ${human}, we come in peace`;
+greetHuman(&#39;Srijan&#39;); &#39;Hello Srijan, we come in peace&#39;
+greetHuman(); &#39;Hello human, we come in peace&#39;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3&gt; 2. Arrow Functions in ES6 &lt;/h3&gt;
+&lt;p&gt;If you are a JavaScript developer, you would already know the good old way of declaring functions.&lt;/p&gt;
+
+&lt;p&gt;This is probably one feature I waited the most. Now we have them in ES6. The arrows are amazing because they would make your this behave properly, i.e., &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; will have the same value as in the context of the function—it won’t mutate. The mutation typically happens each time you create a closure.&lt;/p&gt;
+
+&lt;p&gt;Using arrows functions in ES6 allows us to stop using &lt;code class=&quot;highlighter-rouge&quot;&gt;that = this or self = this or _this = this or .bind(this)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Good ol’ ES5 code :
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+var _this = this
+$(&#39;.btn&#39;).click(function(event){
+  _this.send()
+})
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the ES6 code without &lt;code class=&quot;highlighter-rouge&quot;&gt;_this = this:&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&#39;.btn&#39;).click((event) =&amp;gt;{
+  this.send()
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, the code looks shorter and cleaner — we can even omit the curly braces &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt; (one-liners only). There is support for implicit return as well, so we can conveniently omit the &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; keyword.&lt;/p&gt;
+
+&lt;h3&gt; 3. Template Literals in ES6 &lt;/h3&gt;
+
+&lt;p&gt;Template literals or interpolation in other languages is a way to output variables in the string. This remains one of the most important feature as it really makes string concatenation easier and much more bearable.&lt;/p&gt;
+
+&lt;p&gt;So in ES5 we had to break the string like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &#39;Your name is &#39; + first + &#39; &#39; + last + &#39;.&#39;
+var url = &#39;http://localhost/api/&#39; + id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Luckily, in ES6 we can use a new syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;${NAME}&lt;/code&gt; inside of the back-ticked string:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = `Your name is ${first} ${last}.`
+var url = `http://localhost/api/${id}`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can learn more about ES6 features &lt;a href=&quot;http://exploringjs.com/es6/&quot;&gt;here&lt;/a&gt;. A &lt;a href=&quot;https://github.com/azat-co/cheatsheets/tree/master/es6&quot;&gt;cheatsheet&lt;/a&gt; too.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Apr 2017 13:13:39 +0530</pubDate>
+        <link>http://srijancse.github.io/writing/JSES6-Awesome-Features/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/JSES6-Awesome-Features/</guid>
+        
+        <category>technical</category>
+        
+        <category>javascript</category>
+        
+        <category>js</category>
+        
+        <category>code</category>
+        
+        
+      </item>
     
       <item>
         <title>Fossasiasummit</title>
@@ -319,266 +551,6 @@ You’ll never master something that moves at break-neck speed, not to mention t
         <guid isPermaLink="true">http://srijancse.github.io/writing/what-is-happiness/</guid>
         
         <category>personal</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Everything Is Awful and I’m Not Okay: questions to ask before giving up!</title>
-        <description>&lt;p&gt;The other day, this article on self care floated across my timeline. I took a look and it looks like a very useful tool for anyone struggling with depression.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Everything Is Awful and I’m Not Okay: questions to ask before giving up&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Are you hydrated?&lt;/strong&gt;  If not, have a glass of water.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you eaten in the past three hours?&lt;/strong&gt; If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you showered in the past day?&lt;/strong&gt;  If not, take a shower right now.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If daytime: are you dressed?&lt;/strong&gt;  If not, put on clean clothes that aren’t pajamas.  Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If nighttime: are you sleepy and fatigued but resisting going to sleep?&lt;/strong&gt;  Put on pajamas, make yourself cozy in bed with a teddy bear and the sound of falling rain, and close your eyes for fifteen minutes — no electronic screens allowed.  If you’re still awake after that, you can get up again; no pressure.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you stretched your legs in the past day?&lt;/strong&gt;  If not, do so right now.  If you don’t have the spoons for a run or trip to the gym, just walk around the block, then keep walking as long as you please.  If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you said something nice to someone in the past day?&lt;/strong&gt;  Do so, whether online or in person.  Make it genuine; wait until you see something really wonderful about someone, and tell them about it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you moved your body to music in the past day?&lt;/strong&gt;  If not, do so — jog for the length of an EDM song at your favorite BPM, or just dance around the room for the length of an upbeat song.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you cuddled a living being in the past two days?&lt;/strong&gt;  If not, do so.  Don’t be afraid to ask for hugs from friends or friends’ pets.  Most of them will enjoy the cuddles too; you’re not imposing on them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel ineffective?&lt;/strong&gt;  Pause right now and get something small completed, whether it’s responding to an e-mail, loading up the dishwasher, or packing your gym bag for your next trip.  Good job!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel unattractive?&lt;/strong&gt;  Take a goddamn selfie.  Your friends will remind you how great you look, and you’ll fight society’s restrictions on what beauty can look like.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Do you feel paralyzed by indecision?&lt;/strong&gt;  Give yourself ten minutes to sit back and figure out a game plan for the day.  If a particular decision or problem is still being a roadblock, simply set it aside for now, and pick something else that seems doable.  Right now, the important part is to break through that stasis, even if it means doing something trivial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you seen a therapist in the past few days?&lt;/strong&gt;  If not, hang on until your next therapy visit and talk through things then.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you been over-exerting yourself lately — physically, emotionally, socially, or intellectually?&lt;/strong&gt;  That can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you changed any of your medications in the past couple of weeks, including skipped doses or a change in generic prescription brand?&lt;/strong&gt; That may be screwing with your head.  Give things a few days, then talk to your doctor if it doesn’t settle down.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Have you waited a week?&lt;/strong&gt;  Sometimes our perception of life is skewed, and we can’t even tell that we’re not thinking clearly, and there’s no obvious external cause.  It happens.  Keep yourself going for a full week, whatever it takes, and see if you still feel the same way then.&lt;/p&gt;
-
-&lt;p&gt;You’ve made it this far, and you will make it through.  &lt;strong&gt;You are stronger than you think.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The author was kind enough to create a printable Google Doc that’s well-organized and can be found &lt;a href=&quot;http://drive.google.com/file/d/0B6A2F5ky9SELU0Zfd05YMEpyNUk/view&quot;&gt;here&lt;/a&gt;. They also released it under Creative Commons, which is awesome.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 16 Dec 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/self-care-cheat-sheet/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/self-care-cheat-sheet/</guid>
-        
-        <category>personal</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>FUDCon APAC Phnom Penh Cambodia 2016</title>
-        <description>&lt;p&gt;I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Penh, Cambodia from 4th to 6th November, 2016.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/fudcon.png&quot; alt=&quot;fudcon&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;FUDCon (Fedora Users and Developers Conference) is an important event in the world of free software that is held in different parts of the world organized by Fedora Organization. The FUDCon comprised of sessions, talks, workshops and hackfest in which project participants worked on specific initiatives. FUDCon Phnom Penh was conducted at Norton University, Phnom Penh along Barcamp ASEAN. Around 50 speakers from around the world gave talks related to entrepreneurship and open source software. I was traveling with one my friends, Abhinand N, who also got selected to deliver a talk on Mediawiki. Looked like, we were the only two undergrads who were invited to deliver talks.&lt;/p&gt;
-
-&lt;p&gt;It was my first international trip and pretty amazing. My itinerary was something like this : Cochin -&amp;gt; Kuala Lumpur -&amp;gt; Phnom Penh (4th November) and Phnom Penh -&amp;gt; Bangkok -&amp;gt; Cochin (9th November).&lt;/p&gt;
-
-&lt;p&gt;Phnom Penh looked more or less like an Indian city just with more &lt;strong&gt;prettier&lt;/strong&gt; girls (:D) and &lt;strong&gt;no&lt;/strong&gt; public transport. We reached Phnom Penh on 4th evening, and a tuktuk driver was waiting for us at the airport to take us to the hotel. If you’re wondering what a tuktuk looks like, see this :&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/tuk-tuk.jpeg&quot; alt=&quot;tuktuk&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;As soon as we reached Hotel, it was almost Dinner time. Sirko Kemter was the local organizer and all the developers decided to go to a nearby BBQ place. Remember, Abhinand is a &lt;strong&gt;pure&lt;/strong&gt; vegeterian and he came to eat BBQ (:P). Anyway, the food was great, since I had never tried Lobster and Prawn. Amazing experience, it was.&lt;/p&gt;
-
-&lt;p&gt;At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. &lt;a href=&quot;http://kushaldas.in/&quot;&gt;Kushal Das&lt;/a&gt;, &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt; were among the famous open source developers from India. It was great meeting and interacting with them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Day 1 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by &lt;em&gt;Fedora State of the Union&lt;/em&gt; talk from &lt;a href=&quot;http://fedoraproject.org/wiki/User:Bex&quot;&gt;Brian Exelbierd&lt;/a&gt;, Fedora Community Action and Impact Coordinator.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/brian.jpg&quot; alt=&quot;brian&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The first talk I went to was &lt;em&gt;Introduction to Rust Programming Language by&lt;/em&gt; &lt;a href=&quot;http://twitter.com/a2batic&quot;&gt;Kanika Murarka&lt;/a&gt;. Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/kanika.jpg&quot; alt=&quot;kanika&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt; and &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt; about my project and it was great! After the discussion, we followed for the next series of talks.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/lunch.png&quot; alt=&quot;lunch&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Next talk, I went onto was &lt;em&gt;How to globalize your software by&lt;/em&gt; &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt;. Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/paragn.jpg&quot; alt=&quot;paragn&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The following talk was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Aeng&quot;&gt;Alex Eng&lt;/a&gt; on &lt;em&gt;Zanata, a translation platform&lt;/em&gt;. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/alex.jpg&quot; alt=&quot;paragn&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The next talk was on &lt;em&gt;Web Virtual Reality&lt;/em&gt; by &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt;. The highlight of the talk was a-frame. A-frame is a web framework for building virtual reality experiences and works on almost all devices. With just few lines of code, you can turn a video into 360 degree Virtual Reality. Amazing, isn’t it?&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/sumantro.jpg&quot; alt=&quot;sumantro&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The last talk of the day was by &lt;a href=&quot;anweshadas.in&quot;&gt;Anwesha Das&lt;/a&gt; on &lt;em&gt;A walk on licenses in Fedora ecosystem&lt;/em&gt;. She gave an overview of all the open source licenses, why it is important to use a license and what are the best practices of using a license. The take from the talk was not to use &lt;em&gt;personalized&lt;/em&gt; licenses and even if you use it, not to name it like &lt;strong&gt;Buy me a beer&lt;/strong&gt; or something similar. Overall, it was great to learn about Licenses.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/anwesha.jpg&quot; alt=&quot;anwesha&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The day ended with all the Indians and Ryan going to a Riverside Restaurant and having amazing food.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Day 2 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Day 2 started with heavy rains at Cambodia. Thanks to Sirko for providing raincoats! It was another day of interesting talks and I had my talk at 3pm.&lt;/p&gt;
-
-&lt;p&gt;The first talk I went to was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Noriko&quot;&gt;Noriko Mizumoto&lt;/a&gt; on &lt;em&gt;How can you help us get Fedora to the world?&lt;/em&gt;. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/noriko.jpg&quot; alt=&quot;noriko&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Following was the talk on &lt;em&gt;Exploring Fedora Infrastructure&lt;/em&gt; by &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt;. Sayan Chowdhary is a Senior Software Engineer at Red Hat, Pune and has been a Python developer contributing to Fedora. Sayan talked about Fedora web projects and how can one contribute to them.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/sayan.jpg&quot; alt=&quot;sayan&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Next was the talk by &lt;a href=&quot;http://kushaldas.in&quot;&gt;Kushal Das&lt;/a&gt; on &lt;em&gt;Testing Fedora Atomic in an automated way&lt;/em&gt;. I don’t need to introduce him (:P). He talked about testing fedora atomic project in an automated way by using Python and Go script made by him. It went over my head mostly, since I never contributed to Fedora. Anyway, it is always amazing to listen him speaking. The way he explains a scenario, is absolutely stunning.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/kushal.jpg&quot; alt=&quot;kushal&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;After the better lunch, next talk I attended was on &lt;em&gt;Fedora QA&lt;/em&gt; by &lt;a href=&quot;&quot;&gt;Sumantro Mukherjee&lt;/a&gt;. Sumantro introduced us to Fedora Quality Assurance, the workflow and how to test a package. Great talk, indeed.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/sumantro2.jpg&quot; alt=&quot;sumantro&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Now, it was time for &lt;a href=&quot;http://wwww.srijanagarwal.me&quot;&gt;my&lt;/a&gt; talk on &lt;strong&gt;WikiToLearn&lt;/strong&gt; : &lt;em&gt;Bringing Academia to the Internet Era : A revolution in Knowledge Sharing&lt;/em&gt;. I introduced WikiToLearn to the attendees, how to contribute and gave them a hand-on session on “How to make a personalized book”. I briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. I spoke on who/how can contribute being a student, teacher, translator or hacker, how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, About the power of collaboration and its impact in academia with the help of WikiToLearn and also how students and professors are using it in their universities as a tool to make learning much more effective in a collaborative way. Slides for the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn-2&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/srijan.jpg&quot; alt=&quot;srijan&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The last talk was on &lt;em&gt;Contributing to Mediawiki&lt;/em&gt; by Abhinand N. Abhinand is a Google Summer of Code’16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submission. It was a great talk, too.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/abhinand.jpg&quot; alt=&quot;abhinand&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We had a great party after the talks at Fudpub with Barcamp organizers. Free beer, yaay (:D).&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/party2.jpg&quot; alt=&quot;party&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Mohan Prakash, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I’m going to cherish for long.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Nov 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/FUDCon-PhnomPenh/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/FUDCon-PhnomPenh/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>Travel</category>
-        
-        <category>opensource</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>MediaWikiToLearn Hackathon, Amrita University Amritapuri Campus 2016</title>
-        <description>&lt;p&gt;FOSS@Amrita conducted Mediawiki Hackathon at Amrita University, Amritapuri Campus on 1st and 2nd October, 2016.
-MediaWikiToLearn Hackathon was organised to bring more new students into the field of Open Source Contribution, thereby giving them a chance to interact with developers online. Provide an opportunity to learn the workflow of bug fixing and patch submission in MediaWiki.&lt;/p&gt;
-
-&lt;p&gt;I spoke about &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; to the professors and students of Amrita University, Amritapuri Campus!&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/talk2.jpg&quot; alt=&quot;talk&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;WikiToLearn Editathon was concluded with a good number of edits and personalized books made by 25 professors on subjects varying from Biotechnology, Business, Physics, and Mathematics.&lt;/p&gt;
-
-&lt;p&gt;The Pywikibot Mediawiki hacking session led by Abdeali Kothari was a great success as students could grasp the fundamentals well and catch up with their tasks. Though it was a bit hard for participants to get started with their first bug fix. By the end of second day of MediaWiki Hackathon, we could get more than 5 patches uploaded to Gerrit.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/organizers.jpg&quot; alt=&quot;organizers&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 01 Oct 2016 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/MediaWikiToLearn-hackathon-auac/</guid>
-        
-        <category>KDE</category>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>MediaWiki</category>
-        
-        <category>opensource</category>
         
         
       </item>

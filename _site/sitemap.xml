@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://srijancse.github.io/writing/collaborative-editing/</loc>
+<lastmod>2017-05-01T06:13:39+05:30</lastmod>
+</url>
+<url>
+<loc>http://srijancse.github.io/writing/deploying-nodejs-app/</loc>
+<lastmod>2017-04-26T06:13:39+05:30</lastmod>
+</url>
+<url>
+<loc>http://srijancse.github.io/writing/JSES6-Awesome-Features/</loc>
+<lastmod>2017-04-15T13:13:39+05:30</lastmod>
+</url>
+<url>
 <loc>http://srijancse.github.io/writing/fossasiasummit/</loc>
 <lastmod>2017-03-18T00:00:00+05:30</lastmod>
 </url>
@@ -97,6 +109,15 @@
 <loc>http://srijancse.github.io/tag/code/</loc>
 </url>
 <url>
+<loc>http://srijancse.github.io/tag/technical/</loc>
+</url>
+<url>
+<loc>http://srijancse.github.io/tag/javascript/</loc>
+</url>
+<url>
+<loc>http://srijancse.github.io/tag/js/</loc>
+</url>
+<url>
 <loc>http://srijancse.github.io/amp/writing/contribute-to-open-source/</loc>
 </url>
 <url>
@@ -133,6 +154,15 @@
 <loc>http://srijancse.github.io/amp/writing/fossasiasummit/</loc>
 </url>
 <url>
+<loc>http://srijancse.github.io/amp/writing/JSES6-Awesome-Features/</loc>
+</url>
+<url>
+<loc>http://srijancse.github.io/amp/writing/deploying-nodejs-app/</loc>
+</url>
+<url>
+<loc>http://srijancse.github.io/amp/writing/collaborative-editing/</loc>
+</url>
+<url>
 <loc>http://srijancse.github.io/hotspotscapic.html</loc>
 <lastmod>2017-02-28T18:01:44+05:30</lastmod>
 </url>
@@ -159,6 +189,10 @@
 <url>
 <loc>http://srijancse.github.io/pdfs/raspberrypi.pdf</loc>
 <lastmod>2016-09-13T17:22:42+05:30</lastmod>
+</url>
+<url>
+<loc>http://srijancse.github.io/ppt.html</loc>
+<lastmod>2017-04-21T20:46:04+05:30</lastmod>
 </url>
 <url>
 <loc>http://srijancse.github.io/scapichotspot.html</loc>
