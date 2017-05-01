@@ -2,7 +2,7 @@
 layout: post
 title:  "Operational Transformation and Conflict-free Replicated Data Types!"
 date:   2017-04-27 90:43:39 -0600
-tags: technical javascript js code
+tags: technical javascript js code algorithm 
 ---
 
 
@@ -85,8 +85,6 @@ Starting Document State -> ABCD
 "Insert 'x'" operation at offset 2 [transformed] -> ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
 ```
 
-
-
 ### Client - Server [OT] Approach to Collaborative Editing
 
 
@@ -98,7 +96,7 @@ This source of truth also forces the client to wait for the server to **acknowle
 
 ### Conclusion
 
-Operational Transformation is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I am looking forward to dive deep into the algorithm (and ofcourse extending this blogpost) and possibly working on an editor which supports it as well. 
+**Operational Transformation** is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I am looking forward to dive deep into the algorithm (and ofcourse extending this blogpost) and possibly working on an editor which supports it as well. 
 
 
 ### Resources 
