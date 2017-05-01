@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Operational Transformation and Conflict-free Replicated Data Types!"
+title:  "How Real-Time Collaborative Editors work? [Operational Transformation]"
 date:   2017-04-27 90:43:39 -0600
 tags: technical javascript js code algorithm 
 ---
