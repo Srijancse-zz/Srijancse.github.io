@@ -96,3 +96,32 @@ Choosing a Client-Server architecture will allow scouting a large number of clie
 
 This source of truth also forces the client to wait for the server to **acknowledge** the operation that the client has just sent which would mean that the client always stays on the server's OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. 
 
+### Conclusion
+
+Operational Transformation is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I am looking forward to dive deep into the algorithm (and ofcourse extending this blogpost) and possibly working on an editor which supports it as well. 
+
+
+### Resources 
+
+I've read the following papers and articles to learn about Operational Transformation.
+
+* [High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf) *Authored by David A. Nichols, Pavel Curtis, Michael Dixon, and John Lamping.*
+
+
+* [Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.933&rep=rep1&type=pdf) *Authored by Chengzheng Sun and Clarence (Skip) Ellis.*
+
+
+* [Google's whitepaper on Operational Transformation](http://www.waveprotocol.org/whitepapers/operational-transform)
+
+
+* [Evaluating CRDTs for Real-time Document Editing](https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf) *Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso*
+
+
+* [Merging OT and CRDT Algorithms](https://hal.inria.fr/hal-00957167/document) *Authored by Mehdi Ahmed-Nacer, Pascal Urso, Valter Balegas, Nuno Pregui¸ca*
+
+
+* [Wikipedia on Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation) *One of the most informative articles, I have found on wikipedia, suprisingly.*
+
+
+
+
