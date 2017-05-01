@@ -112,6 +112,9 @@ I've read the following papers and articles to learn about Operational Transform
 * [Google's whitepaper on Operational Transformation](http://www.waveprotocol.org/whitepapers/operational-transform)
 
 
+* [Concurrency Control in Groupware Systems](https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf) *Authored by C.A. Ellis, S.J. Gibbs* 
+
+
 * [Evaluating CRDTs for Real-time Document Editing](https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf) *Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso*
 
 
