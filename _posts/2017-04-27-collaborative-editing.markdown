@@ -20,23 +20,41 @@ Let's take an example :
 
 **Starting Client's state :**
 
-` abcd `
+` ABCD `
 
 **Starting Server's state :**
 
-` abcd `
+` ABCD `
 
-*Client* enters `x` in between `c` and `d` , the operation would look something like this :
+Now, let's say, *Client* enters `X` in between `C` and `D` , the operation would look something like this :
 
-`insert(x,3) //where 3 is the position where x is going to be added (0=a, 1=b, 2=c ..)`
+`insert(X,3) //where 3 is the position where x is going to be added (0=A, 1=B, 2=C ..)`
 
 And at the same time, *Server* deletes `b` , the operation would be :
 
-`delete(b,1)`
+`delete(B,1)`
 
-What actually should happen is that the client and server should both end with ```acxd``` but in reality, *client* ends with ```acxd``` but the *server* ends with ```acdx```. Ofcourse, ```acxd != acdx``` and the document which is shared now is in wrong state.
+What actually should happen is that the client and server should both end with ```ACXD``` but in reality, *client* ends with ```ACXD``` 
 
-Here is where the **Operational Transformation** comes to the rescue. 
+```
+Starting Document State -> ABCD
+"Insert 'x'" operation at offset 3 [local] -> ABCXD
+"Delete 'b'" operation at offset 1 [remote] -> ACXD
+
+```
+
+but the *server* ends with ```acdx```. 
+
+```
+Starting Document State -> ABCD
+"Delete 'b'" operation at offset 1 [local] -> ACD
+"Insert 'x'" operation at offset 3 [remote] -> ACDX
+
+```
+
+Ofcourse, ```ACXD != ACDX``` and the document which is shared now is in wrong state.
+
+Here is where the **Operational Transformation** algorithm comes to the rescue. 
 
 
 ### Client - Server [OT] Approach to Collaborative Editing
