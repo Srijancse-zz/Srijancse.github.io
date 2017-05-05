@@ -6,7 +6,7 @@ tags: technical javascript js code algorithm
 ---
 
 
-Recently, I've been diving deep on how **real-time collaborative** editing works. I have been reading various papers on both the methods of implementing collaborative editing : **Operational Transformation**, which goes back to 1989, when it was first implemented by the [GROVE (GRoup Outtie Viewing Editor)](https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf) system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, etc; Wave) and **Conflict-Free Replicated Data Types**, which is a much newer approach to real-time editing. 
+Recently, I've been diving deep on how **real-time collaborative** editing works. I have been reading various papers on both the methods of implementing collaborative editing : **Operational Transformation**, which goes back to 1989, when it was first implemented by the [GROVE (GRoup Outtie Viewing Editor)](https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf) system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and **Conflict-Free Replicated Data Types**, which is a much newer approach to real-time editing. 
 
 ### Real challenge of collaborative editing
 
@@ -42,7 +42,7 @@ Starting Document State -> ABCD
 "Delete 'b'" operation at offset 1 [remote] -> ACXD
 ```
 
-but the *server* ends with ```acdx```. 
+but the *server* ends with ```ACDX```. 
 
 ```
 Starting Document State -> ABCD
