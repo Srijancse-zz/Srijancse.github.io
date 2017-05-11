@@ -38,16 +38,16 @@ What actually should happen is that the client and server should both end with `
 
 ```
 Starting Document State -> ABCD
-"Insert 'x'" operation at offset 3 [local] -> ABCXD
-"Delete 'b'" operation at offset 1 [remote] -> ACXD
+"Insert 'X'" operation at offset 3 [local] -> ABCXD
+"Delete 'B'" operation at offset 1 [remote] -> ACXD
 ```
 
 but the *server* ends with ```ACDX```. 
 
 ```
 Starting Document State -> ABCD
-"Delete 'b'" operation at offset 1 [local] -> ACD
-"Insert 'x'" operation at offset 3 [remote] -> ACDX
+"Delete 'B'" operation at offset 1 [local] -> ACD
+"Insert 'X'" operation at offset 3 [remote] -> ACDX
 ```
 
 Ofcourse, ```ACXD != ACDX``` and the document which is shared now is in wrong state.
@@ -73,16 +73,16 @@ If we apply OT, *Client* will see :
 
 ```
 Starting Document State -> ABCD
-"Insert 'x'" operation at offset 3 [local] -> ABCXD
-"Delete 'b'" operation at offset 1 [transformed] -> ACXD
+"Insert 'X'" operation at offset 3 [local] -> ABCXD
+"Delete 'B'" operation at offset 1 [transformed] -> ACXD
 ```
 
 and *Server* will see :
 
 ```
 Starting Document State -> ABCD
-"Delete 'b'" operation at offset 1 [local] -> ACD
-"Insert 'x'" operation at offset 2 [transformed] -> ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
+"Delete 'B'" operation at offset 1 [local] -> ACD
+"Insert 'X'" operation at offset 2 [transformed] -> ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
 ```
 
 ### Client - Server [OT] Approach to Collaborative Editing
