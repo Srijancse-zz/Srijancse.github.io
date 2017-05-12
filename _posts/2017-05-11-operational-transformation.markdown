@@ -5,9 +5,9 @@ date:   2017-05-11 09:43:39 -0600
 tags: technical javascript js code algorithm 
 ---
 
-This is the second post about **Operational Transformation**, the real time collaborative editing algorithm. The first post was [How Real-Time Collaborative Editors work? [Operational Transformation]](http://www.srijanagarwal.me/writing/collaborative-editing/). 
+This is the second post related to **Operational Transformation**, the real time collaborative editing algorithm. The first post was [How Real-Time Collaborative Editors work? [Operational Transformation]](http://www.srijanagarwal.me/writing/collaborative-editing/). 
 
-In this post, I would be digging deep into how clients wait for **acknowledgement** from server before sending more operations and compound operational transformation. 
+In this post, I would be digging deep into the transformation function, how clients wait for **acknowledgement** from server before sending more operations and the compound operational transformation. 
 
 ### Transformation function
 To recap, for handling concurrent operations, we use the **tranform** function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change. 
@@ -92,6 +92,20 @@ This has the important benefit that the server only needs to have **a single sta
 
 ### Compound Operational Transformation
 A great tutorial on Compound Operational Transformation is [Understanding and Applying Operational Transformation by Daniel Spiewak](http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation). One must read this to understand how Compound Operational Transformation works.
+
+### Conclusion
+
+As I have mentioned earlier, **Operational Transformation** is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I would keep updating the blogpost with whatever I learn more about OT and other real time collaborative editing algorithms. 
+
+
+Quoting from the [Wikipedia's Page](https://en.wikipedia.org/wiki/Operational_transformation#Critique_of_OT):
+
+
+While the classic OT approach of defining operations through their offsets in the text seems to be simple and natural, real-world distributed systems raise serious issues. Namely, that operations propagate with finite speed, states of participants are often different, thus the resulting combinations of states and operations are extremely hard to foresee and understand. As Li and Li put it, "Due to the need to consider complicated case coverage, formal proofs are very complicated and error-prone, even for OT algorithms that only treat two characterwise primitives (insert and delete)".
+
+Similarly, Joseph Gentle who is a former Google Wave engineer and an author of the Share.JS library wrote, "Unfortunately, implementing OT sucks. There's a million algorithms with different tradeoffs, mostly trapped in academic papers. The algorithms are really hard and time consuming to implement correctly. […] Wave took 2 years to write and if we rewrote it today, it would take almost as long to write a second time."
+
+For OT to work, every single change to the data needs to be captured: "Obtaining a snapshot of the state is usually trivial, but capturing edits is a different matter altogether. […] The richness of modern user interfaces can make this problematic, especially within a browser-based environment." An alternative to OT is differential synchronization.
 
 ### References
 
