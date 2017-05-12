@@ -27,21 +27,21 @@ A character wise transformation function's algorithm (for consistency maintenanc
 
 ```
 Tii(Ins[p1,c1], Ins[p2, c2]) {
-      if p1 < p2  or (p1 = p2 and u1 > u2)    // breaking insert-tie using user identifiers (u1, u2)
-            return Ins[p1, c1];                           // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
-      else return Ins[p1+1, c1]; }                //        Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
+      if p1 < p2  or (p1 = p2 and u1 > u2) // breaking insert-tie using user identifiers (u1, u2)
+            return Ins[p1, c1];  // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
+      else return Ins[p1+1, c1]; } // Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
  
 Tid(Ins[p1,c1], Del[p2]) {          
-      if p1 <= p2 return Ins[p1, c1];       //e.g. Tid(Ins[3, “a”], Del[4]) = Ins[3, “a”]
-     else return Ins[p1-1, c1]; }          //       Tid(Ins[3, “a”], Del[1] ) = Ins[2, “a”]
+      if p1 <= p2 return Ins[p1, c1]; // e.g. Tid(Ins[3, “a”], Del[4]) = Ins[3, “a”]
+     else return Ins[p1-1, c1]; } // Tid(Ins[3, “a”], Del[1] ) = Ins[2, “a”]
  
 Tdi(Del[p1], Ins[p2, c2]) {
-      if p1 < p2 return Del[p1];                    //e.g.  Tdi(Del[3], Ins[4, “b”]) = Del[3]
-      else return Del[p1+1]; }                     //        Tdi(Del[3], Ins[1, “b”]) = Del[4]
+      if p1 < p2 return Del[p1];  // e.g.  Tdi(Del[3], Ins[4, “b”]) = Del[3]
+      else return Del[p1+1]; } // Tdi(Del[3], Ins[1, “b”]) = Del[4]
  
 Tdd(Del[p1], Del[p2]) {
-      if p1 < p2 return Del[p1];                    //e.g.   Tdd(Del[3], Del[4]) = Del[3]
-      else if p1 > p2 return Del[p1-1];             //         Tdd(Del[3], Del[1]) = Del[2]
+      if p1 < p2 return Del[p1]; // e.g.   Tdd(Del[3], Del[4]) = Del[3]
+      else if p1 > p2 return Del[p1-1]; // Tdd(Del[3], Del[1]) = Del[2]
       else return I; } // breaking delete-tie using I (identity op)  Tdd(Del[3]. Del[3]) = I 
 ```      
 String-wise transformation function's algorithm is significantly more challenging than character-wise operations' because:
@@ -51,6 +51,20 @@ String-wise transformation function's algorithm is significantly more challengin
 * concurrent string delete operations may arbitrarily overlap with each other and even with concurrent insert operations.
 
 * a string inserted by a previous insert operation may be changed by following (causally after) insert and delete operations.
+
+### Undo Related Application
+
+Operational Transformation ofcourse supports undo in collaborative editors which impose additional  requirements : 
+
+* One is the undo effect, which requires that undoing an operation O achieves the effect of eliminating the effect of O but retains the effects of other operations in the document. In other words, the effect of undoing O is to `transform` the document state into one that it would have gone to if O had never been performed but other operations had been performed. This undo effect is consistent with the linear undo effect in single-user editing environments, and also suitable for non-linear undo (e.g. “undoing any operation at any time”) in multi-user and concurrent editing environments.
+
+* The other is the undo property, which requires that the document be restored to any previous state by undoing all operations executed after that state, regardless of the order in which those operations are undone. This property is required to ensure the capability of “restoring any prior state”, which is essential for an undo solution to support error-recovery and alternative exploration.
+
+<div class="image-wrap">
+<div class="image-block">
+    <img src="/images/undo.jpg" alt="undo">
+</div>
+</div>
 
 ### Client - Server Acknowledgement approach
 
