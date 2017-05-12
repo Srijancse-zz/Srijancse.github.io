@@ -21,6 +21,37 @@ Basically, there exists two kinds of transformation functions :
 
 Transformation functions are named differently in different OT systems, and some compound transformation functions may combine both IT and ET functionalities in one function. One of the papers, [Analysis of Operational Transformation Algorithms](http://www.springer.com/cda/content/document/cda_downloaddocument/9788132226369-c2.pdf?SGWID=0-0-45-1564306-p177709634) is really good, and analyses all the different OT systems.
 
+#### Character wise Transformation Function
+
+A character wise transformation function's algorithm (for consistency maintenance) is simple.  As an example, for a pair of character-wise operations `Ins[p, c]` (to insert a character c at the position p) and `Del[p]` (to delete a character at position p), four IT functions, denoted as `Tii`, `Tid`, `Tdi`, `Tdd`, can be defined as follows:
+
+```
+Tii(Ins[p1,c1], Ins[p2, c2]) {
+      if p1 < p2  or (p1 = p2 and u1 > u2)    // breaking insert-tie using user identifiers (u1, u2)
+            return Ins[p1, c1];                           // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
+      else return Ins[p1+1, c1]; }                //        Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
+ 
+Tid(Ins[p1,c1], Del[p2]) {          
+      if p1 <= p2 return Ins[p1, c1];       //e.g. Tid(Ins[3, “a”], Del[4]) = Ins[3, “a”]
+     else return Ins[p1-1, c1]; }          //       Tid(Ins[3, “a”], Del[1] ) = Ins[2, “a”]
+ 
+Tdi(Del[p1], Ins[p2, c2]) {
+      if p1 < p2 return Del[p1];                    //e.g.  Tdi(Del[3], Ins[4, “b”]) = Del[3]
+      else return Del[p1+1]; }                     //        Tdi(Del[3], Ins[1, “b”]) = Del[4]
+ 
+Tdd(Del[p1], Del[p2]) {
+      if p1 < p2 return Del[p1];                    //e.g.   Tdd(Del[3], Del[4]) = Del[3]
+      else if p1 > p2 return Del[p1-1];             //         Tdd(Del[3], Del[1]) = Del[2]
+      else return I; } // breaking delete-tie using I (identity op)  Tdd(Del[3]. Del[3]) = I 
+```      
+String-wise transformation function's algorithm is significantly more challenging than character-wise operations' because:
+
+* a string delete covers a deleting range, which may include the characters in the string as well as the interval positions between characters.
+
+* concurrent string delete operations may arbitrarily overlap with each other and even with concurrent insert operations.
+
+* a string inserted by a previous insert operation may be changed by following (causally after) insert and delete operations.
+
 ### Client - Server Acknowledgement approach
 
 Just to recap, what the theory of Operational Transformation in [High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf) says is that a client can send operations in a sequence to the server and vice versa. This means that the client and server can traverse through the state space through different paths of operational transformation to the same convergent state depending on when they receive the other operations.
