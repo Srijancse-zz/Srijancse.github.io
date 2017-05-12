@@ -7,7 +7,21 @@ tags: technical javascript js code algorithm
 
 This is the second post about **Operational Transformation**, the real time collaborative editing algorithm. The first post was [How Real-Time Collaborative Editors work? [Operational Transformation]](http://www.srijanagarwal.me/writing/collaborative-editing/). 
 
-In this post, I would be digging deep into operations, transforms function and also how clients wait for **acknowledgement** from server before sending more operations. 
+In this post, I would be digging deep into how clients wait for **acknowledgement** from server before sending more operations and compound operational transformation. 
+
+### Transformation function
+To recap, for handling concurrent operations, we use the **tranform** function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change. 
+
+Basically, there exists two kinds of transformation functions :
+
+* **Inclusion Transformation** : denoted as IT(a, b), which transforms Operation `a` against another operation `b` in such a way that the impact of `b` is effectively included.
+
+
+* **Exclusion Transformation** : denoted as ET(a, b), which transforms operation `a` against another operation `b` in such a way that the impact of `b` is effectively excluded.
+
+Transformation functions are named differently in different OT systems, and some compound transformation functions may combine both IT and ET functionalities in one function. One of the papers, [Analysis of Operational Transformation Algorithms](http://www.springer.com/cda/content/document/cda_downloaddocument/9788132226369-c2.pdf?SGWID=0-0-45-1564306-p177709634) is really good, and analyses all the different OT systems.
+
+### Client - Server Acknowledgement approach
 
 Just to recap, what the theory of Operational Transformation in [High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf) says is that a client can send operations in a sequence to the server and vice versa. This means that the client and server can traverse through the state space through different paths of operational transformation to the same convergent state depending on when they receive the other operations.
 
@@ -30,4 +44,35 @@ This has the important benefit that the server only needs to have **a single sta
     <img src="/images/ot.png" alt="ot">
 </div>
 </div>
+
+### Compound Operational Transformation
+A great tutorial on Compound Operational Transformation is [Understanding and Applying Operational Transformation by Daniel Spiewak](http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation). One must read this to understand how Compound Operational Transformation works.
+
+### References
+
+I've read the following papers and articles to learn about Operational Transformation.
+
+* [High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf) *Authored by David A. Nichols, Pavel Curtis, Michael Dixon, and John Lamping.*
+
+
+* [Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.933&rep=rep1&type=pdf) *Authored by Chengzheng Sun and Clarence (Skip) Ellis.*
+
+
+* [Google's whitepaper on Operational Transformation](http://www.waveprotocol.org/whitepapers/operational-transform)
+
+
+* [Concurrency Control in Groupware Systems](https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf) *Authored by C.A. Ellis, S.J. Gibbs* 
+
+
+* [Evaluating CRDTs for Real-time Document Editing](https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf) *Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso*
+
+
+* [Merging OT and CRDT Algorithms](https://hal.inria.fr/hal-00957167/document) *Authored by Mehdi Ahmed-Nacer, Pascal Urso, Valter Balegas, Nuno Pregui¸ca*
+
+
+* [Wikipedia on Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation) *One of the most informative articles, I have found on wikipedia, suprisingly.*
+
+
+
+
 
