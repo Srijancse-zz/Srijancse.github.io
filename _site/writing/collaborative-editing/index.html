@@ -23,7 +23,7 @@
     <meta property="fb:admins" content="1103227056" />
     <meta name="google-site-verification" content="bnuGRmgx_XG_VFyzEgt7GUg9BX6349k3A2aGUZjn2wY" />
     <!-- title and desc -->
-    <title>Operational Transformation and Conflict-free Replicated Data Types! | Srijan Agarwal</title>
+    <title>How Real-Time Collaborative Editors work? [Operational Transformation] | Srijan Agarwal</title>
     <meta name="description" content="Recently, I’ve been diving deep on how real-time collaborative editing works. I have been reading various papers on both the methods of implementing collabor...">
 
     <link rel="canonical" href="http://srijancse.github.io/writing/collaborative-editing/">
@@ -39,7 +39,7 @@
         <a href="/writing/">Writing</a>
         <a href="/"><div class="dot"></div></a>
     </h1>
-    <h1 class="title" itemprop="name headline"><a href="">Operational Transformation and Conflict-free Replicated Data Types!</a></h1>
+    <h1 class="title" itemprop="name headline"><a href="">How Real-Time Collaborative Editors work? [Operational Transformation]</a></h1>
     <div class="meta">
         <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
@@ -51,7 +51,7 @@
   </header>
 
   <div class="content" itemprop="articleBody">
-    <p>Recently, I’ve been diving deep on how <strong>real-time collaborative</strong> editing works. I have been reading various papers on both the methods of implementing collaborative editing : <strong>Operational Transformation</strong>, which goes back to 1989, when it was first implemented by the <a href="https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf">GROVE (GRoup Outtie Viewing Editor)</a> system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, etc; Wave) and <strong>Conflict-Free Replicated Data Types</strong>, which is a much newer approach to real-time editing.</p>
+    <p>Recently, I’ve been diving deep on how <strong>real-time collaborative</strong> editing works. I have been reading various papers on both the methods of implementing collaborative editing : <strong>Operational Transformation</strong>, which goes back to 1989, when it was first implemented by the <a href="https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf">GROVE (GRoup Outtie Viewing Editor)</a> system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and <strong>Conflict-Free Replicated Data Types</strong>, which is a much newer approach to real-time editing.</p>
 
 <h3 id="real-challenge-of-collaborative-editing">Real challenge of collaborative editing</h3>
 
@@ -65,29 +65,114 @@
 
 <p><strong>Starting Client’s state :</strong></p>
 
-<p><code class="highlighter-rouge"> abcd </code></p>
+<p><code class="highlighter-rouge"> ABCD </code></p>
 
 <p><strong>Starting Server’s state :</strong></p>
 
-<p><code class="highlighter-rouge"> abcd </code></p>
+<p><code class="highlighter-rouge"> ABCD </code></p>
 
-<p><em>Client</em> enters <code class="highlighter-rouge">x</code> in between <code class="highlighter-rouge">c</code> and <code class="highlighter-rouge">d</code> , the operation would look something like this :</p>
+<p>Now, let’s say, <em>Client</em> enters <code class="highlighter-rouge">X</code> in between <code class="highlighter-rouge">C</code> and <code class="highlighter-rouge">D</code> , the operation would look something like this :</p>
 
-<p><code class="highlighter-rouge">insert(x,3) //where 3 is the position where x is going to be added (0=a, 1=b, 2=c ..)</code></p>
+<p><code class="highlighter-rouge">insert(X,3) //where 3 is the position where x is going to be added (0=A, 1=B, 2=C ..)</code></p>
 
 <p>And at the same time, <em>Server</em> deletes <code class="highlighter-rouge">b</code> , the operation would be :</p>
 
-<p><code class="highlighter-rouge">delete(b,1)</code></p>
+<p><code class="highlighter-rouge">delete(B,1)</code></p>
 
-<p>What actually should happen is that the client and server should both end with <code class="highlighter-rouge">acxd</code> but in reality, <em>client</em> ends with <code class="highlighter-rouge">acxd</code> but the <em>server</em> ends with <code class="highlighter-rouge">acdx</code>. Ofcourse, <code class="highlighter-rouge">acxd != acdx</code> and the document which is shared now is in wrong state.</p>
+<p>What actually should happen is that the client and server should both end with <code class="highlighter-rouge">ACXD</code> but in reality, <em>client</em> ends with <code class="highlighter-rouge">ACXD</code></p>
 
-<p>Here is where the <strong>Operational Transformation</strong> comes to the rescue.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+"Insert 'X'" operation at offset 3 [local] -&gt; ABCXD
+"Delete 'B'" operation at offset 1 [remote] -&gt; ACXD
+</code></pre>
+</div>
+
+<p>but the <em>server</em> ends with <code class="highlighter-rouge">ACDX</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+"Delete 'B'" operation at offset 1 [local] -&gt; ACD
+"Insert 'X'" operation at offset 3 [remote] -&gt; ACDX
+</code></pre>
+</div>
+
+<p>Ofcourse, <code class="highlighter-rouge">ACXD != ACDX</code> and the document which is shared now is in wrong state.</p>
+
+<p>Here is where the <strong>Operational Transformation</strong> algorithm comes to the rescue.</p>
+
+<h3 id="operational-transformation-algorithm">Operational Transformation Algorithm</h3>
+
+<p>Operational Transformation (OT) is an algorithm/technique for the transformation of operations such that they can be applied to documents whose states have diverged, bringing them both back to the same state.</p>
+
+<h4 id="how-does-operational-transformation-work">How does Operational Transformation work?</h4>
+
+<p>A short overview of how OT works :</p>
+
+<ul>
+  <li>
+    <p>Every change (insertion or deletion) is represented as an <strong>operation</strong>. An operation can be applied to the current document which results into a new document state.</p>
+  </li>
+  <li>
+    <p>To handle concurrent operations, we use the <strong>tranform</strong> function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change.</p>
+  </li>
+</ul>
+
+<p>Let’s apply Operational Transformation in the original example.</p>
+
+<p>If we apply OT, <em>Client</em> will see :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+"Insert 'X'" operation at offset 3 [local] -&gt; ABCXD
+"Delete 'B'" operation at offset 1 [transformed] -&gt; ACXD
+</code></pre>
+</div>
+
+<p>and <em>Server</em> will see :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+"Delete 'B'" operation at offset 1 [local] -&gt; ACD
+"Insert 'X'" operation at offset 2 [transformed] -&gt; ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
+</code></pre>
+</div>
 
 <h3 id="client---server-ot-approach-to-collaborative-editing">Client - Server [OT] Approach to Collaborative Editing</h3>
+
+<p>The <strong>transform</strong> function is used to build a client-server protocol that can handle collaboration between any number of clients.</p>
 
 <p>Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily.</p>
 
 <p>This source of truth also forces the client to wait for the server to <strong>acknowledge</strong> the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p><strong>Operational Transformation</strong> is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I am looking forward to dive deep into the algorithm (and ofcourse extending this blogpost) and possibly working on an editor which supports it as well.</p>
+
+<h3 id="resources">Resources</h3>
+
+<p>I’ve read the following papers and articles to learn about Operational Transformation.</p>
+
+<ul>
+  <li>
+    <p><a href="http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf">High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System</a> <em>Authored by David A. Nichols, Pavel Curtis, Michael Dixon, and John Lamping.</em></p>
+  </li>
+  <li>
+    <p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.933&amp;rep=rep1&amp;type=pdf">Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements</a> <em>Authored by Chengzheng Sun and Clarence (Skip) Ellis.</em></p>
+  </li>
+  <li>
+    <p><a href="http://www.waveprotocol.org/whitepapers/operational-transform">Google’s whitepaper on Operational Transformation</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf">Concurrency Control in Groupware Systems</a> <em>Authored by C.A. Ellis, S.J. Gibbs</em></p>
+  </li>
+  <li>
+    <p><a href="https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf">Evaluating CRDTs for Real-time Document Editing</a> <em>Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso</em></p>
+  </li>
+  <li>
+    <p><a href="https://hal.inria.fr/hal-00957167/document">Merging OT and CRDT Algorithms</a> <em>Authored by Mehdi Ahmed-Nacer, Pascal Urso, Valter Balegas, Nuno Pregui¸ca</em></p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Operational_transformation">Wikipedia on Operational Transformation</a> <em>One of the most informative articles, I have found on wikipedia, suprisingly.</em></p>
+  </li>
+</ul>
 
 
   </div>

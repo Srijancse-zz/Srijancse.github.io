@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://srijancse.github.io/writing/operational-transformation/</loc>
+<lastmod>2017-05-11T21:13:39+05:30</lastmod>
+</url>
+<url>
 <loc>http://srijancse.github.io/writing/collaborative-editing/</loc>
 <lastmod>2017-05-01T06:13:39+05:30</lastmod>
 </url>
@@ -118,6 +122,9 @@
 <loc>http://srijancse.github.io/tag/js/</loc>
 </url>
 <url>
+<loc>http://srijancse.github.io/tag/algorithm/</loc>
+</url>
+<url>
 <loc>http://srijancse.github.io/amp/writing/contribute-to-open-source/</loc>
 </url>
 <url>
@@ -161,6 +168,9 @@
 </url>
 <url>
 <loc>http://srijancse.github.io/amp/writing/collaborative-editing/</loc>
+</url>
+<url>
+<loc>http://srijancse.github.io/amp/writing/operational-transformation/</loc>
 </url>
 <url>
 <loc>http://srijancse.github.io/hotspotscapic.html</loc>
