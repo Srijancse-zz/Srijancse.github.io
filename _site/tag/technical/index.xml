@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Srijan Agarwal</title>
-    <description>Web Developer, 19. I code, eat and write.</description>
-    <link>http://srijancse.github.io/</link>
-    <atom:link href="http://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 May 2017 19:00:49 +0530</pubDate>
-    <lastBuildDate>Sat, 13 May 2017 19:00:49 +0530</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
-    
-      <item>
-        <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]</title>
-        <description>&lt;p&gt;This is the second post related to &lt;strong&gt;Operational Transformation&lt;/strong&gt;, the real time collaborative editing algorithm. The first post was &lt;a href=&quot;http://www.srijanagarwal.me/writing/collaborative-editing/&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - technical</title>
+ <link href="http://srijanagarwal.me/tag/technical/index.xml" rel="self"/>
+ <link href="http://srijanagarwal.me/tag/technical.html"/>
+ <updated>2017-05-13T18:47:44+05:30</updated>
+ <id>http://srijanagarwal.me/tag/technical.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]</title>
+   <link href="http://srijanagarwal.me/writing/operational-transformation/"/>
+   <updated>2017-05-11T21:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/operational-transformation</id>
+   <content type="html">&lt;p&gt;This is the second post related to &lt;strong&gt;Operational Transformation&lt;/strong&gt;, the real time collaborative editing algorithm. The first post was &lt;a href=&quot;http://www.srijanagarwal.me/writing/collaborative-editing/&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this post, I would be digging deep into the transformation function, how clients wait for &lt;strong&gt;acknowledgement&lt;/strong&gt; from server before sending more operations and the compound operational transformation.&lt;/p&gt;
 
@@ -154,29 +157,15 @@ Tdd(Del[p1], Del[p2]) {
   &lt;/li&gt;
 &lt;/ul&gt;
 
-</description>
-        <pubDate>Thu, 11 May 2017 21:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/operational-transformation/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/operational-transformation/</guid>
-        
-        <category>technical</category>
-        
-        <category>javascript</category>
-        
-        <category>js</category>
-        
-        <category>code</category>
-        
-        <category>algorithm</category>
-        
-        <category>kde</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>How Real-Time Collaborative Editors work? [Operational Transformation]</title>
-        <description>&lt;p&gt;Recently, I’ve been diving deep on how &lt;strong&gt;real-time collaborative&lt;/strong&gt; editing works. I have been reading various papers on both the methods of implementing collaborative editing : &lt;strong&gt;Operational Transformation&lt;/strong&gt;, which goes back to 1989, when it was first implemented by the &lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;GROVE (GRoup Outtie Viewing Editor)&lt;/a&gt; system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and &lt;strong&gt;Conflict-Free Replicated Data Types&lt;/strong&gt;, which is a much newer approach to real-time editing.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How Real-Time Collaborative Editors work? [Operational Transformation]</title>
+   <link href="http://srijanagarwal.me/writing/collaborative-editing/"/>
+   <updated>2017-05-01T06:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/collaborative-editing</id>
+   <content type="html">&lt;p&gt;Recently, I’ve been diving deep on how &lt;strong&gt;real-time collaborative&lt;/strong&gt; editing works. I have been reading various papers on both the methods of implementing collaborative editing : &lt;strong&gt;Operational Transformation&lt;/strong&gt;, which goes back to 1989, when it was first implemented by the &lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;GROVE (GRoup Outtie Viewing Editor)&lt;/a&gt; system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and &lt;strong&gt;Conflict-Free Replicated Data Types&lt;/strong&gt;, which is a much newer approach to real-time editing.&lt;/p&gt;
 
 &lt;h3 id=&quot;real-challenge-of-collaborative-editing&quot;&gt;Real challenge of collaborative editing&lt;/h3&gt;
 
@@ -299,29 +288,15 @@ Tdd(Del[p1], Del[p2]) {
   &lt;/li&gt;
 &lt;/ul&gt;
 
-</description>
-        <pubDate>Mon, 01 May 2017 06:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/collaborative-editing/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/collaborative-editing/</guid>
-        
-        <category>technical</category>
-        
-        <category>javascript</category>
-        
-        <category>js</category>
-        
-        <category>code</category>
-        
-        <category>algorithm</category>
-        
-        <category>kde</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Deploy a Node.js app in minutes using Heroku!</title>
-        <description>&lt;p&gt;As more and more Node.js projects are being coded, deploying a nodejs app just got easier. I would guide you through on how one can deploy a node.js app in minutes using Heroku.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Deploy a Node.js app in minutes using Heroku!</title>
+   <link href="http://srijanagarwal.me/writing/deploying-nodejs-app/"/>
+   <updated>2017-04-26T06:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/deploying-nodejs-app</id>
+   <content type="html">&lt;p&gt;As more and more Node.js projects are being coded, deploying a nodejs app just got easier. I would guide you through on how one can deploy a node.js app in minutes using Heroku.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What is Heroku?&lt;/strong&gt;&lt;/p&gt;
 
@@ -383,25 +358,15 @@ In the case of Node.js, it will start a default web process via the start script
 Note: If your app runs on a database, you will need to add the database as an add-on.&lt;/p&gt;
 
 &lt;p&gt;Feel free to ping me on &lt;a href=&quot;www.twitter.com/srijancse&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 26 Apr 2017 06:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/deploying-nodejs-app/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/deploying-nodejs-app/</guid>
-        
-        <category>technical</category>
-        
-        <category>javascript</category>
-        
-        <category>js</category>
-        
-        <category>code</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Awesome features you must be using in JavaScript ES6!</title>
-        <description>&lt;div class=&quot;image-wrap&quot;&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Awesome features you must be using in JavaScript ES6!</title>
+   <link href="http://srijanagarwal.me/writing/JSES6-Awesome-Features/"/>
+   <updated>2017-04-15T13:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/JSES6-Awesome-Features</id>
+   <content type="html">&lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
     &lt;img src=&quot;/images/js.png&quot; alt=&quot;js&quot; /&gt;
 &lt;/div&gt;
@@ -479,313 +444,7 @@ var url = `http://localhost/api/${id}`
 &lt;/div&gt;
 
 &lt;p&gt;You can learn more about ES6 features &lt;a href=&quot;http://exploringjs.com/es6/&quot;&gt;here&lt;/a&gt;. A &lt;a href=&quot;https://github.com/azat-co/cheatsheets/tree/master/es6&quot;&gt;cheatsheet&lt;/a&gt; too.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 15 Apr 2017 13:13:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/JSES6-Awesome-Features/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/JSES6-Awesome-Features/</guid>
-        
-        <category>technical</category>
-        
-        <category>javascript</category>
-        
-        <category>js</category>
-        
-        <category>code</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Fossasiasummit</title>
-        <description>
-</description>
-        <pubDate>Sat, 18 Mar 2017 00:00:00 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/fossasiasummit/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/fossasiasummit/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Conf Kde In</title>
-        <description>
-</description>
-        <pubDate>Fri, 10 Mar 2017 00:00:00 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/conf-kde-in/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/conf-kde-in/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>WikiToLearn India Conference 2017</title>
-        <description>&lt;p&gt;The annual &lt;a href=&quot;http://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/wtlindiaconf.jpg&quot; alt=&quot;WTLIndiaConf&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing &lt;a href=&quot;http://www.facebook.com/search/top/?q=%23WTLIndiaConf&quot;&gt;&lt;strong&gt;#WTLIndiaConf&lt;/strong&gt;&lt;/a&gt; happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.&lt;/p&gt;
-
-&lt;p&gt;I was traveling with two other fellow speakers and my university mates, &lt;a href=&quot;harithaharikumar.wordpress.com&quot;&gt;&lt;strong&gt;Haritha Harikumar&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt;. This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -&amp;gt; Bangalore -&amp;gt; Jaipur (17th January) and Jaipur -&amp;gt; Bangalore -&amp;gt; University (22nd January).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Day 0&lt;/em&gt; :
-I was very excited for this conference, and we had a train to Bangalore on 16th evening and a flight from Bangalore to Jaipur on 17th night. Train was not much late (only 4 hours :/), but the good thing was that the flight was at late night. I had some commitments on the morning at Bangalore and had to finish it off.
-The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reached Jaipur at 3.30 AM.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Day 1&lt;/em&gt;:
-Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn’t even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man’eater’’ a.k.a ‘&lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club (&lt;a href=&quot;foss.amrita.ac.in&quot;&gt;&lt;strong&gt;FOSS@Amrita&lt;/strong&gt;&lt;/a&gt;), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home.&lt;/p&gt;
-
-&lt;p&gt;After conversing with him for like 10 minutes, I didn’t even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see &lt;a href=&quot;http://www.linkedin.com/in/riccardoiaconelli&quot;&gt;&lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt;&lt;/a&gt; (met him for the first time, finally :D) and &lt;a href=&quot;http://www.thomastony.me/&quot;&gt;&lt;strong&gt;Tony Thomas&lt;/strong&gt;&lt;/a&gt; (meeting him for the nth time :P) coming.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/group.jpg&quot; alt=&quot;We&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/speakers.jpg&quot; alt=&quot;speakers&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The first talk of the first day of the event was by &lt;a href=&quot;http://sagaragarwal94.me&quot;&gt;&lt;strong&gt;Sagar Agarwal&lt;/strong&gt;&lt;/a&gt; on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/atomsagar.jpeg&quot; alt=&quot;Sagar Agarwal&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Next talk was by &lt;strong&gt;Jaminy Prabha&lt;/strong&gt; on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.&lt;/p&gt;
-
-&lt;p&gt;Lunch was pretty great. All the speakers gathered at a common place and had food. :D&lt;/p&gt;
-
-&lt;p&gt;The following talk was the Keynote by the founder, &lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt; himself. His talk started with an example of some guy who was bragging something how he invented something , and how he couldn’t license it properly to make it proprietary. He talked about the motive behind Richard Stallman’s idea of Open Source. He then briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. He spoke on how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, about the power of collaboration and its impact in academia with the help of WikiToLearn. Also, he launched a competition for the attendees for the best technical and editing contribution - applicants can nominate themselves and there will be a winner who will be invited to a WTL sprint / Akademy.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/ruphy.jpeg&quot; alt=&quot;Riccardo Iaconelli&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Next talk was by &lt;a href=&quot;http://keenlearner.wordpress.com/&quot;&gt;&lt;strong&gt;Abhimanyu Shekhawat&lt;/strong&gt;&lt;/a&gt;. Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/abhimanyu.jpg&quot; alt=&quot;abhimanyu&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The following talk was by &lt;a href=&quot;cryptowriteup.wordpress.com&quot;&gt;&lt;strong&gt;Jay Gupta&lt;/strong&gt;&lt;/a&gt;. Jay is a Computer Science Student at Amity University, fellow WikiToLearn Core Developer and a GSoC’16 student. He talked about his Google Summer of Code’16 project : WikiToLearn Desktop Client which is a cross platform browser. The main feature of the application is the offline mode. Users can use even use WikiToLearn in offline mode after this project is implemented. Nice talk it was.&lt;/p&gt;
-
-&lt;p&gt;The last talk of the day was by &lt;a href=&quot;medium.com/@AMIT_GKP&quot;&gt;&lt;strong&gt;Amit Kumar Jaiswal&lt;/strong&gt;&lt;/a&gt;. He is an open hacktivist and a Mozilla Representative acting as a Mozilla Science Lab collaborator, developer at WorldBrain is a final year undergrad of Computer Science &amp;amp; Engineering from Kanpur University. He is a former internee at IIM Ahmadabad, CMIE and evangelizing Open Source and Mozilla. His talk was titled as “Diving into Docker: Developing a darn fast, repeatable workflow”. He introduced attendees to the basics of Docker,  how to use Docker throughout the development process and Illustrated them the web development process using Docker.&lt;/p&gt;
-
-&lt;p&gt;The talks on day 1 were really great start for the conference. After a quick tea break, where we had a bit of fun with Riccardo teaching him some local slang and pulling off pranks with local people ensured that we made our way to the evening lab sessions. Attendees and Speakers were completely refreshed and were able to provide hands on guidance to students at the university. Abhimanyu showing his ‘stud’ness at the lab hours too (;P).&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/stud.jpg&quot; alt=&quot;abhimanyu&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian and Swedish songs at a bonfire followed by listening and ROFLing on &lt;em&gt;‘Ye Bik Gayi Hai Gormint’&lt;/em&gt; brings the day to a perfect end.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/bonfire1.jpg&quot; alt=&quot;bonfire&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Day2&lt;/em&gt; :
-Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http://tttwrites.wordpress.com&quot;&gt;&lt;em&gt;Tony Thomas&lt;/em&gt;&lt;/a&gt; volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/tony.jpg&quot; alt=&quot;tony&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The next talk was by &lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;. Harish is a free software enthusiast and has been involved with promotional and technical activities with the KDE community for almost half a decade now. He has been a Season of KDE participant as well as being involved in two Google Summer of Code projects with KDE in the past couple of years. His talk was entitled as ‘Modern Day Makefile Generators’. He imparted a basic familiarity to how large projects handle their dependencies and how a buildsystem functions, in general. He talked in depth about Cmake and qmake, and how they are used in handling large projects. It was a great talk for the technical peeps out there which gave them a basic understanding of it.&lt;/p&gt;
-
-&lt;p&gt;This was followed by &lt;a href=&quot;http://twitter.com/davide_vals94&quot;&gt;&lt;strong&gt;Davide Valsecchi&lt;/strong&gt;&lt;/a&gt;, Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. &lt;a href=&quot;http://github.com/wikitolearn/texla&quot;&gt;TeXLa&lt;/a&gt; is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.&lt;/p&gt;
-
-&lt;p&gt;Before heading out for lunch, we took the time out to pose for mandatory group photos.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/groupphoto.jpg&quot; alt=&quot;Group Photo&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;After the lunch it was the time for Mozilla girls, &lt;a href=&quot;http://reps.mozilla.org/u/Vnisha/&quot;&gt;&lt;strong&gt;Vnisha Srivastav&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt; to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/wishingal.jpg&quot; alt=&quot;wishingal&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The following talk was by &lt;a href=&quot;www.arnavdhamija.com&quot;&gt;&lt;strong&gt;Arnav Dhamija&lt;/strong&gt;&lt;/a&gt; on his Google Summer of Code’16 project with KDE. His project aimed to make the menial task of selecting files in a file manager as easy as possible. In any file manager copying and pasting has never been a pleasant experience, especially if the files are in a non-continuous order. Often, when selecting files using Ctrl+A or the selection tool, we find that we need to select only a subset of the required files we have selected. This leads to the unwieldy operation of removing files from our selection. Of course, the common workaround is to create a new folder and to put all the items in this folder prior to copying, but this is a very inefficient and very slow process if large files need to be copied. Moreover Ctrl+Click requires fine motor skills to not lose the entire selection of files. His talk was really great.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/arnav.jpg&quot; alt=&quot;Arnav&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Following was the talk by &lt;a href=&quot;harithaharikumar.wordpress.com&quot;&gt;&lt;strong&gt;Haritha Harikumar&lt;/strong&gt;&lt;/a&gt;. Haritha is an Open Source enthusiast and a Mediawiki contributor since 2015. She is an active member of FOSS@Amrita and a technical mentor at ThinkFOSS. She believes in the motto of Code, Share and Grow. She is an advisor for #include program organised by SHE++. Her talk was titled: “Engine behind Wiki Pages”. She talked about different projects in Wikimedia Foundation, and MediaWiki in general. She introduced attendees to Mediawiki, and how to get started with technical contributions with Mediawiki.&lt;/p&gt;
-
-&lt;p&gt;The last talk of the conference was by &lt;a href=&quot;medium.com/@AMIT_GKP&quot;&gt;&lt;strong&gt;Amit Kumar Jaiswal&lt;/strong&gt;&lt;/a&gt; on &lt;em&gt;“Wikidata : A unidimensional Knowledge base by Wikimedia after Freebase migrated their data to Wikidata”&lt;/em&gt;. He discussed about the Wikidata data model and user interface design, the current state of the project, and induced the discussions on the topic of collaboration for collecting structured data by a broad and open audience.&lt;/p&gt;
-
-&lt;p&gt;After the talks ended, we planned a short &lt;em&gt;FAQ&lt;/em&gt; session where we asked attendees to ask a question if they have in mind for the speakers. That really went nice, and we did have some really funny questions and answers.&lt;/p&gt;
-
-&lt;p&gt;The conference didn’t end here. We had a surprise from Sagar (:D). All the speakers were given VIP access to a musical concert of a famous Rajasthani folk singer Mame Khan which turned out to be an astounding experience. Couldn’t have asked for a better end to the conference.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrap&quot;&gt;
-&lt;div class=&quot;image-block&quot;&gt;
-    &lt;img src=&quot;/images/mamekhan.jpg&quot; alt=&quot;MameKhan&quot; /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;I would like to really thank all the Volunteers especially Sanju Godara and Aarshiya Guneja who put all of their efforts to make this conference successful.&lt;/p&gt;
-
-&lt;p&gt;It was the &lt;em&gt;end&lt;/em&gt; of the first &lt;strong&gt;#WTLIndiaConf&lt;/strong&gt; but not the end of my trip. It wasn’t until two more days that I went back to the university. We used this time to visit some of the bewildering ancient monuments at Agra and Fatepur Sikhri, but that’s a blog for some other time.&lt;/p&gt;
-
-&lt;p&gt;Concluding the blog, I extend my gratitude ​to KDE Family for believing in us to make this event happen.​ This was all possible due to the enormous support of KDE and WikiToLearn Developers (who supported us from Italy :D).&lt;/p&gt;
-</description>
-        <pubDate>Wed, 01 Mar 2017 20:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/WTLIndiaConf2017/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/WTLIndiaConf2017/</guid>
-        
-        <category>WikiToLearn</category>
-        
-        <category>Talks</category>
-        
-        <category>Sprints</category>
-        
-        <category>Travel</category>
-        
-        <category>opensource</category>
-        
-        <category>KDE</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>A lot like me</title>
-        <description>&lt;p&gt;It’s not about &lt;em&gt;me&lt;/em&gt;. It’s about this guy I know.&lt;/p&gt;
-
-&lt;p&gt;He’s about my age and about my height, he has my face and the colour of our eyes they match in shade and the texture of our skin, is exactly the same.
-He walks like me but his gait is softer. And when he passes by you, you’ll want him to smile at you, and fill you with his laughter.
-I’ve heard him speak and he’s shy. His face contorts into funny lines you might not want to hear, so he keeps quiet. Don’t mind him, he’s just trying not to get in your way.&lt;/p&gt;
-
-&lt;p&gt;When he doesn’t meet your eyes, he’s really quite okay. But once you get to know him, in fact, he’s almost lovely, you just need to show him that you’ll help him build a conversation. That’s all will make him go weak in the knees and then you pretty much own him.&lt;/p&gt;
-
-&lt;p&gt;When he talks he talks like me, but he does it much more elegantly. He likes to use his hands while he speaks to orchestrate his spoken imagery. Did you know he writes? He like words. They’re exactly like the ones I’ve heard but even though he strings them just.&lt;/p&gt;
-
-&lt;p&gt;Anyway, feed him chocolate and chai and pizza, give him books to read, programs to code and movies to watch because he’s just like me, he’s just like me but still he’s not.&lt;/p&gt;
-
-&lt;p&gt;There is something that separates us and I’m not sure what. He’ll sing old shayaris to you at midnight, very softly over whatsapp just like I do, and just like me he’ll try to convince you after not to listen to them for a while.&lt;/p&gt;
-
-&lt;p&gt;See this is this guy I know, and he’ll grow on you, he’ll shower you with love that’ll glow on you and he might get on your nerves sometimes like I know I do but he’ll grow on you, I promise. He’ll grow on you. Did I mention that he writes? He likes words. He tries to woo girls with poetry and prose and though you might not think that one can flirt in metaphors he’s never flustered like me and somehow he makes it work.&lt;/p&gt;
-
-&lt;p&gt;Anyway, listen to old hindi songs and take him on long walks. He likes listening to you as much as he likes to talk and you can repeat your stories which is a great perk because his memory sucks and he probably would forgot anyway.&lt;/p&gt;
-
-&lt;p&gt;He acts like me but he’s sweeter. He won’t always tell you what’s on his mind but when he does, he’ll try his hardest not to lie even though it takes all his might to let down
-his guard and and show you his vulnerable side.&lt;/p&gt;
-
-&lt;p&gt;See, he’s a lot like me but he’s braver. Harsh words and crude comments don’t faze him at all, he draws strength, unlike me, from failure. He’s a lot like me but when faced with the scissor; he’s a lot more like rock and I’m a lot more like paper. There is this guy I know and we’re exactly the same. From the height of our body to the length of our names and I have to admit this even though I’m ashamed but I think it’s because I’m to blame.&lt;/p&gt;
-
-&lt;p&gt;He’s the better version even though he’s a lot like me and I think that’s because he’s not what I see. I think that maybe if I stepped out of my shoes and I looked at his objectively maybe, I’d call him awesome because maybe, he is.&lt;/p&gt;
-
-&lt;p&gt;Credits : &lt;a href=&quot;http://papercupplastic.blogspot.com&quot;&gt;Rabia Kapoor&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 25 Feb 2017 20:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/A-lot-like-me/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/A-lot-like-me/</guid>
-        
-        <category>personal</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>My Experiences with NodeJS</title>
-        <description>&lt;p&gt;For the past few months, I have been working with Node.js aka The Node (:D).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Node : Easy to learn, Impossible to master&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If you want to summarize in a line, I would say this (^). If you’ve some experience with JavaScript, then Node is very easy to learn. Google for a few tutorials, play around with &lt;em&gt;Express.js&lt;/em&gt;, and you’re good to go. But as soon as you start playing, you remember, what about database? And, then &lt;em&gt;NPM&lt;/em&gt; comes to the rescue. Few SQL packages could be found, but I always go with Mongo. Easy to work it and open sourced.&lt;/p&gt;
-
-&lt;p&gt;Packages that consist of trivial code no more than 10 lines of code are downloaded in the thousands every day from NPM. Seriously!? You need a dependency for array type checking? And these packages are used by some huge tools such as React.
-You’ll never master something that moves at break-neck speed, not to mention the potential of dependency instability.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Want to catch errors? Good luck, boss!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Me, Coming from other languages such as Python or PHP I’d expect throwing and catching errors, or even returning an error from a function would be a straightforward way of handling errors. It’s not the case with Node.&lt;/p&gt;
-
-&lt;p&gt;Instead, one gets to pass errors around in the callbacks (or promises) — that’s right! No throwing of exceptions. Not to mention if you forget to return your callback on an error, it continues to run and triggers another set of errors after you returned the initial one.&lt;/p&gt;
-
-&lt;p&gt;Even if you do manage to come up with a solid standard for your own errors, you can’t confirm (without reading the source) that the many of the NPM packages you have installed follow the same pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final thoughts on Node&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Go for it. (:D) It’s amazing. It’s fast. It makes Real-Time easy. Well Documented API. And at last, It’s fun.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 Jan 2017 20:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/Experiences-With-Node/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/Experiences-With-Node/</guid>
-        
-        <category>code</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>3586x2017 : New Year’s Resolution</title>
-        <description>&lt;p&gt;&lt;strong&gt;2016 — An amazing year&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The best thing happened to me was &lt;a href=&quot;http://foss.amrita.ac.in&quot;&gt;FOSS at Amrita&lt;/a&gt;, my seniors, and mentors. Working with amazing peeps at &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; has made this year even better. Met and connected with awesome people, traveled to a foreign land for the first time (thanks to WikiToLearn again), learned new skills and now working on an exciting product with &lt;a href=&quot;http://under25.club&quot;&gt;Under 25 club&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In addition, 2016 was a great year, but that doesn’t necessarily mean this debuting 2017 can’t be a better one!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2017 — Future as we know it&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;January 1st is here and it was a long way. After a couple of years watching Mark Zuckerberg setting his goals at the beginning of the year and then showing his accomplishments in December, I decided to start the year with the same idea.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;First: Personal Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;My life is good right now. I have a happy family, friends whom I trust and I am &lt;em&gt;happy&lt;/em&gt;. For this 2017, I want to gain some weight, so I’ll start by exercising and running daily. This goal is difficult for me, so I’ll try my best. It’s my first step to get in shape so I’ll keep that in mind and then find a new goal.&lt;/p&gt;
-
-&lt;p&gt;My main goal is to make at least &lt;em&gt;5&lt;/em&gt; trips this year.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Second: Work Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Funny thing, since last year, I have focused my career on working and studying at the same time. This year, I want to continue contributing to WikiToLearn, work with startups and learn interesting and cool stuff like Machine Learning. If some cool app idea or something comes along the way, awesome, but I won’t be desperate about changing this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Third: Hardware Hacky-Stuff&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This will be my year for &lt;em&gt;artificial intelligence&lt;/em&gt;. I’ll take a course on AI and Machine Learning, so my main goal, much like Zuckerberg’s 2016 goal, is to build something cool using AI and Machine Learning. I want to build something that doesn’t exist yet (atleast planning to), so this summer will serve as exploration and then, in March, I’ll start coding. I hope to find something cool to do so I can show it in December.&lt;/p&gt;
-
-&lt;p&gt;That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!&lt;/p&gt;
-
-&lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Jan 2017 12:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/new-year-2017/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/new-year-2017/</guid>
-        
-        <category>personal</category>
-        
-        
-      </item>
-    
-  </channel>
-</rss>
+</content>
+ </entry>
+ 
+</feed>

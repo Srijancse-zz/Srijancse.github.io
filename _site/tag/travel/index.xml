@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - Travel</title>
+ <link href="http://srijanagarwal.me/tag/travel/index.xml" rel="self"/>
+ <link href="http://srijanagarwal.me/tag/Travel.html"/>
+ <updated>2017-02-20T03:05:05+05:30</updated>
+ <id>http://srijanagarwal.me/tag/Travel.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>WikiToLearn India Conference 2017</title>
+   <link href="http://srijanagarwal.me/writing/WTLIndiaConf2017/"/>
+   <updated>2017-01-20T20:30:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/WTLIndiaConf2017</id>
+   <content type="html">&lt;p&gt;The annual &lt;a href=&quot;http://india2017.wikitolearn.events&quot;&gt;&lt;strong&gt;WikiToLearn India Conference&lt;/strong&gt;&lt;/a&gt; 2017 took place for the first time at The LNMIIT, Jaipur on January 18-19. I had the chance to organize the event and learn in these two days of lectures and conversations with fellow developers from around the world about freedom, sharing and open collaboration.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/wtlindiaconf.jpg&quot; alt=&quot;WTLIndiaConf&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Planning and co-working with Sagar Agarwal, for more than 4 months and finally seeing &lt;a href=&quot;http://www.facebook.com/search/top/?q=%23WTLIndiaConf&quot;&gt;&lt;strong&gt;#WTLIndiaConf&lt;/strong&gt;&lt;/a&gt; happen was heartily pleasing. Huge shoutout to our sponsors, KDE, Jetbrains and DigitalOcean.&lt;/p&gt;
+
+&lt;p&gt;I was traveling with two other fellow speakers and my university mates, &lt;a href=&quot;harithaharikumar.wordpress.com&quot;&gt;&lt;strong&gt;Haritha Harikumar&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt;. This was my first trip to Jaipur (Irony that I was born in Rajasthan) and my itinerary looked something like this : Amrita University -&amp;gt; Bangalore -&amp;gt; Jaipur (17th January) and Jaipur -&amp;gt; Bangalore -&amp;gt; University (22nd January).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Day 0&lt;/em&gt; :
+I was very excited for this conference, and we had a train to Bangalore on 16th evening and a flight from Bangalore to Jaipur on 17th night. Train was not much late (only 4 hours :/), but the good thing was that the flight was at late night. I had some commitments on the morning at Bangalore and had to finish it off.
+The flight for Jaipur, for the worse, also got delayed by 2.30 hours and we reached Jaipur at 3.30 AM.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Day 1&lt;/em&gt;:
+Reaching the campus at 4.30 am, one of the volunteers, Sachin Mittal, was waiting for us at the university gate. He boarded me to my room, and to my and his surprise, no one was opening the door. My roommate was in deep sleep, and I didn’t even know who was inside. After knocking the gate for 10 minutes continuously, I see, the great ‘Harry Green Ghost’ a.k.a ‘The Man’eater’’ a.k.a ‘&lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;’ comes up. For them who doesn’t know Harish, he was one of my first mentors at my university’s open source club (&lt;a href=&quot;foss.amrita.ac.in&quot;&gt;&lt;strong&gt;FOSS@Amrita&lt;/strong&gt;&lt;/a&gt;), a KDE dev, and we share a different bond (Bhai, hain!), and all together I started feeling at home.&lt;/p&gt;
+
+&lt;p&gt;After conversing with him for like 10 minutes, I didn’t even know when I slept and a loud siren at 8am woke me up. I freshened up, rushed to the breakfast area and to my surprise, I see &lt;a href=&quot;http://www.linkedin.com/in/riccardoiaconelli&quot;&gt;&lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt;&lt;/a&gt; (met him for the first time, finally :D) and &lt;a href=&quot;http://www.thomastony.me/&quot;&gt;&lt;strong&gt;Tony Thomas&lt;/strong&gt;&lt;/a&gt; (meeting him for the nth time :P) coming.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/group.jpg&quot; alt=&quot;We&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The WikiToLearn India Conference was a single track event, so no distribution of audiences at the talks.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/speakers.jpg&quot; alt=&quot;speakers&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The first talk of the first day of the event was by &lt;a href=&quot;http://sagaragarwal94.me&quot;&gt;&lt;strong&gt;Sagar Agarwal&lt;/strong&gt;&lt;/a&gt; on KDE Open Source Ecosystem. Sagar Chand Agarwal is a Google Summer of Code 2015 Student, Google Code In Mentor 2015, Season of KDE Mentor 2015, Google Summer of Code 2016 Mentor, KDE Developer, Freelancer and Consultant for over 2 years. He briefly explained about how KDE and open source, in general, works. It was a great start to the conference.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/atomsagar.jpeg&quot; alt=&quot;Sagar Agarwal&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next talk was by &lt;strong&gt;Jaminy Prabha&lt;/strong&gt; on Open Source Opportunities. Jaminy is a GSoC’16 student currently pursuing B.Tech in ECE at National Institute of Technology, Warangal and believes in solving social problems with the help of technology. She spoke about her journey with Open Source, hackathons and introduced the attendees to many different open source opportunities.&lt;/p&gt;
+
+&lt;p&gt;Lunch was pretty great. All the speakers gathered at a common place and had food. :D&lt;/p&gt;
+
+&lt;p&gt;The following talk was the Keynote by the founder, &lt;strong&gt;Riccardo Iaconelli&lt;/strong&gt; himself. His talk started with an example of some guy who was bragging something how he invented something , and how he couldn’t license it properly to make it proprietary. He talked about the motive behind Richard Stallman’s idea of Open Source. He then briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. He spoke on how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, about the power of collaboration and its impact in academia with the help of WikiToLearn. Also, he launched a competition for the attendees for the best technical and editing contribution - applicants can nominate themselves and there will be a winner who will be invited to a WTL sprint / Akademy.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/ruphy.jpeg&quot; alt=&quot;Riccardo Iaconelli&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next talk was by &lt;a href=&quot;http://keenlearner.wordpress.com/&quot;&gt;&lt;strong&gt;Abhimanyu Shekhawat&lt;/strong&gt;&lt;/a&gt;. Abhimanyu is a Computer Science Student at BITS Pilani Goa Campus, fellow WikiToLearn Core Developer and a GSoC’16 student. I was really very happy after I met him. His talk was one of the best talks for the day. He walked us through the basic architecture of his project : WikiRatings and gave have a fair idea of how much rewarding and fun it was to work for WikiToLearn the entire summer.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/abhimanyu.jpg&quot; alt=&quot;abhimanyu&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The following talk was by &lt;a href=&quot;cryptowriteup.wordpress.com&quot;&gt;&lt;strong&gt;Jay Gupta&lt;/strong&gt;&lt;/a&gt;. Jay is a Computer Science Student at Amity University, fellow WikiToLearn Core Developer and a GSoC’16 student. He talked about his Google Summer of Code’16 project : WikiToLearn Desktop Client which is a cross platform browser. The main feature of the application is the offline mode. Users can use even use WikiToLearn in offline mode after this project is implemented. Nice talk it was.&lt;/p&gt;
+
+&lt;p&gt;The last talk of the day was by &lt;a href=&quot;medium.com/@AMIT_GKP&quot;&gt;&lt;strong&gt;Amit Kumar Jaiswal&lt;/strong&gt;&lt;/a&gt;. He is an open hacktivist and a Mozilla Representative acting as a Mozilla Science Lab collaborator, developer at WorldBrain is a final year undergrad of Computer Science &amp;amp; Engineering from Kanpur University. He is a former internee at IIM Ahmadabad, CMIE and evangelizing Open Source and Mozilla. His talk was titled as “Diving into Docker: Developing a darn fast, repeatable workflow”. He introduced attendees to the basics of Docker,  how to use Docker throughout the development process and Illustrated them the web development process using Docker.&lt;/p&gt;
+
+&lt;p&gt;The talks on day 1 were really great start for the conference. After a quick tea break, where we had a bit of fun with Riccardo teaching him some local slang and pulling off pranks with local people ensured that we made our way to the evening lab sessions. Attendees and Speakers were completely refreshed and were able to provide hands on guidance to students at the university. Abhimanyu showing his ‘stud’ness at the lab hours too (;P).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/stud.jpg&quot; alt=&quot;abhimanyu&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;An awesome dinner followed (lot of Paneer) with Riccardo singing some Italian and Swedish songs at a bonfire followed by listening and ROFLing on &lt;em&gt;‘Ye Bik Gayi Hai Gormint’&lt;/em&gt; brings the day to a perfect end.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/bonfire1.jpg&quot; alt=&quot;bonfire&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Day2&lt;/em&gt; :
+Second day of the event started with Tony Thomas’s talk. &lt;a href=&quot;http://tttwrites.wordpress.com&quot;&gt;&lt;em&gt;Tony Thomas&lt;/em&gt;&lt;/a&gt; volunteers as the Organization Administrator for Google Summer of Code (round 12) and Outreachy (round 12-13) with the Wikimedia Foundation. He started with his contributions to the Mediawiki codebase back in September 2013, and did his GSoC with the Wikimedia Foundation in 2014. Post successful deployment of his project in production, he volunteered as a GSoC mentor in the 2015 and 2016 GSoC rounds as well with the Foundation. The talk was titled as Engaging and Bringing in new contributors to a community rather he focused on talking about how to really get started with contributions. He is an amazing speaker, and his talk was splendid.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/tony.jpg&quot; alt=&quot;tony&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The next talk was by &lt;a href=&quot;harishnavnit.wordpress.com&quot;&gt;&lt;strong&gt;Harish Navnit&lt;/strong&gt;&lt;/a&gt;. Harish is a free software enthusiast and has been involved with promotional and technical activities with the KDE community for almost half a decade now. He has been a Season of KDE participant as well as being involved in two Google Summer of Code projects with KDE in the past couple of years. His talk was entitled as ‘Modern Day Makefile Generators’. He imparted a basic familiarity to how large projects handle their dependencies and how a buildsystem functions, in general. He talked in depth about Cmake and qmake, and how they are used in handling large projects. It was a great talk for the technical peeps out there which gave them a basic understanding of it.&lt;/p&gt;
+
+&lt;p&gt;This was followed by &lt;a href=&quot;http://twitter.com/davide_vals94&quot;&gt;&lt;strong&gt;Davide Valsecchi&lt;/strong&gt;&lt;/a&gt;, Core Developer of WikiToLearn joining us over a hangout session straight from Italy to give us a brief introduction on the WikiToLearn infrastructure and introducing TeXLa. &lt;a href=&quot;http://github.com/wikitolearn/texla&quot;&gt;TeXLa&lt;/a&gt; is a minimal and easily extensible LaTeX parser. I would really like to thank him, to take some time out from his busy schedule and do this.&lt;/p&gt;
+
+&lt;p&gt;Before heading out for lunch, we took the time out to pose for mandatory group photos.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/groupphoto.jpg&quot; alt=&quot;Group Photo&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After the lunch it was the time for Mozilla girls, &lt;a href=&quot;http://reps.mozilla.org/u/Vnisha/&quot;&gt;&lt;strong&gt;Vnisha Srivastav&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;chaithanyah.wordpress.com&quot;&gt;&lt;strong&gt;Chaithanya Krishnan&lt;/strong&gt;&lt;/a&gt; to give their talk on Connecting Rural Woman on Internet. For women, education is not about the pursuit of knowledge but more about learning a particular trade or skill that could help them earn their bread and butter. With technology drastically transforming major portions of the world, the minority, also comprising of rural women, are much isolated in terms of technology. It is a great loss for them as they lose out on the opportunity to utilise technology which could improve their ways of living and even help them imbibe more skills at a faster pace.  It is also seen that even if technology is brought to within their reach, it is still not being put to effective use. Recently conducted surveys show that women majorly engage in more of social networking and gaming, when connected to the web, rather than using the same means for educational purpose. Also, the fact that Internet still comes in rates that are mostly not affordable to them, makes it more challenging. Keeping in mind the various challenges present in connecting women via the internet and introducing technology into their lives, we have designed various prototypes based on their diverse needs, and helping them in overcoming their challenges. One of the interesting talks for the day, and it was great we could have them onboard for the #WTLIndiaConf.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/wishingal.jpg&quot; alt=&quot;wishingal&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The following talk was by &lt;a href=&quot;www.arnavdhamija.com&quot;&gt;&lt;strong&gt;Arnav Dhamija&lt;/strong&gt;&lt;/a&gt; on his Google Summer of Code’16 project with KDE. His project aimed to make the menial task of selecting files in a file manager as easy as possible. In any file manager copying and pasting has never been a pleasant experience, especially if the files are in a non-continuous order. Often, when selecting files using Ctrl+A or the selection tool, we find that we need to select only a subset of the required files we have selected. This leads to the unwieldy operation of removing files from our selection. Of course, the common workaround is to create a new folder and to put all the items in this folder prior to copying, but this is a very inefficient and very slow process if large files need to be copied. Moreover Ctrl+Click requires fine motor skills to not lose the entire selection of files. His talk was really great.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/arnav.jpg&quot; alt=&quot;Arnav&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Following was the talk by &lt;a href=&quot;harithaharikumar.wordpress.com&quot;&gt;&lt;strong&gt;Haritha Harikumar&lt;/strong&gt;&lt;/a&gt;. Haritha is an Open Source enthusiast and a Mediawiki contributor since 2015. She is an active member of FOSS@Amrita and a technical mentor at ThinkFOSS. She believes in the motto of Code, Share and Grow. She is an advisor for #include program organised by SHE++. Her talk was titled: “Engine behind Wiki Pages”. She talked about different projects in Wikimedia Foundation, and MediaWiki in general. She introduced attendees to Mediawiki, and how to get started with technical contributions with Mediawiki.&lt;/p&gt;
+
+&lt;p&gt;The last talk of the conference was by &lt;a href=&quot;medium.com/@AMIT_GKP&quot;&gt;&lt;strong&gt;Amit Kumar Jaiswal&lt;/strong&gt;&lt;/a&gt; on &lt;em&gt;“Wikidata : A unidimensional Knowledge base by Wikimedia after Freebase migrated their data to Wikidata”&lt;/em&gt;. He discussed about the Wikidata data model and user interface design, the current state of the project, and induced the discussions on the topic of collaboration for collecting structured data by a broad and open audience.&lt;/p&gt;
+
+&lt;p&gt;After the talks ended, we planned a short &lt;em&gt;FAQ&lt;/em&gt; session where we asked attendees to ask a question if they have in mind for the speakers. That really went nice, and we did have some really funny questions and answers.&lt;/p&gt;
+
+&lt;p&gt;The conference didn’t end here. We had a surprise from Sagar (:D). All the speakers were given VIP access to a musical concert of a famous Rajasthani folk singer Mame Khan which turned out to be an astounding experience. Couldn’t have asked for a better end to the conference.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/mamekhan.jpg&quot; alt=&quot;MameKhan&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I would like to really thank all the Volunteers especially Sanju Godara and Aarshiya Guneja who put all of their efforts to make this conference successful.&lt;/p&gt;
+
+&lt;p&gt;It was the &lt;em&gt;end&lt;/em&gt; of the first &lt;strong&gt;#WTLIndiaConf&lt;/strong&gt; but not the end of my trip. It wasn’t until two more days that I went back to the university. We used this time to visit some of the bewildering ancient monuments at Agra and Fatepur Sikhri, but that’s a blog for some other time.&lt;/p&gt;
+
+&lt;p&gt;Concluding the blog, I extend my gratitude ​to KDE Family for believing in us to make this event happen.​ This was all possible due to the enormous support of KDE and WikiToLearn Developers (who supported us from Italy :D).&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>FUDCon APAC Phnom Penh Cambodia 2016</title>
+   <link href="http://srijanagarwal.me/writing/FUDCon-PhnomPenh/"/>
+   <updated>2016-11-05T13:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/FUDCon-PhnomPenh</id>
+   <content type="html">&lt;p&gt;I was selected for delivering a talk on WikiToLearn at the FUDCon APAC, Phnom Penh, Cambodia from 4th to 6th November, 2016.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/fudcon.png&quot; alt=&quot;fudcon&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;FUDCon (Fedora Users and Developers Conference) is an important event in the world of free software that is held in different parts of the world organized by Fedora Organization. The FUDCon comprised of sessions, talks, workshops and hackfest in which project participants worked on specific initiatives. FUDCon Phnom Penh was conducted at Norton University, Phnom Penh along Barcamp ASEAN. Around 50 speakers from around the world gave talks related to entrepreneurship and open source software. I was traveling with one my friends, Abhinand N, who also got selected to deliver a talk on Mediawiki. Looked like, we were the only two undergrads who were invited to deliver talks.&lt;/p&gt;
+
+&lt;p&gt;It was my first international trip and pretty amazing. My itinerary was something like this : Cochin -&amp;gt; Kuala Lumpur -&amp;gt; Phnom Penh (4th November) and Phnom Penh -&amp;gt; Bangkok -&amp;gt; Cochin (9th November).&lt;/p&gt;
+
+&lt;p&gt;Phnom Penh looked more or less like an Indian city just with more &lt;strong&gt;prettier&lt;/strong&gt; girls (:D) and &lt;strong&gt;no&lt;/strong&gt; public transport. We reached Phnom Penh on 4th evening, and a tuktuk driver was waiting for us at the airport to take us to the hotel. If you’re wondering what a tuktuk looks like, see this :&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/tuk-tuk.jpeg&quot; alt=&quot;tuktuk&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As soon as we reached Hotel, it was almost Dinner time. Sirko Kemter was the local organizer and all the developers decided to go to a nearby BBQ place. Remember, Abhinand is a &lt;strong&gt;pure&lt;/strong&gt; vegeterian and he came to eat BBQ (:P). Anyway, the food was great, since I had never tried Lobster and Prawn. Amazing experience, it was.&lt;/p&gt;
+
+&lt;p&gt;At the time of dinner, I interacted with rest of the Fedora developers from India, Australia, China and USA. &lt;a href=&quot;http://kushaldas.in/&quot;&gt;Kushal Das&lt;/a&gt;, &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt; were among the famous open source developers from India. It was great meeting and interacting with them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Day 1 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FUDCon Day 1 was pretty amazing. We started off with Barcamp pitches followed by &lt;em&gt;Fedora State of the Union&lt;/em&gt; talk from &lt;a href=&quot;http://fedoraproject.org/wiki/User:Bex&quot;&gt;Brian Exelbierd&lt;/a&gt;, Fedora Community Action and Impact Coordinator.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/brian.jpg&quot; alt=&quot;brian&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The first talk I went to was &lt;em&gt;Introduction to Rust Programming Language by&lt;/em&gt; &lt;a href=&quot;http://twitter.com/a2batic&quot;&gt;Kanika Murarka&lt;/a&gt;. Kanika actively contributes to Fedora, and is an intern at Red Hat, Bangalore. She engrossed us, telling that Rust is designed to be a safe, concurrent, practical language, supporting functional paradigms and is sponsored by Mozilla.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/kanika.jpg&quot; alt=&quot;kanika&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lunch was pretty interesting. Everyone gathered at a common lunch place with full of local khmer snacks, jackfruits, veg fried rice and non veg rice. Veg food had egg in it, so yeah! (:D) Lunch was okayish, but what made it interesting was the discussion! I had a long discussion with &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt; and &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt; about my project and it was great! After the discussion, we followed for the next series of talks.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/lunch.png&quot; alt=&quot;lunch&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next talk, I went onto was &lt;em&gt;How to globalize your software by&lt;/em&gt; &lt;a href=&quot;http://fedoraproject.org/wiki/User:Pnemade&quot;&gt;Parag Nemade&lt;/a&gt;. Parag Nemade is a Senior Software Engineer at Red Hat. He is an active contributor to Fedora project, sponsor for packager group, proven packager, helps in improving Fedora packaging and testing Fedora updates. Parag introduced us to Globalization. It is a collaborative work done by internationalizing, localizing your software. He told us how important it is to globalize the code you write. Then he told what Localization is and how to add internationalization in code by showing some code examples. It was a great talk!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/paragn.jpg&quot; alt=&quot;paragn&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The following talk was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Aeng&quot;&gt;Alex Eng&lt;/a&gt; on &lt;em&gt;Zanata, a translation platform&lt;/em&gt;. One of the best and interesting talk for the day. Alex presented a round up of the new features that will be available in the next release of the translation tool. I was very eager to learn more about how Zanata works, and therefore had a brief conversation with him. I was fascinated about the new editor and discussed  my GSoC project and collaborative editing would work in Zanata. Handling translations is very challenging and great thing is that, WikiToLearn is also looking for ways to implement Zanata.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/alex.jpg&quot; alt=&quot;paragn&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The next talk was on &lt;em&gt;Web Virtual Reality&lt;/em&gt; by &lt;a href=&quot;http://sumantrom.blogspot.com&quot;&gt;Sumantro Mukherjee&lt;/a&gt;. The highlight of the talk was a-frame. A-frame is a web framework for building virtual reality experiences and works on almost all devices. With just few lines of code, you can turn a video into 360 degree Virtual Reality. Amazing, isn’t it?&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/sumantro.jpg&quot; alt=&quot;sumantro&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The last talk of the day was by &lt;a href=&quot;anweshadas.in&quot;&gt;Anwesha Das&lt;/a&gt; on &lt;em&gt;A walk on licenses in Fedora ecosystem&lt;/em&gt;. She gave an overview of all the open source licenses, why it is important to use a license and what are the best practices of using a license. The take from the talk was not to use &lt;em&gt;personalized&lt;/em&gt; licenses and even if you use it, not to name it like &lt;strong&gt;Buy me a beer&lt;/strong&gt; or something similar. Overall, it was great to learn about Licenses.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/anwesha.jpg&quot; alt=&quot;anwesha&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The day ended with all the Indians and Ryan going to a Riverside Restaurant and having amazing food.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Day 2 : FUDCon APAC, Norton University, Phnom Penh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Day 2 started with heavy rains at Cambodia. Thanks to Sirko for providing raincoats! It was another day of interesting talks and I had my talk at 3pm.&lt;/p&gt;
+
+&lt;p&gt;The first talk I went to was by &lt;a href=&quot;http://fedoraproject.org/wiki/User:Noriko&quot;&gt;Noriko Mizumoto&lt;/a&gt; on &lt;em&gt;How can you help us get Fedora to the world?&lt;/em&gt;. Noriko hails from Japan and is a Community Relations Specialist and Program Manager, Red Hat Asia Pacific. Noriko focused on the importance of localization. Localization of a software is very important, since non-native English speakers are much more when compared to native English speakers.She introduced how Fedora has been localized into over 80 languages. A great talk, indeed.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/noriko.jpg&quot; alt=&quot;noriko&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Following was the talk on &lt;em&gt;Exploring Fedora Infrastructure&lt;/em&gt; by &lt;a href=&quot;http://sayanchowdhury.com/&quot;&gt;Sayan Chowdhary&lt;/a&gt;. Sayan Chowdhary is a Senior Software Engineer at Red Hat, Pune and has been a Python developer contributing to Fedora. Sayan talked about Fedora web projects and how can one contribute to them.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/sayan.jpg&quot; alt=&quot;sayan&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next was the talk by &lt;a href=&quot;http://kushaldas.in&quot;&gt;Kushal Das&lt;/a&gt; on &lt;em&gt;Testing Fedora Atomic in an automated way&lt;/em&gt;. I don’t need to introduce him (:P). He talked about testing fedora atomic project in an automated way by using Python and Go script made by him. It went over my head mostly, since I never contributed to Fedora. Anyway, it is always amazing to listen him speaking. The way he explains a scenario, is absolutely stunning.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/kushal.jpg&quot; alt=&quot;kushal&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After the better lunch, next talk I attended was on &lt;em&gt;Fedora QA&lt;/em&gt; by &lt;a href=&quot;&quot;&gt;Sumantro Mukherjee&lt;/a&gt;. Sumantro introduced us to Fedora Quality Assurance, the workflow and how to test a package. Great talk, indeed.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/sumantro2.jpg&quot; alt=&quot;sumantro&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, it was time for &lt;a href=&quot;http://wwww.srijanagarwal.me&quot;&gt;my&lt;/a&gt; talk on &lt;strong&gt;WikiToLearn&lt;/strong&gt; : &lt;em&gt;Bringing Academia to the Internet Era : A revolution in Knowledge Sharing&lt;/em&gt;. I introduced WikiToLearn to the attendees, how to contribute and gave them a hand-on session on “How to make a personalized book”. I briefed on how WikiToLearn is being adapted at European Universities and making it easier for students and professors for collaborative learning. I spoke on who/how can contribute being a student, teacher, translator or hacker, how the project is having powerful impact not only in Europe but also in the world with many universities involved and also organizations like KDE, Wikimedia Foundation and the CERN, About the power of collaboration and its impact in academia with the help of WikiToLearn and also how students and professors are using it in their universities as a tool to make learning much more effective in a collaborative way. Slides for the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn-2&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/srijan.jpg&quot; alt=&quot;srijan&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The last talk was on &lt;em&gt;Contributing to Mediawiki&lt;/em&gt; by Abhinand N. Abhinand is a Google Summer of Code’16 select for Mediawiki. He actively contributes to Mediawiki. He introduced attendees to Mediawiki and how can one contribute to Mediawiki by code. He briefed about Gerrit and the workflow of patch submission. It was a great talk, too.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/abhinand.jpg&quot; alt=&quot;abhinand&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We had a great party after the talks at Fudpub with Barcamp organizers. Free beer, yaay (:D).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/party2.jpg&quot; alt=&quot;party&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This was the first time, I attended Fedora event and it was amazing to meet and interact with developers around the world including Gerard Braad, Siddesh Poyarekar, Mohan Prakash, Jens Peterson, Nisha Poyarekar, Estu Fardani, Robert Mayr, Ryan Lerch and Tommy He. Kudos to the local organizers and KDE for sponsoring my trip. Overall, it was an amazing experience which I’m going to cherish for long.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>MediaWiki Hackathon BITS Pilani Hyderabad Campus 2016</title>
+   <link href="http://srijanagarwal.me/writing/Mediawiki-hackathon-bphc/"/>
+   <updated>2016-09-25T13:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/Mediawiki-hackathon-bphc</id>
+   <content type="html">&lt;p&gt;I was invited by BITS Pilani Hyderabad Campus, to give a talk on WikiToLearn at the MediaWiki Hackathon on 24th and 25th September, 2016.&lt;/p&gt;
+
+&lt;p&gt;It was a great event indeed, and an amazing experience to speak about WikiToLearn among those students. I spoke on ‘How to contribute to WikiToLearn’ and the talk can be found &lt;a href=&quot;http://slides.com/srijancse/wikitolearn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Few amazing things, I found out at BITS was :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;0% attendance requirements, creating nocturnal but hardcore engineers! Met crazy &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; waking up at 6 pm, like its 6 am. Met couple of others brushing at 20:00 in the washroom, getting ready for work.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Give students bad mess food, they would complain.
+Give students good mess food, they would complain in a month.
+Baffled at crazy &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Soni&quot;&gt;Subham Soni&lt;/a&gt; addressing their mess food as boring/bad etc.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since, this was my first visit to Hyderabad, I also got an opportunity to roam around the city, with my BPHC Friends, Utkarsh and Utsav. Some of the photos :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Visit to Charminar&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+ &lt;div class=&quot;image-block&quot;&gt;
+     &lt;img src=&quot;/images/Charminar.jpg&quot; alt=&quot;profile image&quot; /&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;BITS Pilani Hyderabad Campus&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+ &lt;div class=&quot;image-block&quot;&gt;
+     &lt;img src=&quot;/images/bphc.jpg&quot; alt=&quot;profile image&quot; /&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Giving talk&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/talk.jpg&quot; alt=&quot;profile image&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+</feed>

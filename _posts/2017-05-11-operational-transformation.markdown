@@ -2,7 +2,7 @@
 layout: post
 title:  "Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]"
 date:   2017-05-11 09:43:39 -0600
-tags: technical javascript js code algorithm 
+tags: technical javascript js code algorithm kde
 ---
 
 This is the second post related to **Operational Transformation**, the real time collaborative editing algorithm. The first post was [How Real-Time Collaborative Editors work? [Operational Transformation]](http://www.srijanagarwal.me/writing/collaborative-editing/). 

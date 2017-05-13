@@ -2,7 +2,7 @@
 layout: post
 title:  "How Real-Time Collaborative Editors work? [Operational Transformation]"
 date:   2017-04-27 90:43:39 -0600
-tags: technical javascript js code algorithm 
+tags: technical javascript js code algorithm kde
 ---
 
 
