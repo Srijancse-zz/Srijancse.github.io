@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - algorithm</title>
+ <link href="http://srijanagarwal.me/tag/algorithm/index.xml" rel="self"/>
+ <link href="http://srijanagarwal.me/tag/algorithm.html"/>
+ <updated>2017-05-13T18:47:44+05:30</updated>
+ <id>http://srijanagarwal.me/tag/algorithm.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]</title>
+   <link href="http://srijanagarwal.me/writing/operational-transformation/"/>
+   <updated>2017-05-11T21:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/operational-transformation</id>
+   <content type="html">&lt;p&gt;This is the second post related to &lt;strong&gt;Operational Transformation&lt;/strong&gt;, the real time collaborative editing algorithm. The first post was &lt;a href=&quot;http://www.srijanagarwal.me/writing/collaborative-editing/&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this post, I would be digging deep into the transformation function, how clients wait for &lt;strong&gt;acknowledgement&lt;/strong&gt; from server before sending more operations and the compound operational transformation.&lt;/p&gt;
+
+&lt;h3 id=&quot;transformation-function&quot;&gt;Transformation function&lt;/h3&gt;
+&lt;p&gt;To recap, for handling concurrent operations, we use the &lt;strong&gt;tranform&lt;/strong&gt; function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change.&lt;/p&gt;
+
+&lt;p&gt;Basically, there exists two kinds of transformation functions :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Inclusion Transformation&lt;/strong&gt; : denoted as IT(a, b), which transforms Operation &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; against another operation &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; in such a way that the impact of &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; is effectively included.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Exclusion Transformation&lt;/strong&gt; : denoted as ET(a, b), which transforms operation &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; against another operation &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; in such a way that the impact of &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; is effectively excluded.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Transformation functions are named differently in different OT systems, and some compound transformation functions may combine both IT and ET functionalities in one function. One of the papers, &lt;a href=&quot;http://www.springer.com/cda/content/document/cda_downloaddocument/9788132226369-c2.pdf?SGWID=0-0-45-1564306-p177709634&quot;&gt;Analysis of Operational Transformation Algorithms&lt;/a&gt; is really good, and analyses all the different OT systems.&lt;/p&gt;
+
+&lt;h4 id=&quot;character-wise-transformation-function&quot;&gt;Character wise Transformation Function&lt;/h4&gt;
+
+&lt;p&gt;A character wise transformation function’s algorithm (for consistency maintenance) is simple.  As an example, for a pair of character-wise operations &lt;code class=&quot;highlighter-rouge&quot;&gt;Ins[p, c]&lt;/code&gt; (to insert a character c at the position p) and &lt;code class=&quot;highlighter-rouge&quot;&gt;Del[p]&lt;/code&gt; (to delete a character at position p), four IT functions, denoted as &lt;code class=&quot;highlighter-rouge&quot;&gt;Tii&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tid&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tdi&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tdd&lt;/code&gt;, can be defined as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Tii(Ins[p1,c1], Ins[p2, c2]) {
+      if p1 &amp;lt; p2  or (p1 = p2 and u1 &amp;gt; u2) // breaking insert-tie using user identifiers (u1, u2)
+            return Ins[p1, c1];  // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
+      else return Ins[p1+1, c1]; } // Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
+ 
+Tid(Ins[p1,c1], Del[p2]) {          
+      if p1 &amp;lt;= p2 return Ins[p1, c1]; // e.g. Tid(Ins[3, “a”], Del[4]) = Ins[3, “a”]
+     else return Ins[p1-1, c1]; } // Tid(Ins[3, “a”], Del[1] ) = Ins[2, “a”]
+ 
+Tdi(Del[p1], Ins[p2, c2]) {
+      if p1 &amp;lt; p2 return Del[p1];  // e.g.  Tdi(Del[3], Ins[4, “b”]) = Del[3]
+      else return Del[p1+1]; } // Tdi(Del[3], Ins[1, “b”]) = Del[4]
+ 
+Tdd(Del[p1], Del[p2]) {
+      if p1 &amp;lt; p2 return Del[p1]; // e.g.   Tdd(Del[3], Del[4]) = Del[3]
+      else if p1 &amp;gt; p2 return Del[p1-1]; // Tdd(Del[3], Del[1]) = Del[2]
+      else return I; } // breaking delete-tie using I (identity op)  Tdd(Del[3]. Del[3]) = I 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;String-wise transformation function’s algorithm is significantly more challenging than character-wise operations’ because:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;a string delete covers a deleting range, which may include the characters in the string as well as the interval positions between characters.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;concurrent string delete operations may arbitrarily overlap with each other and even with concurrent insert operations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a string inserted by a previous insert operation may be changed by following (causally after) insert and delete operations.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;undo-related-application&quot;&gt;Undo Related Application&lt;/h3&gt;
+
+&lt;p&gt;Operational Transformation ofcourse supports undo in collaborative editors which impose additional  requirements :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One is the undo effect, which requires that undoing an operation O achieves the effect of eliminating the effect of O but retains the effects of other operations in the document. In other words, the effect of undoing O is to &lt;code class=&quot;highlighter-rouge&quot;&gt;transform&lt;/code&gt; the document state into one that it would have gone to if O had never been performed but other operations had been performed. This undo effect is consistent with the linear undo effect in single-user editing environments, and also suitable for non-linear undo (e.g. “undoing any operation at any time”) in multi-user and concurrent editing environments.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The other is the undo property, which requires that the document be restored to any previous state by undoing all operations executed after that state, regardless of the order in which those operations are undone. This property is required to ensure the capability of “restoring any prior state”, which is essential for an undo solution to support error-recovery and alternative exploration.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/undo.jpg&quot; alt=&quot;undo&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;client---server-acknowledgement-approach&quot;&gt;Client - Server Acknowledgement approach&lt;/h3&gt;
+
+&lt;p&gt;Just to recap, what the theory of Operational Transformation in &lt;a href=&quot;http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf&quot;&gt;High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System&lt;/a&gt; says is that a client can send operations in a sequence to the server and vice versa. This means that the client and server can traverse through the state space through different paths of operational transformation to the same convergent state depending on when they receive the other operations.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/ot-paths.png&quot; alt=&quot;otpath&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When multiple clients are connected to the server, every client and server pair have their own state space. One shortcoming of this is that the server would need to carry a state space for every connected client, which can be very memory-intensive. In addition, this complicates the server algorithm by requiring it to convert clients’ operations between state spaces.&lt;/p&gt;
+
+&lt;p&gt;Having a simple and efficient server is important in making waves reliable and scalable. With this goal, Google’s Operational Transformation algorithm modifies the basic theory of OT by requiring the client to wait for &lt;strong&gt;acknowledgement&lt;/strong&gt; from the server before sending more operations. When a server acknowledges a client’s operation, it means the server has transformed the client’s operation, applied it to the server’s copy of the wavelet and broadcast the transformed operation to all other connected clients. While the client is waiting for the acknowledgement, it caches operations produced locally and sends them in bulk later.&lt;/p&gt;
+
+&lt;p&gt;With the addition of acknowledgements, a client can infer the server’s OT path. By having this, the client can send operations to the server that are always on the server’s OT path.&lt;/p&gt;
+
+&lt;p&gt;This has the important benefit that the server only needs to have &lt;strong&gt;a single state space&lt;/strong&gt;, which is the history of operations it has applied. When it receives a client’s operation, it only needs to transform the operation against the operation history, apply the transformed operation, and then broadcast it. This source of truth also forces the client to wait for the server to &lt;strong&gt;acknowledge&lt;/strong&gt; the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. One trade off of this change is that a client will see chunks of operations from another client in intervals of approximately one round trip time to the other client.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/ot.png&quot; alt=&quot;ot&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;compound-operational-transformation&quot;&gt;Compound Operational Transformation&lt;/h3&gt;
+&lt;p&gt;A great tutorial on Compound Operational Transformation is &lt;a href=&quot;http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation&quot;&gt;Understanding and Applying Operational Transformation by Daniel Spiewak&lt;/a&gt;. One must read this to understand how Compound Operational Transformation works.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;As I have mentioned earlier, &lt;strong&gt;Operational Transformation&lt;/strong&gt; is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I would keep updating the blogpost with whatever I learn more about OT and other real time collaborative editing algorithms.&lt;/p&gt;
+
+&lt;p&gt;Quoting from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Operational_transformation#Critique_of_OT&quot;&gt;Wikipedia’s Page&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;While the classic OT approach of defining operations through their offsets in the text seems to be simple and natural, real-world distributed systems raise serious issues. Namely, that operations propagate with finite speed, states of participants are often different, thus the resulting combinations of states and operations are extremely hard to foresee and understand. As Li and Li put it, “Due to the need to consider complicated case coverage, formal proofs are very complicated and error-prone, even for OT algorithms that only treat two characterwise primitives (insert and delete)”.&lt;/p&gt;
+
+&lt;p&gt;Similarly, Joseph Gentle who is a former Google Wave engineer and an author of the Share.JS library wrote, “Unfortunately, implementing OT sucks. There’s a million algorithms with different tradeoffs, mostly trapped in academic papers. The algorithms are really hard and time consuming to implement correctly. […] Wave took 2 years to write and if we rewrote it today, it would take almost as long to write a second time.”&lt;/p&gt;
+
+&lt;p&gt;For OT to work, every single change to the data needs to be captured: “Obtaining a snapshot of the state is usually trivial, but capturing edits is a different matter altogether. […] The richness of modern user interfaces can make this problematic, especially within a browser-based environment.” An alternative to OT is differential synchronization.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;I’ve read the following papers and articles to learn about Operational Transformation.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf&quot;&gt;High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System&lt;/a&gt; &lt;em&gt;Authored by David A. Nichols, Pavel Curtis, Michael Dixon, and John Lamping.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.933&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements&lt;/a&gt; &lt;em&gt;Authored by Chengzheng Sun and Clarence (Skip) Ellis.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.waveprotocol.org/whitepapers/operational-transform&quot;&gt;Google’s whitepaper on Operational Transformation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;Concurrency Control in Groupware Systems&lt;/a&gt; &lt;em&gt;Authored by C.A. Ellis, S.J. Gibbs&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf&quot;&gt;Evaluating CRDTs for Real-time Document Editing&lt;/a&gt; &lt;em&gt;Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://hal.inria.fr/hal-00957167/document&quot;&gt;Merging OT and CRDT Algorithms&lt;/a&gt; &lt;em&gt;Authored by Mehdi Ahmed-Nacer, Pascal Urso, Valter Balegas, Nuno Pregui¸ca&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Operational_transformation&quot;&gt;Wikipedia on Operational Transformation&lt;/a&gt; &lt;em&gt;One of the most informative articles, I have found on wikipedia, suprisingly.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How Real-Time Collaborative Editors work? [Operational Transformation]</title>
+   <link href="http://srijanagarwal.me/writing/collaborative-editing/"/>
+   <updated>2017-05-01T06:13:39+05:30</updated>
+   <id>http://srijanagarwal.me/writing/collaborative-editing</id>
+   <content type="html">&lt;p&gt;Recently, I’ve been diving deep on how &lt;strong&gt;real-time collaborative&lt;/strong&gt; editing works. I have been reading various papers on both the methods of implementing collaborative editing : &lt;strong&gt;Operational Transformation&lt;/strong&gt;, which goes back to 1989, when it was first implemented by the &lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;GROVE (GRoup Outtie Viewing Editor)&lt;/a&gt; system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and &lt;strong&gt;Conflict-Free Replicated Data Types&lt;/strong&gt;, which is a much newer approach to real-time editing.&lt;/p&gt;
+
+&lt;h3 id=&quot;real-challenge-of-collaborative-editing&quot;&gt;Real challenge of collaborative editing&lt;/h3&gt;
+
+&lt;p&gt;If you know how real-time collaborative editing works, then you may know that handling concurrent editing in multi user environment gracefully is very challenging. However, a few simple concepts can simplify this problem. The main challenge, as mentioned, with collaborative editing is the concurrency control [&lt;strong&gt;concurrent edits&lt;/strong&gt;] to the document are not commutative. This needs to be causally ordered before applying either by undoing history, or by transforming the operations [&lt;strong&gt;operational transformation&lt;/strong&gt;] before applying them to make them seem commutative.&lt;/p&gt;
+
+&lt;h3 id=&quot;bringing-latency-into-action&quot;&gt;Bringing Latency into action&lt;/h3&gt;
+
+&lt;p&gt;Introducing latency between the client and server is where the problems arise. Latency in a collaborative editor introduces the possibility of version conflicts. Here, where, I said Operational Transformation will come into action.&lt;/p&gt;
+
+&lt;p&gt;Let’s take an example :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Starting Client’s state :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; ABCD &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Starting Server’s state :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; ABCD &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, let’s say, &lt;em&gt;Client&lt;/em&gt; enters &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; in between &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;D&lt;/code&gt; , the operation would look something like this :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;insert(X,3) //where 3 is the position where x is going to be added (0=A, 1=B, 2=C ..)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And at the same time, &lt;em&gt;Server&lt;/em&gt; deletes &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; , the operation would be :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;delete(B,1)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;What actually should happen is that the client and server should both end with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD&lt;/code&gt; but in reality, &lt;em&gt;client&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Insert &#39;X&#39;&quot; operation at offset 3 [local] -&amp;gt; ABCXD
+&quot;Delete &#39;B&#39;&quot; operation at offset 1 [remote] -&amp;gt; ACXD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;but the &lt;em&gt;server&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACDX&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Delete &#39;B&#39;&quot; operation at offset 1 [local] -&amp;gt; ACD
+&quot;Insert &#39;X&#39;&quot; operation at offset 3 [remote] -&amp;gt; ACDX
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ofcourse, &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD != ACDX&lt;/code&gt; and the document which is shared now is in wrong state.&lt;/p&gt;
+
+&lt;p&gt;Here is where the &lt;strong&gt;Operational Transformation&lt;/strong&gt; algorithm comes to the rescue.&lt;/p&gt;
+
+&lt;h3 id=&quot;operational-transformation-algorithm&quot;&gt;Operational Transformation Algorithm&lt;/h3&gt;
+
+&lt;p&gt;Operational Transformation (OT) is an algorithm/technique for the transformation of operations such that they can be applied to documents whose states have diverged, bringing them both back to the same state.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-does-operational-transformation-work&quot;&gt;How does Operational Transformation work?&lt;/h4&gt;
+
+&lt;p&gt;A short overview of how OT works :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every change (insertion or deletion) is represented as an &lt;strong&gt;operation&lt;/strong&gt;. An operation can be applied to the current document which results into a new document state.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To handle concurrent operations, we use the &lt;strong&gt;tranform&lt;/strong&gt; function that takes two operations that have been applied to the same document state (but on different clients) and computes a new operation that can be applied after the second operation and that preserves the first operation’s intended change.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s apply Operational Transformation in the original example.&lt;/p&gt;
+
+&lt;p&gt;If we apply OT, &lt;em&gt;Client&lt;/em&gt; will see :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Insert &#39;X&#39;&quot; operation at offset 3 [local] -&amp;gt; ABCXD
+&quot;Delete &#39;B&#39;&quot; operation at offset 1 [transformed] -&amp;gt; ACXD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and &lt;em&gt;Server&lt;/em&gt; will see :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Delete &#39;B&#39;&quot; operation at offset 1 [local] -&amp;gt; ACD
+&quot;Insert &#39;X&#39;&quot; operation at offset 2 [transformed] -&amp;gt; ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;client---server-ot-approach-to-collaborative-editing&quot;&gt;Client - Server [OT] Approach to Collaborative Editing&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;transform&lt;/strong&gt; function is used to build a client-server protocol that can handle collaboration between any number of clients.&lt;/p&gt;
+
+&lt;p&gt;Choosing a Client-Server architecture will allow scouting a large number of clients without actually complicating the environment. Also, there will be a single system which holds the source of truth i.e. the server, so even if the clients crash/go offline for a long time, we can go back to the server and fetch the document easily.&lt;/p&gt;
+
+&lt;p&gt;This source of truth also forces the client to wait for the server to &lt;strong&gt;acknowledge&lt;/strong&gt; the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Operational Transformation&lt;/strong&gt; is a very powerful tool that allows to build great collaborative apps with support for non-blocking concurrent editing. I am looking forward to dive deep into the algorithm (and ofcourse extending this blogpost) and possibly working on an editor which supports it as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;
+
+&lt;p&gt;I’ve read the following papers and articles to learn about Operational Transformation.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf&quot;&gt;High Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System&lt;/a&gt; &lt;em&gt;Authored by David A. Nichols, Pavel Curtis, Michael Dixon, and John Lamping.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.933&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements&lt;/a&gt; &lt;em&gt;Authored by Chengzheng Sun and Clarence (Skip) Ellis.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.waveprotocol.org/whitepapers/operational-transform&quot;&gt;Google’s whitepaper on Operational Transformation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;Concurrency Control in Groupware Systems&lt;/a&gt; &lt;em&gt;Authored by C.A. Ellis, S.J. Gibbs&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://hal.archives-ouvertes.fr/file/index/docid/629503/filename/doce63-ahmednacer.pdf&quot;&gt;Evaluating CRDTs for Real-time Document Editing&lt;/a&gt; &lt;em&gt;Authored by Mehdi Ahmed-Nacer, Claudia-Lavinia Ignat, G´erald Oster, Hyun-Gul Roh, Pascal Urso&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://hal.inria.fr/hal-00957167/document&quot;&gt;Merging OT and CRDT Algorithms&lt;/a&gt; &lt;em&gt;Authored by Mehdi Ahmed-Nacer, Pascal Urso, Valter Balegas, Nuno Pregui¸ca&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Operational_transformation&quot;&gt;Wikipedia on Operational Transformation&lt;/a&gt; &lt;em&gt;One of the most informative articles, I have found on wikipedia, suprisingly.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+</feed>
