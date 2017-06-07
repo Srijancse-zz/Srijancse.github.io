@@ -4,7 +4,7 @@ title:  "Analysing different Operational Transformation algorithms for collabora
 date:   2017-06-07 21:43:39 -0600
 tags: technical javascript js code algorithm kde
 ---
-## Introduction
+**Introduction**
 This is the third post in my series of **Operational Transformation (OT)**, the real time collaborative editing algorithm. The first and second posts were [How Real-Time Collaborative Editors work? [Operational Transformation]](https://medium.com/@srijancse/how-real-time-collaborative-editing-work-operational-transformation-ac4902d75682) and [Operational Transformation, the real time collaborative editing algorithm respectively](https://medium.com/@srijancse/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66).
 
 As mentioned in earlier posts, Operational transformation was originally born due the need of consistency maintenance in collaborative text editors. In the span of over two decades OTs have gained new capabilities (such as undo operations and group undo) and have been applied to different applications ranging from HTML/XML editing, office tools and even 3D digital media design tools.
@@ -34,7 +34,7 @@ In the second post, I explained about the two kinds of Transformation functions,
 
 **Precondition of TP2** : TP2 is required only if the OT system allows two operations O1 and O2 be IT-transformed in two different document states (or contexts).
 
-## 1. dOPT — distributed OPerational Transformation
+** 1. dOPT — distributed OPerational Transformation**
 
 The dOPT Algorithm was one of the first approaches to OT. In dOPT Algorithm, each machine has an identifier i, which could be an IP or MAC. Each machine has to maintain a state vector s with n components where n is the number of machines. The i component store the number of changes recorded by the ith machine. The requests are of the form: < i, s, o, p >
 
@@ -50,7 +50,7 @@ A transformation matrix, denoted as T, is what solves *conflicting operations*. 
 
 For handling requests, the actions are based on comparisons between *s_i* [sending state] and *s_x* [receiving state]. If they are same i.e *s_i = s_x*, *o* is executed immediately, if *s_i > s_x*, *o* is queued and executed later and if *s_i < s_x*, *o* is transformed and then executed.
 
-** Strengths of the algorithm :
+** Strengths of the algorithm ** :
 
 * Immediate feedback for local operations.
 
@@ -62,4 +62,7 @@ For handling requests, the actions are based on comparisons between *s_i* [sendi
 
 * Enforces the *Transformation property 1*.
 
+**Problems:**
+
+The priority, *p*, suggested doesn’t work great for two clients. It fails whenever an operation is concurrent with two or more dependent operations. This algorithm is distributed and does not have a **central server**.
 
