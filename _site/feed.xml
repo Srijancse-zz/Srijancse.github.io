@@ -5,9 +5,242 @@
     <description>Web Developer, 19. I code, eat and write.</description>
     <link>http://srijancse.github.io/</link>
     <atom:link href="http://srijancse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Jun 2017 14:30:12 +0530</pubDate>
-    <lastBuildDate>Tue, 06 Jun 2017 14:30:12 +0530</lastBuildDate>
+    <pubDate>Thu, 08 Jun 2017 13:05:16 +0530</pubDate>
+    <lastBuildDate>Thu, 08 Jun 2017 13:05:16 +0530</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Analysing different Operational Transformation algorithms for collaborative editing</title>
+        <description>&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;
+This is the third post in my series of &lt;strong&gt;Operational Transformation (OT)&lt;/strong&gt;, the real time collaborative editing algorithm. The first and second posts were &lt;a href=&quot;https://medium.com/@srijancse/how-real-time-collaborative-editing-work-operational-transformation-ac4902d75682&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt; and &lt;a href=&quot;https://medium.com/@srijancse/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66&quot;&gt;Operational Transformation, the real time collaborative editing algorithm respectively&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As mentioned in earlier posts, Operational transformation was originally born due the need of consistency maintenance in collaborative text editors. In the span of over two decades OTs have gained new capabilities (such as undo operations and group undo) and have been applied to different applications ranging from HTML/XML editing, office tools and even 3D digital media design tools.&lt;/p&gt;
+
+&lt;p&gt;There are many established approaches that exists to operational transformation. In this post, I will walk through the different OT algorithms that are well defined and implemented.&lt;/p&gt;
+
+&lt;h3 id=&quot;definitionsterms-used-&quot;&gt;Definitions/Terms used :&lt;/h3&gt;
+&lt;p&gt;In the second post, I explained about the two kinds of Transformation functions, i.e, Inclusion Transformation and Exclusion Transformation. These functions have two properties/preconditions which ensures OT correctness. TP1 and TP2 are the transformation/convergence properties.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TP1&lt;/strong&gt; : For two concurrent operations O1 and O2, the transform function (T) satisfies TP1 iff O1 o T(O2, O1) ≡ O2 o T(O1, O2) where o denotes the sequence of operations containing Oi followed by Oj and ≡ denotes the equivalence of the two operations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Precondition of TP1&lt;/strong&gt; : TP1 is required only if the Operational Transformation system allows any two operations to be executed in different orders.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/OTtp1.jpg&quot; alt=&quot;TP1&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;TP2&lt;/strong&gt; : For three concurrent operations O1, O2 and O3, the transform function (T) satisfies TP2 iff T(O3, O1 o T(O2, O1)) ≡ T(O3, O2 o T(O1, O2)).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/OTtp2.jpg&quot; alt=&quot;TP2&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Precondition of TP2&lt;/strong&gt; : TP2 is required only if the OT system allows two operations O1 and O2 be IT-transformed in two different document states (or contexts).&lt;/p&gt;
+
+&lt;p&gt;** 1. dOPT — distributed OPerational Transformation**&lt;/p&gt;
+
+&lt;p&gt;The dOPT Algorithm was one of the first approaches to OT. In dOPT Algorithm, each machine has an identifier i, which could be an IP or MAC. Each machine has to maintain a state vector s with n components where n is the number of machines. The i component store the number of changes recorded by the ith machine. The requests are of the form: &amp;lt; i, s, o, p &amp;gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;i — the original site’s identifier&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;s — the state vector of the machine which is sending&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;o — the operation which needs to be performed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;p — the priority which is associated with o [&lt;strong&gt;this is where the algorithm got wrong&lt;/strong&gt;]&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A transformation matrix, denoted as T, is what solves &lt;em&gt;conflicting operations&lt;/em&gt;. T is a &lt;em&gt;m x m&lt;/em&gt; matrix, where &lt;em&gt;m&lt;/em&gt; is the number of supported operations in the group-ware system. Each entry in the matrix is a function which transforms operations into other operations and to ensure convergence dOPT requires the Transformation Property 1.&lt;/p&gt;
+
+&lt;p&gt;For handling requests, the actions are based on comparisons between &lt;em&gt;s_i&lt;/em&gt; [sending state] and &lt;em&gt;s_x&lt;/em&gt; [receiving state]. If they are same i.e &lt;em&gt;s_i = s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is executed immediately, if &lt;em&gt;s_i &amp;gt; s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is queued and executed later and if &lt;em&gt;s_i &amp;lt; s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is transformed and then executed.&lt;/p&gt;
+
+&lt;p&gt;** Strengths of the algorithm ** :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Immediate feedback for local operations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Does not require locking of resources.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Relatively easy to implement due to its simple data structures.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Satisfies the &lt;em&gt;precedence property&lt;/em&gt;, which is defined as, a consistency property which ensures that the execution order is the same as the operations natural cause-effect order. In other words if an operation O1 causally precedes another operation O2, then at every site O1 will be executed before O2.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enforces the &lt;em&gt;Transformation property 1&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The priority, &lt;em&gt;p&lt;/em&gt;, suggested doesn’t work great for two clients. It fails whenever an operation is concurrent with two or more dependent operations. This algorithm is distributed and does not have a &lt;strong&gt;central server&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.1. adOPTed Algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The shortcomings in dOPT were in the way it transformed operations. The adOPTed introduced the second transformation property [TP2] which ensures that transformation of an operation along different paths will yield the same resulting operation.&lt;/p&gt;
+
+&lt;p&gt;The adOPTed algorithm is right in general, and solves most of the shortcomings of dOPT algorithm but &lt;strong&gt;has not proved Intention Preservation property&lt;/strong&gt;, which is defined as, a consistency property which ensures that the intention of an operation is preserved after a transformation. The intention of an operation, O, is the effect of applying O on the resource where the operation was generated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. GOT and GOTO — Generic and Generic Optimized Operational Transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;GOT control algorithm maintains convergence nicely i.e. when the same set of operations have been executed at all sites, all copies of the document which is shared are identical. Also, it is integrated with Undo/Do/Redo Scheme which states that when a new operation O is ready;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Undo&lt;/strong&gt; operations in &lt;strong&gt;History Buffer (HB)&lt;/strong&gt; (which is defined as ‘saved executed operations at each site’) which totally follow O to restore the document to the state before their execution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Do&lt;/strong&gt; O (the operation)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Redo&lt;/strong&gt; all operations that were undone from the HB.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, in this convergence TP2 is not a necessary condition i.e the precondition CP2/TP2 is required only if the OT systems allows two operations op1 and op2 be IT-transformed [inclusion transformation] in two different document states.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strengths of the algorithm :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OT based undo is established, faster and more efficient undo based operations.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Convergence property&lt;/em&gt; is fulfilled, which is defined as, a consistency property which ensures that copies of a shared resource are identical at all sites in state of rest (i.e. ensuring that all operations are executed).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The algorithm only supports basic string operations i.e Insert/Delete. Also, correctness proof of algorithm is missing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GOTO Algorithm&lt;/strong&gt; is the &lt;strong&gt;O&lt;/strong&gt;ptimized version of GOT Algorithm. The optimization takes place because of two postconditions, &lt;strong&gt;TP1&lt;/strong&gt; and &lt;strong&gt;TP2&lt;/strong&gt; to reduce the number of &lt;strong&gt;IT/ET&lt;/strong&gt; (Inclusion/Exclusion) transformations by adding the properties from adOPTed.&lt;/p&gt;
+
+&lt;p&gt;GOTO algorithm uses the function &lt;strong&gt;convert2HC()&lt;/strong&gt; which basically uses ET between an insert and a delete [concurrent], what basically happens is we transpose the entire history to obtain the concurrent operations when integrating a remote operation. The algorithm fulfills the convergence property, precedence property, TP1, TP2 and has better undo operations, but was &lt;strong&gt;never theoretically proven correct for all scenarios.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. COT — Context-based Operational Transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The COT algorithm does not use a history buffer (HB) when an operation is executed, instead it keeps track of the document state in which a operation have been executed in. So instead of a HB it has a context vector.&lt;/p&gt;
+
+&lt;p&gt;In an OT-based collaborative editor, a document state can be uniquely characterized by the set of original operations executed so far on the document. These original operations may be executed in different orders or forms at different sites, but they must produce the same document state according to the convergence/transformation properties . Moreover, the difference between two document states can be expressed in terms of different original operations executed in these two states. Since every transformed operation must come from an original operation, org(O) is used to denote the original operation of O.
+A document state, denoted as** DS**, can be represented as :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The initial Document State is represented by DS = { }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After executing an operation O on DS, the new Document State DS’ = DS ∪ { org(O) }.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An operation is defined by a site identifier and a number given when it is generated. This operation in turn has &lt;strong&gt;a context vector&lt;/strong&gt; that contains the operation context in terms of operations that precedes it. The operations inside the context vector in turn have their own site identifiers and defining numbers.
+This is the main difference since COT heavily relies on every operation which is to be executed on the same document state on all locations, if the operation is executed on the same document state at all sites the result can not diverge.&lt;/p&gt;
+
+&lt;p&gt;A context vector, denoted as CV(O), can be represented as :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CV(O) = [(ns⁰, ic⁰), (ns¹, ic¹), . . . , (ns^N-1, ic^N-1)]&lt;/strong&gt; where 0 ≤ i ≤ N-1 and&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ns^i represents all original normal operations at site i&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ic^i = [(ns⁰, is⁰), (ns¹, is¹), . . . , (ns^k-1, is^k-1)] represents all inverse operations for undoing normal operations at site i.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also to capture the essential requirements for correct operation execution and transformation, a set of six rules called Context-based Conditions (CCs) were introduced.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC1: Given a original operation O and a document state DS, where O ∉ DS, O can be transformed for execution on DS only if C(O) ⊆ DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC2: Given an original operation O and a document state DS, where O ∉ DS and C(O) ⊆ DS, DS-C(O)² is the set of operations that O must be transformed against before being executed on DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC3: Given any operation O and a state DS, O can be executed on DS only if C(O) = DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC4: Given an original operation Ox and a operation O of any type, where Ox ∉ C(O), Ox can be transformed to the context of O only if C(Ox) ⊆ C(O).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC5: Given an original operation Ox and a operation O of any type, where Ox ∉ C(O) and C(Ox) ⊆ C(O), C(O) ≠ C(Ox) is the set of operations that Ox must be transformed against before being IT-transformed with O.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC6: Given two operations Oa and Ob, they can be IT-transformed with each other IT(Oa,Ob) or IT(Ob,Oa), only if C(Oa) = C(Ob).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Due to these conditions and the context vector the COT algorithm is optimized to the extent that it does not even have a need for the &lt;strong&gt;ET&lt;/strong&gt; transformations. This is made possible because of the context vector that enables a better use of &lt;strong&gt;IT&lt;/strong&gt;s.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strengths of the algorithm:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fulfils the convergence property.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fulfils the precedence property.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Platform capable of more than text editing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Has been well tested as it has been implemented in several editing programs such as CoMaya, CoWord and more.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Requires more memory than other algorithms because of the nature of context vectors but can be optimized in the same way other algorithms have.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Google Wave OT Algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Wave OT is basically based on the algorithm given by Jupiter System [dOPT algorithm]. Having a simple and efficient server is important in making wave’s reliable and scalable. With this goal, Google’s Operational Transformation algorithm modifies the basic theory of OT by requiring the client to wait for &lt;strong&gt;acknowledgement [ACKs]&lt;/strong&gt; (In the &lt;a href=&quot;https://medium.com/@srijancse/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66&quot;&gt;second post&lt;/a&gt;, I have explained Client — Server Acknowledgement approach) from the server before sending more operations. When a server acknowledges a client’s operation, it means the server has transformed the client’s operation, applied it to the server’s copy of the wavelet and broadcast the transformed operation to all other connected clients. While the client is waiting for the acknowledgement, it caches operations produced locally and sends them in bulk later.&lt;/p&gt;
+
+&lt;p&gt;With the addition of acknowledgements, a client can infer the server’s OT path. By having this, the client can send operations to the server that are always on the server’s OT path.&lt;/p&gt;
+
+&lt;p&gt;This has the important benefit that the server only needs to have &lt;strong&gt;a single state space&lt;/strong&gt;, which is the history of operations it has applied. When it receives a client’s operation, it only needs to transform the operation against the operation history, apply the transformed operation, and then broadcast it. This source of truth also forces the client to wait for the server to acknowledge the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. One trade off of this change is that a client will see chunks of operations (accumulated batch operations) from another client in intervals of approximately one round trip time to the other client.&lt;/p&gt;
+
+&lt;p&gt;Google Wave OT solves most of the flaws by its Acknowledge command and by strictly limiting the number of participants in communication to two. If the number of clients were increased to three, &lt;strong&gt;17%&lt;/strong&gt; of the time, conflicts arose. However, there is one flaw that might have slipped through, which is intention preservation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;What I think would be a viable approach is when we can incorporate &lt;strong&gt;Context based OT&lt;/strong&gt; with G&lt;strong&gt;oogle wave OT&lt;/strong&gt;, since COT would be able to provide a better intention preservation. Also, COT algorithm is not based on when the operation arrives at different places but in what context [CV(O)] the original operation was executed in. Therefore at each site when Oi arrives a comparison will be made with Oi’s context vector and the site’s own document state.&lt;/p&gt;
+
+&lt;p&gt;Also, note that not all Operational Transformation approaches has been taken into considerations. I have merely listed those which I believed are the most significant ones.&lt;/p&gt;
+
+&lt;p&gt;I would also be researching and writing another post on why Google Wave OT failed in practice by using whatever source code provided by Google implementing a test to prove that Waves OT fails to preserve true intention in practice. Also, I may perform a benchmarking with COT and Google Wave together to know if really COT can be incorporated with Google Wave’s OT.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Jun 2017 09:13:39 +0530</pubDate>
+        <link>http://srijancse.github.io/writing/analysing-ot/</link>
+        <guid isPermaLink="true">http://srijancse.github.io/writing/analysing-ot/</guid>
+        
+        <category>technical</category>
+        
+        <category>javascript</category>
+        
+        <category>js</category>
+        
+        <category>code</category>
+        
+        <category>algorithm</category>
+        
+        <category>kde</category>
+        
+        
+      </item>
     
       <item>
         <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]</title>
@@ -744,45 +977,6 @@ You’ll never master something that moves at break-neck speed, not to mention t
         <guid isPermaLink="true">http://srijancse.github.io/writing/Experiences-With-Node/</guid>
         
         <category>code</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>3586x2017 : New Year’s Resolution</title>
-        <description>&lt;p&gt;&lt;strong&gt;2016 — An amazing year&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The best thing happened to me was &lt;a href=&quot;http://foss.amrita.ac.in&quot;&gt;FOSS at Amrita&lt;/a&gt;, my seniors, and mentors. Working with amazing peeps at &lt;a href=&quot;http://www.wikitolearn.org&quot;&gt;WikiToLearn&lt;/a&gt; has made this year even better. Met and connected with awesome people, traveled to a foreign land for the first time (thanks to WikiToLearn again), learned new skills and now working on an exciting product with &lt;a href=&quot;http://under25.club&quot;&gt;Under 25 club&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In addition, 2016 was a great year, but that doesn’t necessarily mean this debuting 2017 can’t be a better one!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2017 — Future as we know it&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;January 1st is here and it was a long way. After a couple of years watching Mark Zuckerberg setting his goals at the beginning of the year and then showing his accomplishments in December, I decided to start the year with the same idea.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;First: Personal Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;My life is good right now. I have a happy family, friends whom I trust and I am &lt;em&gt;happy&lt;/em&gt;. For this 2017, I want to gain some weight, so I’ll start by exercising and running daily. This goal is difficult for me, so I’ll try my best. It’s my first step to get in shape so I’ll keep that in mind and then find a new goal.&lt;/p&gt;
-
-&lt;p&gt;My main goal is to make at least &lt;em&gt;5&lt;/em&gt; trips this year.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Second: Work Life&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Funny thing, since last year, I have focused my career on working and studying at the same time. This year, I want to continue contributing to WikiToLearn, work with startups and learn interesting and cool stuff like Machine Learning. If some cool app idea or something comes along the way, awesome, but I won’t be desperate about changing this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Third: Hardware Hacky-Stuff&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This will be my year for &lt;em&gt;artificial intelligence&lt;/em&gt;. I’ll take a course on AI and Machine Learning, so my main goal, much like Zuckerberg’s 2016 goal, is to build something cool using AI and Machine Learning. I want to build something that doesn’t exist yet (atleast planning to), so this summer will serve as exploration and then, in March, I’ll start coding. I hope to find something cool to do so I can show it in December.&lt;/p&gt;
-
-&lt;p&gt;That closes my new year resolutions! Thanks for reading, although I made this mostly for myself, to keep the focus, it’s great someone that reads what I think :) Thank you very much!&lt;/p&gt;
-
-&lt;p&gt;and &lt;em&gt;Happy New Year!&lt;/em&gt; :D&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Jan 2017 12:30:39 +0530</pubDate>
-        <link>http://srijancse.github.io/writing/new-year-2017/</link>
-        <guid isPermaLink="true">http://srijancse.github.io/writing/new-year-2017/</guid>
-        
-        <category>personal</category>
         
         
       </item>
