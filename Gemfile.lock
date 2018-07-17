@@ -5,7 +5,7 @@ GEM
     amp-jekyll (1.0.1)
       fastimage (>= 1.8.0)
       jekyll (~> 3.0)
-      nokogiri (>= 1.6.0)
+      nokogiri (>= 1.8.2)
     colorator (0.1)
     fastimage (2.1.0)
     ffi (1.9.10)
