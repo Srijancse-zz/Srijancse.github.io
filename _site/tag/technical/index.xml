@@ -3,16 +3,235 @@
  <title>Your Title - technical</title>
  <link href="http://srijanagarwal.me/tag/technical/index.xml" rel="self"/>
  <link href="http://srijanagarwal.me/tag/technical.html"/>
- <updated>2017-05-13T18:47:44+05:30</updated>
+ <updated>2018-07-30T19:48:03+02:00</updated>
  <id>http://srijanagarwal.me/tag/technical.html</id>
  <author>
    <name>Author Here</name>
  </author>
  
  <entry>
+   <title>Analysing different Operational Transformation algorithms for collaborative editing</title>
+   <link href="http://srijanagarwal.me/writing/analysing-ot/"/>
+   <updated>2017-06-08T05:43:39+02:00</updated>
+   <id>http://srijanagarwal.me/writing/analysing-ot</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;
+This is the third post in my series of &lt;strong&gt;Operational Transformation (OT)&lt;/strong&gt;, the real time collaborative editing algorithm. The first and second posts were &lt;a href=&quot;https://medium.com/@srijancse/how-real-time-collaborative-editing-work-operational-transformation-ac4902d75682&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt; and &lt;a href=&quot;https://medium.com/@srijancse/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66&quot;&gt;Operational Transformation, the real time collaborative editing algorithm respectively&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As mentioned in earlier posts, Operational transformation was originally born due the need of consistency maintenance in collaborative text editors. In the span of over two decades OTs have gained new capabilities (such as undo operations and group undo) and have been applied to different applications ranging from HTML/XML editing, office tools and even 3D digital media design tools.&lt;/p&gt;
+
+&lt;p&gt;There are many established approaches that exists to operational transformation. In this post, I will walk through the different OT algorithms that are well defined and implemented.&lt;/p&gt;
+
+&lt;h3 id=&quot;definitionsterms-used-&quot;&gt;Definitions/Terms used :&lt;/h3&gt;
+&lt;p&gt;In the second post, I explained about the two kinds of Transformation functions, i.e, Inclusion Transformation and Exclusion Transformation. These functions have two properties/preconditions which ensures OT correctness. TP1 and TP2 are the transformation/convergence properties.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TP1&lt;/strong&gt; : For two concurrent operations O1 and O2, the transform function (T) satisfies TP1 iff O1 o T(O2, O1) ≡ O2 o T(O1, O2) where o denotes the sequence of operations containing Oi followed by Oj and ≡ denotes the equivalence of the two operations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Precondition of TP1&lt;/strong&gt; : TP1 is required only if the Operational Transformation system allows any two operations to be executed in different orders.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/OTtp1.jpg&quot; alt=&quot;TP1&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;TP2&lt;/strong&gt; : For three concurrent operations O1, O2 and O3, the transform function (T) satisfies TP2 iff T(O3, O1 o T(O2, O1)) ≡ T(O3, O2 o T(O1, O2)).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrap&quot;&gt;
+&lt;div class=&quot;image-block&quot;&gt;
+    &lt;img src=&quot;/images/OTtp2.jpg&quot; alt=&quot;TP2&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Precondition of TP2&lt;/strong&gt; : TP2 is required only if the OT system allows two operations O1 and O2 be IT-transformed in two different document states (or contexts).&lt;/p&gt;
+
+&lt;p&gt;** 1. dOPT — distributed OPerational Transformation**&lt;/p&gt;
+
+&lt;p&gt;The dOPT Algorithm was one of the first approaches to OT. In dOPT Algorithm, each machine has an identifier i, which could be an IP or MAC. Each machine has to maintain a state vector s with n components where n is the number of machines. The i component store the number of changes recorded by the ith machine. The requests are of the form: &amp;lt; i, s, o, p &amp;gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;i — the original site’s identifier&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;s — the state vector of the machine which is sending&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;o — the operation which needs to be performed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;p — the priority which is associated with o [&lt;strong&gt;this is where the algorithm got wrong&lt;/strong&gt;]&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A transformation matrix, denoted as T, is what solves &lt;em&gt;conflicting operations&lt;/em&gt;. T is a &lt;em&gt;m x m&lt;/em&gt; matrix, where &lt;em&gt;m&lt;/em&gt; is the number of supported operations in the group-ware system. Each entry in the matrix is a function which transforms operations into other operations and to ensure convergence dOPT requires the Transformation Property 1.&lt;/p&gt;
+
+&lt;p&gt;For handling requests, the actions are based on comparisons between &lt;em&gt;s_i&lt;/em&gt; [sending state] and &lt;em&gt;s_x&lt;/em&gt; [receiving state]. If they are same i.e &lt;em&gt;s_i = s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is executed immediately, if &lt;em&gt;s_i &amp;gt; s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is queued and executed later and if &lt;em&gt;s_i &amp;lt; s_x&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt; is transformed and then executed.&lt;/p&gt;
+
+&lt;p&gt;** Strengths of the algorithm ** :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Immediate feedback for local operations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Does not require locking of resources.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Relatively easy to implement due to its simple data structures.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Satisfies the &lt;em&gt;precedence property&lt;/em&gt;, which is defined as, a consistency property which ensures that the execution order is the same as the operations natural cause-effect order. In other words if an operation O1 causally precedes another operation O2, then at every site O1 will be executed before O2.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enforces the &lt;em&gt;Transformation property 1&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The priority, &lt;em&gt;p&lt;/em&gt;, suggested doesn’t work great for two clients. It fails whenever an operation is concurrent with two or more dependent operations. This algorithm is distributed and does not have a &lt;strong&gt;central server&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.1. adOPTed Algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The shortcomings in dOPT were in the way it transformed operations. The adOPTed introduced the second transformation property [TP2] which ensures that transformation of an operation along different paths will yield the same resulting operation.&lt;/p&gt;
+
+&lt;p&gt;The adOPTed algorithm is right in general, and solves most of the shortcomings of dOPT algorithm but &lt;strong&gt;has not proved Intention Preservation property&lt;/strong&gt;, which is defined as, a consistency property which ensures that the intention of an operation is preserved after a transformation. The intention of an operation, O, is the effect of applying O on the resource where the operation was generated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. GOT and GOTO — Generic and Generic Optimized Operational Transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;GOT control algorithm maintains convergence nicely i.e. when the same set of operations have been executed at all sites, all copies of the document which is shared are identical. Also, it is integrated with Undo/Do/Redo Scheme which states that when a new operation O is ready;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Undo&lt;/strong&gt; operations in &lt;strong&gt;History Buffer (HB)&lt;/strong&gt; (which is defined as ‘saved executed operations at each site’) which totally follow O to restore the document to the state before their execution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Do&lt;/strong&gt; O (the operation)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Redo&lt;/strong&gt; all operations that were undone from the HB.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, in this convergence TP2 is not a necessary condition i.e the precondition CP2/TP2 is required only if the OT systems allows two operations op1 and op2 be IT-transformed [inclusion transformation] in two different document states.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strengths of the algorithm :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OT based undo is established, faster and more efficient undo based operations.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Convergence property&lt;/em&gt; is fulfilled, which is defined as, a consistency property which ensures that copies of a shared resource are identical at all sites in state of rest (i.e. ensuring that all operations are executed).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The algorithm only supports basic string operations i.e Insert/Delete. Also, correctness proof of algorithm is missing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GOTO Algorithm&lt;/strong&gt; is the &lt;strong&gt;O&lt;/strong&gt;ptimized version of GOT Algorithm. The optimization takes place because of two postconditions, &lt;strong&gt;TP1&lt;/strong&gt; and &lt;strong&gt;TP2&lt;/strong&gt; to reduce the number of &lt;strong&gt;IT/ET&lt;/strong&gt; (Inclusion/Exclusion) transformations by adding the properties from adOPTed.&lt;/p&gt;
+
+&lt;p&gt;GOTO algorithm uses the function &lt;strong&gt;convert2HC()&lt;/strong&gt; which basically uses ET between an insert and a delete [concurrent], what basically happens is we transpose the entire history to obtain the concurrent operations when integrating a remote operation. The algorithm fulfills the convergence property, precedence property, TP1, TP2 and has better undo operations, but was &lt;strong&gt;never theoretically proven correct for all scenarios.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. COT — Context-based Operational Transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The COT algorithm does not use a history buffer (HB) when an operation is executed, instead it keeps track of the document state in which a operation have been executed in. So instead of a HB it has a context vector.&lt;/p&gt;
+
+&lt;p&gt;In an OT-based collaborative editor, a document state can be uniquely characterized by the set of original operations executed so far on the document. These original operations may be executed in different orders or forms at different sites, but they must produce the same document state according to the convergence/transformation properties . Moreover, the difference between two document states can be expressed in terms of different original operations executed in these two states. Since every transformed operation must come from an original operation, org(O) is used to denote the original operation of O.
+A document state, denoted as** DS**, can be represented as :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The initial Document State is represented by DS = { }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After executing an operation O on DS, the new Document State DS’ = DS ∪ { org(O) }.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An operation is defined by a site identifier and a number given when it is generated. This operation in turn has &lt;strong&gt;a context vector&lt;/strong&gt; that contains the operation context in terms of operations that precedes it. The operations inside the context vector in turn have their own site identifiers and defining numbers.
+This is the main difference since COT heavily relies on every operation which is to be executed on the same document state on all locations, if the operation is executed on the same document state at all sites the result can not diverge.&lt;/p&gt;
+
+&lt;p&gt;A context vector, denoted as CV(O), can be represented as :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CV(O) = [(ns⁰, ic⁰), (ns¹, ic¹), . . . , (ns^N-1, ic^N-1)]&lt;/strong&gt; where 0 ≤ i ≤ N-1 and&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ns^i represents all original normal operations at site i&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ic^i = [(ns⁰, is⁰), (ns¹, is¹), . . . , (ns^k-1, is^k-1)] represents all inverse operations for undoing normal operations at site i.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also to capture the essential requirements for correct operation execution and transformation, a set of six rules called Context-based Conditions (CCs) were introduced.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC1: Given a original operation O and a document state DS, where O ∉ DS, O can be transformed for execution on DS only if C(O) ⊆ DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC2: Given an original operation O and a document state DS, where O ∉ DS and C(O) ⊆ DS, DS-C(O)² is the set of operations that O must be transformed against before being executed on DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC3: Given any operation O and a state DS, O can be executed on DS only if C(O) = DS.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC4: Given an original operation Ox and a operation O of any type, where Ox ∉ C(O), Ox can be transformed to the context of O only if C(Ox) ⊆ C(O).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC5: Given an original operation Ox and a operation O of any type, where Ox ∉ C(O) and C(Ox) ⊆ C(O), C(O) ≠ C(Ox) is the set of operations that Ox must be transformed against before being IT-transformed with O.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CC6: Given two operations Oa and Ob, they can be IT-transformed with each other IT(Oa,Ob) or IT(Ob,Oa), only if C(Oa) = C(Ob).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Due to these conditions and the context vector the COT algorithm is optimized to the extent that it does not even have a need for the &lt;strong&gt;ET&lt;/strong&gt; transformations. This is made possible because of the context vector that enables a better use of &lt;strong&gt;IT&lt;/strong&gt;s.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strengths of the algorithm:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fulfils the convergence property.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fulfils the precedence property.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Platform capable of more than text editing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Has been well tested as it has been implemented in several editing programs such as CoMaya, CoWord and more.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Requires more memory than other algorithms because of the nature of context vectors but can be optimized in the same way other algorithms have.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Google Wave OT Algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Wave OT is basically based on the algorithm given by Jupiter System [dOPT algorithm]. Having a simple and efficient server is important in making wave’s reliable and scalable. With this goal, Google’s Operational Transformation algorithm modifies the basic theory of OT by requiring the client to wait for &lt;strong&gt;acknowledgement [ACKs]&lt;/strong&gt; (In the &lt;a href=&quot;https://medium.com/@srijancse/operational-transformation-the-real-time-collaborative-editing-algorithm-bf8756683f66&quot;&gt;second post&lt;/a&gt;, I have explained Client — Server Acknowledgement approach) from the server before sending more operations. When a server acknowledges a client’s operation, it means the server has transformed the client’s operation, applied it to the server’s copy of the wavelet and broadcast the transformed operation to all other connected clients. While the client is waiting for the acknowledgement, it caches operations produced locally and sends them in bulk later.&lt;/p&gt;
+
+&lt;p&gt;With the addition of acknowledgements, a client can infer the server’s OT path. By having this, the client can send operations to the server that are always on the server’s OT path.&lt;/p&gt;
+
+&lt;p&gt;This has the important benefit that the server only needs to have &lt;strong&gt;a single state space&lt;/strong&gt;, which is the history of operations it has applied. When it receives a client’s operation, it only needs to transform the operation against the operation history, apply the transformed operation, and then broadcast it. This source of truth also forces the client to wait for the server to acknowledge the operation that the client has just sent which would mean that the client always stays on the server’s OT path. This would help in keeping a single history of operations without actually having to keep a mirror of the state for each client that is connected. That would eventually mean the number of clients that are connected to the server would have only one single copy of the document on the server. One trade off of this change is that a client will see chunks of operations (accumulated batch operations) from another client in intervals of approximately one round trip time to the other client.&lt;/p&gt;
+
+&lt;p&gt;Google Wave OT solves most of the flaws by its Acknowledge command and by strictly limiting the number of participants in communication to two. If the number of clients were increased to three, &lt;strong&gt;17%&lt;/strong&gt; of the time, conflicts arose. However, there is one flaw that might have slipped through, which is intention preservation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;What I think would be a viable approach is when we can incorporate &lt;strong&gt;Context based OT&lt;/strong&gt; with G&lt;strong&gt;oogle wave OT&lt;/strong&gt;, since COT would be able to provide a better intention preservation. Also, COT algorithm is not based on when the operation arrives at different places but in what context [CV(O)] the original operation was executed in. Therefore at each site when Oi arrives a comparison will be made with Oi’s context vector and the site’s own document state.&lt;/p&gt;
+
+&lt;p&gt;Also, note that not all Operational Transformation approaches has been taken into considerations. I have merely listed those which I believed are the most significant ones.&lt;/p&gt;
+
+&lt;p&gt;I would also be researching and writing another post on why Google Wave OT failed in practice by using whatever source code provided by Google implementing a test to prove that Waves OT fails to preserve true intention in practice. Also, I may perform a benchmarking with COT and Google Wave together to know if really COT can be incorporated with Google Wave’s OT.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations]</title>
    <link href="http://srijanagarwal.me/writing/operational-transformation/"/>
-   <updated>2017-05-11T21:13:39+05:30</updated>
+   <updated>2017-05-11T17:43:39+02:00</updated>
    <id>http://srijanagarwal.me/writing/operational-transformation</id>
    <content type="html">&lt;p&gt;This is the second post related to &lt;strong&gt;Operational Transformation&lt;/strong&gt;, the real time collaborative editing algorithm. The first post was &lt;a href=&quot;http://www.srijanagarwal.me/writing/collaborative-editing/&quot;&gt;How Real-Time Collaborative Editors work? [Operational Transformation]&lt;/a&gt;.&lt;/p&gt;
 
@@ -38,7 +257,7 @@
 
 &lt;p&gt;A character wise transformation function’s algorithm (for consistency maintenance) is simple.  As an example, for a pair of character-wise operations &lt;code class=&quot;highlighter-rouge&quot;&gt;Ins[p, c]&lt;/code&gt; (to insert a character c at the position p) and &lt;code class=&quot;highlighter-rouge&quot;&gt;Del[p]&lt;/code&gt; (to delete a character at position p), four IT functions, denoted as &lt;code class=&quot;highlighter-rouge&quot;&gt;Tii&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tid&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tdi&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Tdd&lt;/code&gt;, can be defined as follows:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Tii(Ins[p1,c1], Ins[p2, c2]) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Tii(Ins[p1,c1], Ins[p2, c2]) {
       if p1 &amp;lt; p2  or (p1 = p2 and u1 &amp;gt; u2) // breaking insert-tie using user identifiers (u1, u2)
             return Ins[p1, c1];  // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
       else return Ins[p1+1, c1]; } // Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
@@ -55,8 +274,7 @@ Tdd(Del[p1], Del[p2]) {
       if p1 &amp;lt; p2 return Del[p1]; // e.g.   Tdd(Del[3], Del[4]) = Del[3]
       else if p1 &amp;gt; p2 return Del[p1-1]; // Tdd(Del[3], Del[1]) = Del[2]
       else return I; } // breaking delete-tie using I (identity op)  Tdd(Del[3]. Del[3]) = I 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;String-wise transformation function’s algorithm is significantly more challenging than character-wise operations’ because:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -163,7 +381,7 @@ Tdd(Del[p1], Del[p2]) {
  <entry>
    <title>How Real-Time Collaborative Editors work? [Operational Transformation]</title>
    <link href="http://srijanagarwal.me/writing/collaborative-editing/"/>
-   <updated>2017-05-01T06:13:39+05:30</updated>
+   <updated>2017-05-01T02:43:39+02:00</updated>
    <id>http://srijanagarwal.me/writing/collaborative-editing</id>
    <content type="html">&lt;p&gt;Recently, I’ve been diving deep on how &lt;strong&gt;real-time collaborative&lt;/strong&gt; editing works. I have been reading various papers on both the methods of implementing collaborative editing : &lt;strong&gt;Operational Transformation&lt;/strong&gt;, which goes back to 1989, when it was first implemented by the &lt;a href=&quot;https://www.lri.fr/~mbl/ENS/CSCW/2012/papers/Ellis-SIGMOD89.pdf&quot;&gt;GROVE (GRoup Outtie Viewing Editor)&lt;/a&gt; system (this algorithm is quite old, and Google uses this algorithm for collaborative editing for Google Docs, Google Slides, Wave, etc) and &lt;strong&gt;Conflict-Free Replicated Data Types&lt;/strong&gt;, which is a much newer approach to real-time editing.&lt;/p&gt;
 
@@ -195,19 +413,17 @@ Tdd(Del[p1], Del[p2]) {
 
 &lt;p&gt;What actually should happen is that the client and server should both end with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD&lt;/code&gt; but in reality, &lt;em&gt;client&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
-&quot;Insert &#39;X&#39;&quot; operation at offset 3 [local] -&amp;gt; ABCXD
-&quot;Delete &#39;B&#39;&quot; operation at offset 1 [remote] -&amp;gt; ACXD
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Insert 'X'&quot; operation at offset 3 [local] -&amp;gt; ABCXD
+&quot;Delete 'B'&quot; operation at offset 1 [remote] -&amp;gt; ACXD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;but the &lt;em&gt;server&lt;/em&gt; ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;ACDX&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
-&quot;Delete &#39;B&#39;&quot; operation at offset 1 [local] -&amp;gt; ACD
-&quot;Insert &#39;X&#39;&quot; operation at offset 3 [remote] -&amp;gt; ACDX
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Delete 'B'&quot; operation at offset 1 [local] -&amp;gt; ACD
+&quot;Insert 'X'&quot; operation at offset 3 [remote] -&amp;gt; ACDX
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Ofcourse, &lt;code class=&quot;highlighter-rouge&quot;&gt;ACXD != ACDX&lt;/code&gt; and the document which is shared now is in wrong state.&lt;/p&gt;
 
@@ -234,19 +450,17 @@ Tdd(Del[p1], Del[p2]) {
 
 &lt;p&gt;If we apply OT, &lt;em&gt;Client&lt;/em&gt; will see :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
-&quot;Insert &#39;X&#39;&quot; operation at offset 3 [local] -&amp;gt; ABCXD
-&quot;Delete &#39;B&#39;&quot; operation at offset 1 [transformed] -&amp;gt; ACXD
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Insert 'X'&quot; operation at offset 3 [local] -&amp;gt; ABCXD
+&quot;Delete 'B'&quot; operation at offset 1 [transformed] -&amp;gt; ACXD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;and &lt;em&gt;Server&lt;/em&gt; will see :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
-&quot;Delete &#39;B&#39;&quot; operation at offset 1 [local] -&amp;gt; ACD
-&quot;Insert &#39;X&#39;&quot; operation at offset 2 [transformed] -&amp;gt; ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Document State -&amp;gt; ABCD
+&quot;Delete 'B'&quot; operation at offset 1 [local] -&amp;gt; ACD
+&quot;Insert 'X'&quot; operation at offset 2 [transformed] -&amp;gt; ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;client---server-ot-approach-to-collaborative-editing&quot;&gt;Client - Server [OT] Approach to Collaborative Editing&lt;/h3&gt;
 
@@ -294,7 +508,7 @@ Tdd(Del[p1], Del[p2]) {
  <entry>
    <title>Deploy a Node.js app in minutes using Heroku!</title>
    <link href="http://srijanagarwal.me/writing/deploying-nodejs-app/"/>
-   <updated>2017-04-26T06:13:39+05:30</updated>
+   <updated>2017-04-26T02:43:39+02:00</updated>
    <id>http://srijanagarwal.me/writing/deploying-nodejs-app</id>
    <content type="html">&lt;p&gt;As more and more Node.js projects are being coded, deploying a nodejs app just got easier. I would guide you through on how one can deploy a node.js app in minutes using Heroku.&lt;/p&gt;
 
@@ -333,13 +547,14 @@ Tdd(Del[p1], Del[p2]) {
   &lt;li&gt;The Heroku CLI.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Let’s get down to it!
-1.  Login to your Heroku via the command line heroku login. This will prompt for your credential.
+&lt;p&gt;Let’s get down to it!&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Login to your Heroku via the command line heroku login. This will prompt for your credential.
 Add Procfile to your application echo &lt;code class=&quot;highlighter-rouge&quot;&gt;‘web: ./node_modules/.bin/forever -m 5 server.js’ &amp;gt;Procfile&lt;/code&gt;
 A Procfile is not necessary to deploy apps written in most languages supported by Heroku. The platform automatically detects the language, and creates a default web process type to boot the application server. 
 In the case of Node.js, it will start a default web process via the start script in your &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;. Creating an explicit Procfile is recommended for greater control and flexibility for your app.As the case maybe, &lt;code class=&quot;highlighter-rouge&quot;&gt;web: ./node_modules/.bin/forever -m 5 server.js&lt;/code&gt;, I am using Node.js’ forever module to start my server named server.js&lt;/p&gt;
-
-&lt;ol&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Create Heroku remote repository &lt;code class=&quot;highlighter-rouge&quot;&gt;heroku create appName&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -364,7 +579,7 @@ Note: If your app runs on a database, you will need to add the database as an ad
  <entry>
    <title>Awesome features you must be using in JavaScript ES6!</title>
    <link href="http://srijanagarwal.me/writing/JSES6-Awesome-Features/"/>
-   <updated>2017-04-15T13:13:39+05:30</updated>
+   <updated>2017-04-15T09:43:39+02:00</updated>
    <id>http://srijanagarwal.me/writing/JSES6-Awesome-Features</id>
    <content type="html">&lt;div class=&quot;image-wrap&quot;&gt;
 &lt;div class=&quot;image-block&quot;&gt;
@@ -379,14 +594,13 @@ Note: If your app runs on a database, you will need to add the database as an ad
 &lt;h3&gt; 1. Default Parameters in ES6 &lt;/h3&gt;
 &lt;p&gt;Before the arrival of ES2015, when one wanted to specify a default parameter in a function, he/she had to do it in the body of the function like so:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function greetHuman(name) {
-    name = name || &#39;human&#39;;
-    return &#39;Hello &#39; + name + &#39;, we come in peace&#39;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function greetHuman(name) {
+    name = name || 'human';
+    return 'Hello ' + name + ', we come in peace';
 }
     greetHuman();
-    greetHuman(&#39;Srijan&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+    greetHuman('Srijan');
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;They were okay until the value was 0, because 0 is falsy in JavaScript and it would default to the hard-coded value instead of becoming the value itself. Of course, who needs 0 as a value (:P), so we just ignored this flaw and used the logic OR anyway. No more!&lt;/p&gt;
 
@@ -394,12 +608,11 @@ Note: If your app runs on a database, you will need to add the database as an ad
 
 &lt;p&gt;Here’s what the code in ES6 would look like if you’re combining arrow functions, template literal, and default:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const greetHuman = (name = &#39;human&#39;) =&amp;gt; `Hello ${human}, we come in peace`;
-greetHuman(&#39;Srijan&#39;); &#39;Hello Srijan, we come in peace&#39;
-greetHuman(); &#39;Hello human, we come in peace&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const greetHuman = (name = 'human') =&amp;gt; `Hello ${human}, we come in peace`;
+greetHuman('Srijan'); 'Hello Srijan, we come in peace'
+greetHuman(); 'Hello human, we come in peace'
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3&gt; 2. Arrow Functions in ES6 &lt;/h3&gt;
 &lt;p&gt;If you are a JavaScript developer, you would already know the good old way of declaring functions.&lt;/p&gt;
 
@@ -407,23 +620,21 @@ greetHuman(); &#39;Hello human, we come in peace&#39;
 
 &lt;p&gt;Using arrows functions in ES6 allows us to stop using &lt;code class=&quot;highlighter-rouge&quot;&gt;that = this or self = this or _this = this or .bind(this)&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Good ol’ ES5 code :
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-var _this = this
-$(&#39;.btn&#39;).click(function(event){
+&lt;p&gt;Good ol’ ES5 code :&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var _this = this
+$('.btn').click(function(event){
   _this.send()
 })
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is the ES6 code without &lt;code class=&quot;highlighter-rouge&quot;&gt;_this = this:&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(&#39;.btn&#39;).click((event) =&amp;gt;{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$('.btn').click((event) =&amp;gt;{
   this.send()
 })
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As you can see, the code looks shorter and cleaner — we can even omit the curly braces &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt; (one-liners only). There is support for implicit return as well, so we can conveniently omit the &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; keyword.&lt;/p&gt;
+&lt;p&gt;As you can see, the code looks shorter and cleaner — we can even omit the curly braces &lt;code class=&quot;highlighter-rouge&quot;&gt;{}&lt;/code&gt; (one-liners only). There is support for implicit return as well, so we can conveniently omit the &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; keyword.&lt;/p&gt;
 
 &lt;h3&gt; 3. Template Literals in ES6 &lt;/h3&gt;
 
@@ -431,17 +642,15 @@ $(&#39;.btn&#39;).click(function(event){
 
 &lt;p&gt;So in ES5 we had to break the string like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = &#39;Your name is &#39; + first + &#39; &#39; + last + &#39;.&#39;
-var url = &#39;http://localhost/api/&#39; + id
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = 'Your name is ' + first + ' ' + last + '.'
+var url = 'http://localhost/api/' + id
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Luckily, in ES6 we can use a new syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;${NAME}&lt;/code&gt; inside of the back-ticked string:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = `Your name is ${first} ${last}.`
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var name = `Your name is ${first} ${last}.`
 var url = `http://localhost/api/${id}`
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can learn more about ES6 features &lt;a href=&quot;http://exploringjs.com/es6/&quot;&gt;here&lt;/a&gt;. A &lt;a href=&quot;https://github.com/azat-co/cheatsheets/tree/master/es6&quot;&gt;cheatsheet&lt;/a&gt; too.&lt;/p&gt;
 </content>
