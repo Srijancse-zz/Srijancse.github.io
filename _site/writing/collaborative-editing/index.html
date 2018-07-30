@@ -26,9 +26,11 @@
     <title>How Real-Time Collaborative Editors work? [Operational Transformation] | Srijan Agarwal</title>
     <meta name="description" content="Recently, I’ve been diving deep on how real-time collaborative editing works. I have been reading various papers on both the methods of implementing collabor...">
 
-    <link rel="canonical" href="http://srijancse.github.io/writing/collaborative-editing/">
-    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="canonical" href="http://localhost:4000/writing/collaborative-editing/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://localhost:4000/feed.xml">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -50,7 +52,7 @@
         <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
         </span>
-        <time datetime="2017-05-01T06:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+        <time datetime="2017-05-01T02:43:39+02:00" itemprop="datePublished" title="It was a beautiful day!">
             1 May 2017
         </time>
     </div>
@@ -87,19 +89,17 @@
 
 <p>What actually should happen is that the client and server should both end with <code class="highlighter-rouge">ACXD</code> but in reality, <em>client</em> ends with <code class="highlighter-rouge">ACXD</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting Document State -&gt; ABCD
 "Insert 'X'" operation at offset 3 [local] -&gt; ABCXD
 "Delete 'B'" operation at offset 1 [remote] -&gt; ACXD
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>but the <em>server</em> ends with <code class="highlighter-rouge">ACDX</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting Document State -&gt; ABCD
 "Delete 'B'" operation at offset 1 [local] -&gt; ACD
 "Insert 'X'" operation at offset 3 [remote] -&gt; ACDX
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Ofcourse, <code class="highlighter-rouge">ACXD != ACDX</code> and the document which is shared now is in wrong state.</p>
 
@@ -126,19 +126,17 @@
 
 <p>If we apply OT, <em>Client</em> will see :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting Document State -&gt; ABCD
 "Insert 'X'" operation at offset 3 [local] -&gt; ABCXD
 "Delete 'B'" operation at offset 1 [transformed] -&gt; ACXD
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and <em>Server</em> will see :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Starting Document State -&gt; ABCD
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting Document State -&gt; ABCD
 "Delete 'B'" operation at offset 1 [local] -&gt; ACD
 "Insert 'X'" operation at offset 2 [transformed] -&gt; ACXD //Transform function would add add it in the new (3 - 1 = 2) position 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="client---server-ot-approach-to-collaborative-editing">Client - Server [OT] Approach to Collaborative Editing</h3>
 

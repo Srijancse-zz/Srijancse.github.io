@@ -26,9 +26,11 @@
     <title>Operational Transformation, the real time collaborative editing algorithm [Operations and Transformations] | Srijan Agarwal</title>
     <meta name="description" content="This is the second post related to Operational Transformation, the real time collaborative editing algorithm. The first post was How Real-Time Collaborative ...">
 
-    <link rel="canonical" href="http://srijancse.github.io/writing/operational-transformation/">
-    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="canonical" href="http://localhost:4000/writing/operational-transformation/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://localhost:4000/feed.xml">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -50,7 +52,7 @@
         <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
         </span>
-        <time datetime="2017-05-11T21:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+        <time datetime="2017-05-11T17:43:39+02:00" itemprop="datePublished" title="It was a beautiful day!">
             11 May 2017
         </time>
     </div>
@@ -81,7 +83,7 @@
 
 <p>A character wise transformation function’s algorithm (for consistency maintenance) is simple.  As an example, for a pair of character-wise operations <code class="highlighter-rouge">Ins[p, c]</code> (to insert a character c at the position p) and <code class="highlighter-rouge">Del[p]</code> (to delete a character at position p), four IT functions, denoted as <code class="highlighter-rouge">Tii</code>, <code class="highlighter-rouge">Tid</code>, <code class="highlighter-rouge">Tdi</code>, <code class="highlighter-rouge">Tdd</code>, can be defined as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Tii(Ins[p1,c1], Ins[p2, c2]) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tii(Ins[p1,c1], Ins[p2, c2]) {
       if p1 &lt; p2  or (p1 = p2 and u1 &gt; u2) // breaking insert-tie using user identifiers (u1, u2)
             return Ins[p1, c1];  // e.g. Tii(Ins[3, “a”], Ins[4, “b”]) = Ins[3, “a”]
       else return Ins[p1+1, c1]; } // Tii(Ins[3, “a”], Ins[1, “b”]) = Ins[4, “a”]
@@ -98,8 +100,7 @@ Tdd(Del[p1], Del[p2]) {
       if p1 &lt; p2 return Del[p1]; // e.g.   Tdd(Del[3], Del[4]) = Del[3]
       else if p1 &gt; p2 return Del[p1-1]; // Tdd(Del[3], Del[1]) = Del[2]
       else return I; } // breaking delete-tie using I (identity op)  Tdd(Del[3]. Del[3]) = I 
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>String-wise transformation function’s algorithm is significantly more challenging than character-wise operations’ because:</p>
 
 <ul>

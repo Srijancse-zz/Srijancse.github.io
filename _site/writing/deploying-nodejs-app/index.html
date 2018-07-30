@@ -26,9 +26,11 @@
     <title>Deploy a Node.js app in minutes using Heroku! | Srijan Agarwal</title>
     <meta name="description" content="As more and more Node.js projects are being coded, deploying a nodejs app just got easier. I would guide you through on how one can deploy a node.js app in m...">
 
-    <link rel="canonical" href="http://srijancse.github.io/writing/deploying-nodejs-app/">
-    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="canonical" href="http://localhost:4000/writing/deploying-nodejs-app/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://localhost:4000/feed.xml">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -50,7 +52,7 @@
         <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
         </span>
-        <time datetime="2017-04-26T06:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+        <time datetime="2017-04-26T02:43:39+02:00" itemprop="datePublished" title="It was a beautiful day!">
             26 Apr 2017
         </time>
     </div>
@@ -94,13 +96,14 @@
   <li>The Heroku CLI.</li>
 </ol>
 
-<p>Let’s get down to it!
-1.  Login to your Heroku via the command line heroku login. This will prompt for your credential.
+<p>Let’s get down to it!</p>
+<ol>
+  <li>
+    <p>Login to your Heroku via the command line heroku login. This will prompt for your credential.
 Add Procfile to your application echo <code class="highlighter-rouge">‘web: ./node_modules/.bin/forever -m 5 server.js’ &gt;Procfile</code>
 A Procfile is not necessary to deploy apps written in most languages supported by Heroku. The platform automatically detects the language, and creates a default web process type to boot the application server. 
 In the case of Node.js, it will start a default web process via the start script in your <code class="highlighter-rouge">package.json</code>. Creating an explicit Procfile is recommended for greater control and flexibility for your app.As the case maybe, <code class="highlighter-rouge">web: ./node_modules/.bin/forever -m 5 server.js</code>, I am using Node.js’ forever module to start my server named server.js</p>
-
-<ol>
+  </li>
   <li>
     <p>Create Heroku remote repository <code class="highlighter-rouge">heroku create appName</code></p>
   </li>

@@ -26,9 +26,11 @@
     <title>Awesome features you must be using in JavaScript ES6! | Srijan Agarwal</title>
     <meta name="description" content="    ">
 
-    <link rel="canonical" href="http://srijancse.github.io/writing/JSES6-Awesome-Features/">
-    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://srijancse.github.io/feed.xml">
+    <link rel="canonical" href="http://localhost:4000/writing/JSES6-Awesome-Features/">
+    <link rel="alternate" type="application/rss+xml" title="Srijan Agarwal" href="http://localhost:4000/feed.xml">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -50,7 +52,7 @@
         <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/"><span itemprop="name">Srijan Agarwal</span></a>
         </span>
-        <time datetime="2017-04-15T13:13:39+05:30" itemprop="datePublished" title="It was a beautiful day!">
+        <time datetime="2017-04-15T09:43:39+02:00" itemprop="datePublished" title="It was a beautiful day!">
             15 Apr 2017
         </time>
     </div>
@@ -70,14 +72,13 @@
 <h3> 1. Default Parameters in ES6 </h3>
 <p>Before the arrival of ES2015, when one wanted to specify a default parameter in a function, he/she had to do it in the body of the function like so:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function greetHuman(name) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function greetHuman(name) {
     name = name || 'human';
     return 'Hello ' + name + ', we come in peace';
 }
     greetHuman();
     greetHuman('Srijan');
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>They were okay until the value was 0, because 0 is falsy in JavaScript and it would default to the hard-coded value instead of becoming the value itself. Of course, who needs 0 as a value (:P), so we just ignored this flaw and used the logic OR anyway. No more!</p>
 
@@ -85,12 +86,11 @@
 
 <p>Here’s what the code in ES6 would look like if you’re combining arrow functions, template literal, and default:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>const greetHuman = (name = 'human') =&gt; `Hello ${human}, we come in peace`;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const greetHuman = (name = 'human') =&gt; `Hello ${human}, we come in peace`;
 greetHuman('Srijan'); 'Hello Srijan, we come in peace'
 greetHuman(); 'Hello human, we come in peace'
 
-</code></pre>
-</div>
+</code></pre></div></div>
 <h3> 2. Arrow Functions in ES6 </h3>
 <p>If you are a JavaScript developer, you would already know the good old way of declaring functions.</p>
 
@@ -98,23 +98,21 @@ greetHuman(); 'Hello human, we come in peace'
 
 <p>Using arrows functions in ES6 allows us to stop using <code class="highlighter-rouge">that = this or self = this or _this = this or .bind(this)</code>.</p>
 
-<p>Good ol’ ES5 code :
-<code class="highlighter-rouge">
-var _this = this
+<p>Good ol’ ES5 code :</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var _this = this
 $('.btn').click(function(event){
   _this.send()
 })
-</code></p>
+</code></pre></div></div>
 
 <p>This is the ES6 code without <code class="highlighter-rouge">_this = this:</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$('.btn').click((event) =&gt;{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('.btn').click((event) =&gt;{
   this.send()
 })
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>As you can see, the code looks shorter and cleaner — we can even omit the curly braces <code class="highlighter-rouge"><span class="p">{}</span></code> (one-liners only). There is support for implicit return as well, so we can conveniently omit the <code class="highlighter-rouge">return</code> keyword.</p>
+<p>As you can see, the code looks shorter and cleaner — we can even omit the curly braces <code class="highlighter-rouge">{}</code> (one-liners only). There is support for implicit return as well, so we can conveniently omit the <code class="highlighter-rouge">return</code> keyword.</p>
 
 <h3> 3. Template Literals in ES6 </h3>
 
@@ -122,17 +120,15 @@ $('.btn').click(function(event){
 
 <p>So in ES5 we had to break the string like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var name = 'Your name is ' + first + ' ' + last + '.'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var name = 'Your name is ' + first + ' ' + last + '.'
 var url = 'http://localhost/api/' + id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Luckily, in ES6 we can use a new syntax <code class="highlighter-rouge">${NAME}</code> inside of the back-ticked string:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var name = `Your name is ${first} ${last}.`
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var name = `Your name is ${first} ${last}.`
 var url = `http://localhost/api/${id}`
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can learn more about ES6 features <a href="http://exploringjs.com/es6/">here</a>. A <a href="https://github.com/azat-co/cheatsheets/tree/master/es6">cheatsheet</a> too.</p>
 
